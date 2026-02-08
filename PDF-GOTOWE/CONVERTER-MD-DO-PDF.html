@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Converter MD → PDF - POLSKA 2038</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px;
+            background: #f9fafb;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #dc2626;
+            font-size: 32pt;
+            margin-bottom: 20px;
+            border-bottom: 4px solid #dc2626;
+            padding-bottom: 15px;
+        }
+        .instruction {
+            background: #fef3c7;
+            padding: 20px;
+            border-left: 4px solid #f59e0b;
+            margin: 20px 0;
+            border-radius: 6px;
+        }
+        .file-list {
+            background: #f0fdf4;
+            padding: 20px;
+            border-left: 4px solid #10b981;
+            margin: 20px 0;
+            border-radius: 6px;
+        }
+        .file-item {
+            padding: 15px;
+            background: white;
+            margin: 10px 0;
+            border-radius: 6px;
+            border: 1px solid #e5e7eb;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .file-item:hover {
+            background: #f9fafb;
+            border-color: #dc2626;
+            transform: translateX(5px);
+        }
+        .file-name {
+            font-weight: 700;
+            color: #1e40af;
+            font-size: 14pt;
+        }
+        .file-desc {
+            color: #6b7280;
+            font-size: 10pt;
+            margin-top: 5px;
+        }
+        textarea {
+            width: 100%;
+            min-height: 400px;
+            font-family: 'Courier New', monospace;
+            font-size: 10pt;
+            padding: 15px;
+            border: 2px solid #e5e7eb;
+            border-radius: 6px;
+            margin: 20px 0;
+        }
+        button {
+            background: #dc2626;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 6px;
+            font-size: 14pt;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        button:hover {
+            background: #991b1b;
+            transform: scale(1.05);
+        }
+        .warning {
+            background: #fee2e2;
+            padding: 15px;
+            border-left: 4px solid #dc2626;
+            margin: 20px 0;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🔄 Converter MD → PDF<br>POLSKA 2038</h1>
+
+    <div class="instruction">
+        <h2>📖 Instrukcja użycia:</h2>
+        <ol>
+            <li>Otwórz plik .md w Notatniku (prawy przycisk → Otwórz za pomocą → Notatnik)</li>
+            <li>Zaznacz CAŁĄ zawartość (Ctrl+A)</li>
+            <li>Skopiuj (Ctrl+C)</li>
+            <li>Wklej poniżej w pole tekstowe (Ctrl+V)</li>
+            <li>Kliknij "Generuj PDF"</li>
+            <li>Nowa karta się otworzy z pięknie sformatowanym dokumentem</li>
+            <li>W nowej karcie: Ctrl+P → Zapisz jako PDF</li>
+        </ol>
+    </div>
+
+    <div class="file-list">
+        <h2>📚 Pliki do skonwertowania (kliknij aby skopiować nazwę):</h2>
+        <div class="file-item" onclick="copyToClipboard('01-MAPA-DROGOWA-2026-2038.md')">
+            <div class="file-name">01-MAPA-DROGOWA-2026-2038.md</div>
+            <div class="file-desc">Harmonogram 2026-2038 • 28 stron • Kamienie milowe + KPI</div>
+        </div>
+        <div class="file-item" onclick="copyToClipboard('02-BUDZET-SZCZEGOLOWY-2026-2035.md')">
+            <div class="file-name">02-BUDZET-SZCZEGOLOWY-2026-2035.md</div>
+            <div class="file-desc">Budżet szczegółowy • 22 strony • Źródła finansowania</div>
+        </div>
+        <div class="file-item" onclick="copyToClipboard('03-STRUKTURA-ORGANIZACYJNA.md')">
+            <div class="file-name">03-STRUKTURA-ORGANIZACYJNA.md</div>
+            <div class="file-desc">Organizacja • 15 stron • 604 pracowników + schemat</div>
+        </div>
+        <div class="file-item" onclick="copyToClipboard('04-PLAN-WDROZENIA-INSTRUKCJA.md')">
+            <div class="file-name">04-PLAN-WDROZENIA-INSTRUKCJA.md</div>
+            <div class="file-desc">Wdrożenie krok po kroku • 20 stron • Instrukcja dla PZPN</div>
+        </div>
+        <div class="file-item" onclick="copyToClipboard('05-BRIEFING-DLA-MEDIOW.md')">
+            <div class="file-name">05-BRIEFING-DLA-MEDIOW.md</div>
+            <div class="file-desc">Briefing mediowy • 12 stron • FAQ + cytaty</div>
+        </div>
+    </div>
+
+    <h2>📝 Wklej zawartość pliku MD tutaj:</h2>
+    <textarea id="mdContent" placeholder="Wklej tutaj zawartość pliku .md (Ctrl+V)..."></textarea>
+
+    <button onclick="generatePDF()">🎨 Generuj PDF</button>
+
+    <div class="warning">
+        <strong>⚠️ Ważne:</strong> Narzędzie działa w przeglądarce. Każdy plik musisz skonwertować osobno (zajmuje ~30 sekund/plik).
+    </div>
+</div>
+
+<script>
+function copyToClipboard(text) {
+    navigator.clipboard.writeText(text);
+    alert('Skopiowano: ' + text);
+}
+
+function generatePDF() {
+    const content = document.getElementById('mdContent').value;
+
+    if (!content.trim()) {
+        alert('Wklej najpierw zawartość pliku MD!');
+        return;
+    }
+
+    // Podstawowa konwersja Markdown → HTML
+    let html = content;
+
+    // Nagłówki
+    html = html.replace(/^# (.*$)/gim, '<h1>$1</h1>');
+    html = html.replace(/^## (.*$)/gim, '<h2>$1</h2>');
+    html = html.replace(/^### (.*$)/gim, '<h3>$1</h3>');
+    html = html.replace(/^#### (.*$)/gim, '<h4>$1</h4>');
+
+    // Bold i italic
+    html = html.replace(/\*\*(.*?)\*\*/gim, '<strong>$1</strong>');
+    html = html.replace(/\*(.*?)\*/gim, '<em>$1</em>');
+
+    // Listy
+    html = html.replace(/^\- (.*$)/gim, '<li>$1</li>');
+    html = html.replace(/^\* (.*$)/gim, '<li>$1</li>');
+
+    // Nowe linie
+    html = html.replace(/\n\n/g, '</p><p>');
+    html = '<p>' + html + '</p>';
+
+    // Otwórz nowe okno z profesjonalnym stylem
+    const newWindow = window.open('', '_blank');
+    newWindow.document.write(`
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>POLSKA 2038 - Dokument PDF</title>
+    <style>
+        @page { size: A4; margin: 2cm; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            max-width: 210mm;
+            margin: 0 auto;
+            padding: 20mm;
+            background: white;
+            font-size: 11pt;
+        }
+        h1 {
+            color: #dc2626;
+            font-size: 24pt;
+            font-weight: 900;
+            margin-top: 20pt;
+            margin-bottom: 10pt;
+            border-bottom: 3px solid #dc2626;
+            padding-bottom: 10pt;
+        }
+        h2 {
+            color: #1e40af;
+            font-size: 16pt;
+            font-weight: 700;
+            margin-top: 15pt;
+            margin-bottom: 8pt;
+            background: #dbeafe;
+            padding: 8pt;
+            border-radius: 4pt;
+        }
+        h3 {
+            color: #059669;
+            font-size: 13pt;
+            font-weight: 700;
+            margin-top: 12pt;
+            margin-bottom: 6pt;
+        }
+        h4 {
+            color: #6b7280;
+            font-size: 11pt;
+            font-weight: 700;
+            margin-top: 10pt;
+            margin-bottom: 5pt;
+        }
+        p {
+            margin: 8pt 0;
+        }
+        ul, ol {
+            margin: 8pt 0;
+            padding-left: 20pt;
+        }
+        li {
+            margin: 4pt 0;
+        }
+        strong {
+            font-weight: 700;
+            color: #dc2626;
+        }
+        em {
+            font-style: italic;
+            color: #1e40af;
+        }
+        .footer {
+            text-align: center;
+            color: #6b7280;
+            font-size: 9pt;
+            margin-top: 30pt;
+            padding-top: 15pt;
+            border-top: 1px solid #e5e7eb;
+        }
+    </style>
+</head>
+<body>
+    ${html}
+    <div class="footer">
+        <p><strong>Projekt: POLSKA 2038 - Mistrzostwo Świata 2038</strong><br>
+        Kontakt: polska2038@proton.me • Wersja: FINAL (Listopad 2024)</p>
+    </div>
+    <script>
+        window.onload = function() {
+            alert('Dokument gotowy!\\n\\nNaciśnij: Ctrl+P\\nWybierz: Zapisz jako PDF\\nZapisz!');
+        }
+    </script>
+</body>
+</html>
+    `);
+    newWindow.document.close();
+}
+</script>
+
+</body>
+</html>

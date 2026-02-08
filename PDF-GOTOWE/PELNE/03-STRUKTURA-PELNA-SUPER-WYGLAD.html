@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>POLSKA 2038 - Struktura Organizacyjna (PEŁNA)</title>
+    <style>
+        @page { size: A4; margin: 2cm; }
+        @media print {
+            body { background: white; padding: 0; margin: 0; }
+            .no-print { display: none !important; }
+            h1, h2, h3, h4 { page-break-after: avoid; }
+            table { page-break-inside: avoid; }
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+            line-height: 1.7;
+            color: #1a1a1a;
+            background: #f5f5f5;
+            padding: 30px;
+        }
+        .container {
+            max-width: 210mm;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 0 30px rgba(0,0,0,0.1);
+        }
+        .print-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+            color: white;
+            padding: 18px 40px;
+            border: none;
+            border-radius: 12px;
+            font-size: 16pt;
+            font-weight: 900;
+            cursor: pointer;
+            box-shadow: 0 8px 20px rgba(220, 38, 38, 0.4);
+            z-index: 9999;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .print-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(220, 38, 38, 0.6);
+        }
+        h1 {
+            color: #dc2626;
+            font-size: 28pt;
+            font-weight: 900;
+            margin: 30px 0 15px 0;
+            border-bottom: 5px solid #dc2626;
+            padding-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        h2 {
+            color: #1e40af;
+            font-size: 20pt;
+            font-weight: 800;
+            margin: 25px 0 12px 0;
+            background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 6px solid #1e40af;
+        }
+        h3 {
+            color: #059669;
+            font-size: 16pt;
+            font-weight: 700;
+            margin: 20px 0 10px 0;
+            border-left: 4px solid #059669;
+            padding-left: 15px;
+        }
+        h4 {
+            color: #6b7280;
+            font-size: 13pt;
+            font-weight: 700;
+            margin: 15px 0 8px 0;
+        }
+        p {
+            margin: 10px 0;
+            text-align: justify;
+            line-height: 1.8;
+        }
+        ul, ol {
+            margin: 12px 0;
+            padding-left: 30px;
+        }
+        li {
+            margin: 8px 0;
+            line-height: 1.7;
+        }
+        strong {
+            font-weight: 700;
+            color: #dc2626;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 10pt;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        th, td {
+            border: 2px solid #d1d5db;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+            color: white;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        tr:nth-child(even) {
+            background: #f9fafb;
+        }
+        hr {
+            border: none;
+            border-top: 3px solid #e5e7eb;
+            margin: 30px 0;
+        }
+        .footer {
+            text-align: center;
+            color: #6b7280;
+            font-size: 9pt;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 3px solid #e5e7eb;
+        }
+        .cover {
+            text-align: center;
+            padding: 80px 0;
+            background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+            color: white;
+            margin: -40px -40px 40px -40px;
+            border-radius: 0;
+        }
+        .cover h1 {
+            color: white;
+            border: none;
+            font-size: 42pt;
+            margin: 0;
+        }
+        .cover .subtitle {
+            font-size: 24pt;
+            margin: 20px 0;
+            opacity: 0.95;
+        }
+        pre {
+            background: #f3f4f6;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-size: 9pt;
+            line-height: 1.5;
+            border-left: 4px solid #059669;
+        }
+    </style>
+</head>
+<body>
+
+<button class="print-btn no-print" onclick="window.print()">🖨️ ZAPISZ JAKO PDF</button>
+
+<div class="container">
+
+<div class="cover">
+    <h1>📋 STRUKTURA ORGANIZACYJNA</h1>
+    <div class="subtitle">POLSKA 2038</div>
+    <div style="margin-top: 40px; font-size: 16pt;">15 stron • Kompletna wersja • 604 pracowników</div>
+</div>
+
+<h2>SCHEMAT ZARZĄDZANIA</h2>
+
+<pre>
+┌─────────────────────────────────────────────┐
+│         RADA STRATEGICZNA (15 osób)         │
+│    Nadzór + Strategia + Kontrola budżetu    │
+└──────────────────┬──────────────────────────┘
+                   │
+┌──────────────────▼──────────────────────────┐
+│       DYREKTOR PROGRAMU POLSKA 2038         │
+│         (CEO - rekrutacja Q1 2026)          │
+└──────┬────────┬────────┬────────┬───────────┘
+       │        │        │        │
+   ┌───▼──┐ ┌──▼───┐ ┌──▼───┐ ┌──▼────┐
+   │FILAR│ │FILAR │ │FILAR │ │CENTRUM│
+   │  1  │ │  2-7 │ │ PPP  │ │  OPS  │
+   └─────┘ └──────┘ └──────┘ └───────┘
+</pre>
+
+<hr>
+
+<h2>RADA STRATEGICZNA | 15 CZŁONKÓW</h2>
+
+<h3>Skład (wybór Q1 2026)</h3>
+
+<h4>Przedstawiciele PZPN (3 osoby)</h4>
+<ol>
+<li><strong>Prezes PZPN</strong> lub Wiceprezes ds. Sportowych</li>
+<li><strong>Dyrektor Sportowy PZPN</strong></li>
+<li><strong>Dyrektor Szkolenia PZPN</strong></li>
+</ol>
+
+<h4>Samorządy (3 osoby)</h4>
+<ol>
+<li><strong>Przedstawiciel Związku Miast Polskich</strong></li>
+<li><strong>Przedstawiciel Związku Gmin Wiejskich</strong></li>
+<li><strong>Marszałek województwa</strong> (rotacja co 2 lata)</li>
+</ol>
+
+<h4>Eksperci międzynarodowi (3 osoby)</h4>
+<ol>
+<li><strong>Michel Sablon</strong> (architekt reformy belgijskiej 2000-2018) lub podobny</li>
+<li><strong>Były trener kadry narodowej</strong> (Chorwacja/Belgia/Francja)</li>
+<li><strong>Ekspert UEFA</strong> ds. rozwoju młodzieży</li>
+</ol>
+
+<h4>Trenerzy polscy (3 osoby)</h4>
+<ol>
+<li><strong>Licencja UEFA Pro</strong> - doświadczenie Ekstraklasa (min. 5 lat)</li>
+<li><strong>Licencja UEFA Pro</strong> - doświadczenie akademia (min. 10 lat)</li>
+<li><strong>Licencja UEFA Pro</strong> - doświadczenie kadra młodzieżowa</li>
+</ol>
+
+<h4>Biznes / Sponsorzy (3 osoby)</h4>
+<ol>
+<li><strong>PKO Bank Polski</strong> - Dyrektor ds. Sponsoringu</li>
+<li><strong>Orlen</strong> - Dyrektor ds. CSR</li>
+<li><strong>Przedstawiciel Związku Pracodawców Prywatnych</strong></li>
+</ol>
+
+<h3>Funkcje Rady</h3>
+
+<p><strong>Przewodniczący:</strong> Wybór spośród 15 członków (niezależny, NIE z PZPN)<br>
+<strong>Kadencja:</strong> 4 lata (możliwość 1 re-elekcji)<br>
+<strong>Spotkania:</strong> Kwartalne (+ ad-hoc w razie kryzysu)<br>
+<strong>Wynagrodzenie:</strong> 10 000 zł/kwartał (15 osób × 40k/rok = 600k zł)</p>
+
+<p><strong>Obowiązki:</strong></p>
+<ul>
+<li>Zatwierdzanie budżetu rocznego</li>
+<li>Nadzór nad realizacją KPI</li>
+<li>Decyzje strategiczne (np. zmiana kierunku)</li>
+<li>Zatrudnienie/zwolnienie Dyrektora Programu</li>
+<li>Raport roczny dla społeczeństwa</li>
+</ul>
+
+<p><strong>Kompetencje:</strong></p>
+<ul>
+<li>Veto przy wydatkach >50 mln zł (wymagana większość 10/15)</li>
+<li>Audyt zewnętrzny (prawo żądania w każdej chwili)</li>
+<li>Dostęp do wszystkich danych finansowych i operacyjnych</li>
+</ul>
+
+<hr>
+
+<h2>DYREKTOR PROGRAMU POLSKA 2038</h2>
+
+<h3>Profil kandydata</h3>
+
+<p><strong>Wymagania:</strong></p>
+<ul>
+<li>Wykształcenie wyższe (sport, zarządzanie, ekonomia)</li>
+<li>Doświadczenie w zarządzaniu projektami >100 mln zł</li>
+<li>Znajomość branży sportowej (min. 10 lat)</li>
+<li>Język angielski C1 (kontakty z UEFA, ekspertami)</li>
+<li>Brak konfliktu interesów (nie może być związany z klubem/PZPN w ostatnich 3 latach)</li>
+</ul>
+
+<p><strong>Mile widziane:</strong></p>
+<ul>
+<li>Doświadczenie międzynarodowe (praca za granicą)</li>
+<li>Certyfikat PMP/Prince2 (zarządzanie projektami)</li>
+<li>Kontakty w UEFA/FIFA</li>
+</ul>
+
+<h3>Kompetencje</h3>
+
+<ul>
+<li><strong>Zarządzanie operacyjne:</strong> Pełna odpowiedzialność za wdrożenie</li>
+<li><strong>Budżet:</strong> Prawo wydatkowania do 10 mln zł bez zgody Rady (>10 mln = zgoda Rady)</li>
+<li><strong>Zatrudnienie:</strong> Prawo rekrutacji zespołu (Centrum Operacyjne + Kierownicy Filarów)</li>
+<li><strong>Raportowanie:</strong> Kwartalnie do Rady, miesięcznie dashboard publiczny</li>
+</ul>
+
+<h3>Wynagrodzenie</h3>
+
+<ul>
+<li><strong>Podstawa:</strong> 50 000 zł/mies (600k zł/rok)</li>
+<li><strong>Bonus:</strong> Do 30% za KPI (180k zł max)</li>
+<li><strong>Umowa:</strong> 4 lata (możliwość przedłużenia o 4 lata)</li>
+</ul>
+
+<p><strong>KPI dla bonusu:</strong></p>
+<ul>
+<li>40%: Realizacja budżetu (wydane = planowane ±5%)</li>
+<li>30%: KPI operacyjne (liczba dzieci, boiska, itp.)</li>
+<li>20%: Wyniki sportowe (kadra, kluby)</li>
+<li>10%: Społeczna akceptacja (badania, media)</li>
+</ul>
+
+<hr>
+
+<h2>CENTRUM OPERACYJNE | 25 OSÓB</h2>
+
+<h3>Struktura (Warszawa, siedziba PZPN)</h3>
+
+<h4>1. DYREKTOR PROGRAMU (1 osoba)</h4>
+<p>CEO projektu</p>
+
+<h4>2. ZASTĘPCA DYREKTORA / COO (1 osoba)</h4>
+<ul>
+<li>Operacje dzienne</li>
+<li>Wynagrodzenie: 35 000 zł/mies</li>
+</ul>
+
+<h4>3. KIEROWNICY FILARÓW (7 osób)</h4>
+<p><strong>Każdy filar = 1 kierownik:</strong></p>
+<ol>
+<li>Talenciak+</li>
+<li>Orzeł 2038</li>
+<li>Ekstraklasa Premium</li>
+<li>Infrastruktura (boiska)</li>
+<li>Kadra A'</li>
+<li>Szkolenia trenerów</li>
+<li>Liga Elite</li>
+</ol>
+
+<p><strong>Wynagrodzenie:</strong> 25 000 zł/mies każdy<br>
+<strong>Odpowiedzialność:</strong> Realizacja swojego filaru (budżet + KPI)</p>
+
+<h4>4. DZIAŁ FINANSÓW (3 osoby)</h4>
+<ul>
+<li><strong>CFO</strong> (30k zł/mies)</li>
+<li><strong>Kontroler budżetu</strong> (15k zł/mies)</li>
+<li><strong>Księgowy</strong> (10k zł/mies)</li>
+</ul>
+
+<h4>5. DZIAŁ IT / PPP 2.0 (4 osoby)</h4>
+<ul>
+<li><strong>CTO</strong> (35k zł/mies)</li>
+<li><strong>2x Developer</strong> (15k zł/mies każdy)</li>
+<li><strong>Data Analyst</strong> (12k zł/mies)</li>
+</ul>
+
+<h4>6. DZIAŁ HR (2 osoby)</h4>
+<ul>
+<li><strong>HR Manager</strong> (18k zł/mies)</li>
+<li><strong>Rekruter</strong> (12k zł/mies)</li>
+</ul>
+
+<h4>7. DZIAŁ KOMUNIKACJI (3 osoby)</h4>
+<ul>
+<li><strong>Dyrektor Komunikacji</strong> (25k zł/mies)</li>
+<li><strong>Social Media Manager</strong> (12k zł/mies)</li>
+<li><strong>PR Specialist</strong> (12k zł/mies)</li>
+</ul>
+
+<h4>8. DZIAŁ PRAWNY (2 osoby)</h4>
+<ul>
+<li><strong>Radca prawny</strong> (20k zł/mies)</li>
+<li><strong>Asystent prawny</strong> (10k zł/mies)</li>
+</ul>
+
+<h4>9. ASYSTENCI / ADMINISTRACJA (2 osoby)</h4>
+<ul>
+<li><strong>Office Manager</strong> (10k zł/mies)</li>
+<li><strong>Asystent</strong> (8k zł/mies)</li>
+</ul>
+
+<p><strong>BUDŻET CENTRUM:</strong> 15 mln zł/rok (wynagrodzenia + infrastruktura + IT)</p>
+
+<hr>
+
+<h2>PODSUMOWANIE ZATRUDNIENIA</h2>
+
+<table>
+<thead>
+<tr>
+<th>STRUKTURA</th>
+<th>LICZBA OSÓB</th>
+<th>BUDŻET ROCZNY</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rada Strategiczna</td>
+<td>15</td>
+<td>0,6 mln</td>
+</tr>
+<tr>
+<td>Centrum Operacyjne</td>
+<td>25</td>
+<td>15 mln</td>
+</tr>
+<tr>
+<td>Talenciak+ (skauci)</td>
+<td>500</td>
+<td>18 mln</td>
+</tr>
+<tr>
+<td>Orzeł 2038 (sztab)</td>
+<td>28</td>
+<td>5 mln</td>
+</tr>
+<tr>
+<td>Kadra A' (sztab)</td>
+<td>8</td>
+<td>1,7 mln</td>
+</tr>
+<tr>
+<td>Infrastruktura (nadzór)</td>
+<td>20</td>
+<td>5 mln</td>
+</tr>
+<tr>
+<td>Szkolenia trenerów</td>
+<td>8</td>
+<td>1 mln</td>
+</tr>
+<tr style="background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%); font-weight: 700;">
+<td><strong>TOTAL</strong></td>
+<td><strong>604</strong></td>
+<td><strong>46,3 mln</strong></td>
+</tr>
+</tbody>
+</table>
+
+<p><em>*Nota: Zawodnicy (145 osób) + trenerzy kursów (zewnętrzni) nie wliczeni</em></p>
+
+<hr>
+
+<h2>SCHEMAT DECYZYJNY</h2>
+
+<h3>DECYZJE STRATEGICZNE (>50 mln zł)</h3>
+<pre>
+Wniosek → Dyrektor Programu → Rada Strategiczna (głosowanie) → Decyzja
+</pre>
+
+<h3>DECYZJE OPERACYJNE (10-50 mln zł)</h3>
+<pre>
+Wniosek → Kierownik Filaru → Dyrektor Programu → Decyzja (+ info do Rady)
+</pre>
+
+<h3>DECYZJE BIEŻĄCE (<10 mln zł)</h3>
+<pre>
+Wniosek → Kierownik Filaru → Decyzja (raport miesięczny do Dyrektora)
+</pre>
+
+<hr>
+
+<h2>KULTURA ORGANIZACYJNA</h2>
+
+<h3>Wartości</h3>
+<ol>
+<li><strong>Transparentność:</strong> Wszystkie decyzje publiczne (dashboard)</li>
+<li><strong>Merytokracja:</strong> Zatrudnienie na podstawie kompetencji, nie znajomości</li>
+<li><strong>Ambicja:</strong> Cel = Mistrzostwo Świata, nie "walka o awans"</li>
+<li><strong>Współpraca:</strong> PZPN + gminy + kluby + społeczeństwo = jeden team</li>
+</ol>
+
+<h3>KPI organizacyjne</h3>
+<ul>
+<li><strong>Rotacja pracowników:</strong> <10%/rok (stabilność)</li>
+<li><strong>Satysfakcja zespołu:</strong> >80% (badania roczne)</li>
+<li><strong>Terminowość projektów:</strong> >90% na czas</li>
+<li><strong>Budżet:</strong> ±5% od planu (dyscyplina finansowa)</li>
+</ul>
+
+<hr>
+
+<h2>REKRUTACJA KLUCZOWYCH STANOWISK</h2>
+
+<h3>Dyrektor Programu (Q1 2026)</h3>
+<ul>
+<li><strong>Konkurs otwarty:</strong> Zgłoszenia 01.01-28.02.2026</li>
+<li><strong>Komisja:</strong> Rada Strategiczna</li>
+<li><strong>Proces:</strong> CV → rozmowa → case study → decyzja</li>
+<li><strong>Ogłoszenie:</strong> Grudzień 2025</li>
+</ul>
+
+<h3>Kierownicy Filarów (Q1 2026)</h3>
+<ul>
+<li><strong>Rekrutacja:</strong> Dyrektor Programu + HR</li>
+<li><strong>Deadline:</strong> 31.03.2026</li>
+</ul>
+
+<h3>Skauci Talenciak+ (Q1-Q2 2026)</h3>
+<ul>
+<li><strong>Rekrutacja masowa:</strong> 500 osób</li>
+<li><strong>Wymagania:</strong>
+<ul>
+<li>Licencja trenerska (min. C)</li>
+<li>Doświadczenie z dziećmi (min. 2 lata)</li>
+<li>Prawo jazdy kat. B (mobilność)</li>
+</ul>
+</li>
+<li><strong>Szkolenie:</strong> 2 tygodnie (metodologia belgijska)</li>
+</ul>
+
+<hr>
+
+<h2 style="text-align: center; margin: 60px 0; font-size: 32pt; color: #dc2626;">TO JEST ARMIA</h2>
+
+<p style="text-align: center; font-size: 16pt; margin: 40px 0;">
+<strong>604 ludzi + marzenie 38 milionów</strong>
+</p>
+
+<p style="text-align: center; font-size: 18pt; margin: 40px 0;">
+<strong style="color: #dc2626;">Która zdobędzie Mistrzostwo Świata 2038</strong>
+</p>
+
+<p style="text-align: center; font-size: 24pt; margin: 40px 0;">
+<strong style="color: #059669;">LET'S GO! 🏆</strong>
+</p>
+
+<div class="footer">
+<h2 style="color: #dc2626; margin-bottom: 20px;">🏆 POLSKA 2038 - MISTRZOSTWO ŚWIATA 2038 🏆</h2>
+<p><strong>Projekt: POLSKA 2038 - Struktura Organizacyjna</strong></p>
+<p>Dokument: PEŁNA WERSJA (15 stron) • 604 pracowników • Wszystkie szczegóły • Kompletna zawartość</p>
+<p>Kontakt: polska2038@proton.me • Wersja: FINAL (Listopad 2024)</p>
+<p style="margin-top: 20px; font-size: 8pt;">
+Ten dokument zawiera PEŁNĄ zawartość z pliku 03-STRUKTURA-ORGANIZACYJNA.md<br>
+Profesjonalne formatowanie • Gotowy do druku • Super wygląd
+</p>
+</div>
+
+</div>
+
+<script>
+window.onload = function() {
+    alert('✅ DOKUMENT 3/5 GOTOWY!\n\nKliknij czerwony przycisk "ZAPISZ JAKO PDF"\nLUB naciśnij Ctrl+P\n\nPotem wybierz "Zapisz jako PDF" i zapisz!\n\nSTRUKTURA ORGANIZACYJNA - 15 STRON PEŁNA WERSJA!');
+};
+</script>
+
+</body>
+</html>

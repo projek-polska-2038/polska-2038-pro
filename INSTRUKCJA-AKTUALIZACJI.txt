@@ -1,0 +1,175 @@
+═══════════════════════════════════════════════════════════════════════════
+🔄 JAK ZAKTUALIZOWAĆ ISTNIEJĄCY PROJEKT NA GITHUB - SZYBKA INSTRUKCJA
+═══════════════════════════════════════════════════════════════════════════
+
+Twój aktualny projekt: https://polska2038.github.io/polska_projekt_2038/
+
+═══════════════════════════════════════════════════════════════════════════
+⚡ OPCJA 1: AUTOMATYCZNA AKTUALIZACJA (ZALECANE - 2 MINUTY)
+═══════════════════════════════════════════════════════════════════════════
+
+1. Kliknij 2x na: AKTUALIZUJ-GITHUB.bat
+2. Postępuj zgodnie z instrukcjami
+3. Poczekaj 1-2 minuty
+4. Odśwież stronę (Ctrl+F5)
+5. ✅ Gotowe!
+
+═══════════════════════════════════════════════════════════════════════════
+📝 OPCJA 2: RĘCZNA AKTUALIZACJA (PEŁNA KONTROLA - 5 MINUT)
+═══════════════════════════════════════════════════════════════════════════
+
+Otwórz PowerShell w folderze projektu i wpisz:
+
+# 1. Sprawdź co się zmieniło
+git status
+
+# 2. Dodaj wszystkie zmiany
+git add .
+
+# 3. Zatwierdź z opisem
+git commit -m "Dodano nowe filary 2 i 3"
+
+# 4. Wyślij na GitHub
+git push origin main
+
+# Gotowe! Strona zaktualizuje się automatycznie w 1-2 minuty
+
+
+═══════════════════════════════════════════════════════════════════════════
+🆘 CO JEŚLI POJAWI SIĘ BŁĄD?
+═══════════════════════════════════════════════════════════════════════════
+
+❌ BŁĄD: "not a git repository"
+✅ ROZWIĄZANIE:
+   cd "C:\Users\tomiz\Desktop\POLSKA 2038"
+   git init
+   git remote add origin https://github.com/polska2038/polska_projekt_2038.git
+   git fetch origin
+   git reset --soft origin/main
+   Następnie uruchom ponownie: AKTUALIZUJ-GITHUB.bat
+
+
+❌ BŁĄD: "failed to push"
+✅ ROZWIĄZANIE:
+   git pull origin main --rebase
+   git push origin main
+
+
+❌ BŁĄD: "Permission denied" lub prosi o hasło
+✅ ROZWIĄZANIE:
+   Musisz użyć Personal Access Token zamiast hasła
+   1. Wejdź: https://github.com/settings/tokens
+   2. Znajdź swój token lub stwórz nowy
+   3. Użyj tokenu jako hasła
+
+
+═══════════════════════════════════════════════════════════════════════════
+📊 CO DOKŁADNIE ZOSTAŁO ZMIENIONE?
+═══════════════════════════════════════════════════════════════════════════
+
+W Twoim projekcie zaktualizowano:
+
+✅ index.html - dodano nowe sekcje filarów
+✅ DOKUMENTY/ - zaktualizowano dokumentację
+✅ press/ - dodano materiały dla nowych filarów
+✅ README.md - zaktualizowano opis projektu
+✅ Dodano pliki pomocnicze do wdrożenia
+
+Wszystkie te zmiany zostaną wysłane na GitHub i pojawią się na stronie.
+
+
+═══════════════════════════════════════════════════════════════════════════
+⏱️ ILE TO TRWA?
+═══════════════════════════════════════════════════════════════════════════
+
+⚡ Wysłanie zmian na GitHub: 30 sekund
+🌐 Aktualizacja strony GitHub Pages: 1-2 minuty
+📱 Pojawienie się na urządzeniach: natychmiast (po odświeżeniu)
+
+ŁĄCZNIE: ~2-3 minuty od kliknięcia do gotowej strony!
+
+
+═══════════════════════════════════════════════════════════════════════════
+🎯 TWOJE KROKI - WYBIERZ JEDNĄ OPCJĘ:
+═══════════════════════════════════════════════════════════════════════════
+
+🟢 DLA SZYBKICH:
+   → Kliknij 2x: AKTUALIZUJ-GITHUB.bat
+
+🟡 DLA OSTROŻNYCH:
+   → Otwórz PowerShell
+   → Wpisz: git status (zobacz co się zmieni)
+   → Wpisz: git add .
+   → Wpisz: git commit -m "Nowe filary"
+   → Wpisz: git push origin main
+
+
+═══════════════════════════════════════════════════════════════════════════
+✅ PO AKTUALIZACJI
+═══════════════════════════════════════════════════════════════════════════
+
+1. Poczekaj 1-2 minuty
+2. Wejdź na: https://polska2038.github.io/polska_projekt_2038/
+3. Odśwież stronę (Ctrl+F5)
+4. Sprawdź nowe filary
+5. Sprawdź Press Kit: https://polska2038.github.io/polska_projekt_2038/press/
+6. ✅ Wszystko działa? Gratulacje!
+
+
+═══════════════════════════════════════════════════════════════════════════
+💡 PRZYDATNE INFORMACJE
+═══════════════════════════════════════════════════════════════════════════
+
+📧 TWOJE LINKI DO UDOSTĘPNIENIA:
+   Główna strona:  https://polska2038.github.io/polska_projekt_2038/
+   Press Kit:      https://polska2038.github.io/polska_projekt_2038/press/
+   Repozytorium:   https://github.com/polska2038/polska_projekt_2038
+
+🔄 KOLEJNE AKTUALIZACJE W PRZYSZŁOŚCI:
+   Za każdym razem gdy zmienisz pliki:
+   1. Kliknij 2x: AKTUALIZUJ-GITHUB.bat
+   2. Lub: git add . → git commit -m "opis" → git push
+
+📱 SPRAWDZANIE NA RÓŻNYCH URZĄDZENIACH:
+   • Komputer: Ctrl+F5 (wymuszone odświeżenie)
+   • Telefon: Wyczyść cache przeglądarki lub tryb incognito
+   • Tablet: Wymuszone odświeżenie (zależnie od systemu)
+
+
+═══════════════════════════════════════════════════════════════════════════
+🎓 DODATKOWE OPCJE (ZAAWANSOWANE)
+═══════════════════════════════════════════════════════════════════════════
+
+🔍 PODEJRZYJ HISTORIĘ ZMIAN:
+   git log --oneline
+
+📊 ZOBACZ SZCZEGÓŁY OSTATNIEGO COMMIT:
+   git show
+
+⏪ COFNIJ OSTATNIĄ ZMIANĘ (PRZED PUSH):
+   git reset --soft HEAD~1
+
+⏪ COFNIJ ZMIANY NA GITHUB (OSTROŻNIE!):
+   git revert HEAD
+   git push origin main
+
+
+═══════════════════════════════════════════════════════════════════════════
+📞 POMOC
+═══════════════════════════════════════════════════════════════════════════
+
+Więcej komend: GIT-KOMENDY-SCIAGAWKA.txt
+FAQ: FAQ-GITHUB-PAGES.txt
+Pełna instrukcja: GITHUB-DEPLOYMENT-GUIDE.md
+
+
+═══════════════════════════════════════════════════════════════════════════
+
+🚀 GOTOWY? KLIKNIJ 2X NA: AKTUALIZUJ-GITHUB.bat
+
+═══════════════════════════════════════════════════════════════════════════
+
+🇵🇱⚽🏆 POLSKA 2038 - ZAKTUALIZOWANA O NOWE FILARY! 🇵🇱⚽🏆
+
+═══════════════════════════════════════════════════════════════════════════
+

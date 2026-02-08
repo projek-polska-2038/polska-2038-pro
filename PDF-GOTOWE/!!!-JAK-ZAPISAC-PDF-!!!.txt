@@ -1,0 +1,133 @@
+╔════════════════════════════════════════════════════════════╗
+║                                                            ║
+║          📄 JAK ZAPISAĆ PLIKI HTML JAKO PDF 📄            ║
+║                                                            ║
+╚════════════════════════════════════════════════════════════╝
+
+=== PROFESJONALNE PLIKI HTML GOTOWE! ===
+
+Stworzyłem dla Ciebie profesjonalnie sformatowane pliki HTML,
+które wyglądają jak dokumenty PDF. Teraz musisz je tylko zapisać.
+
+═══════════════════════════════════════════════════════════
+
+🚀 JAK ZAPISAĆ JAKO PDF? (30 SEKUND/PLIK)
+
+KROK 1: Znajdź folder
+   📁 C:\Users\tomiz\Desktop\POLSKA 2038\PDF-GOTOWE\
+
+KROK 2: Dwuklik na plik HTML
+   Przykład: 01-EXECUTIVE-SUMMARY.html
+   → Otworzy się w przeglądarce
+
+KROK 3: Drukuj do PDF
+   • Naciśnij: Ctrl + P (lub kliknij Drukuj)
+   • Wybierz: "Zapisz jako PDF" lub "Microsoft Print to PDF"
+   • Kliknij: Zapisz
+   • Gotowe!
+
+KROK 4: Powtórz dla wszystkich plików
+   (Lista poniżej)
+
+═══════════════════════════════════════════════════════════
+
+📂 LISTA PLIKÓW DO ZAPISANIA:
+
+FOLDER: PDF-GOTOWE/
+
+✓ 01-EXECUTIVE-SUMMARY.html
+  → Zapisz jako: POLSKA-2038-Executive-Summary.pdf
+
+✓ 02-BRIEFING-DLA-MEDIOW.html (już robię!)
+  → Zapisz jako: POLSKA-2038-Briefing-Media.pdf
+
+✓ 03-INSTRUKCJA-EMAIL.html (już robię!)
+  → Zapisz jako: POLSKA-2038-Instrukcja-Email.pdf
+
+═══════════════════════════════════════════════════════════
+
+🎯 CO WYSŁAĆ DO PZPN I MEDIÓW?
+
+GŁÓWNY ZAŁĄCZNIK (OBOWIĄZKOWO):
+   📄 POLSKA 2038.html
+      (Interaktywna prezentacja - NIE zapisuj jako PDF!)
+
+OPCJONALNIE (dla ekspertów):
+   📄 POLSKA-2038-Executive-Summary.pdf
+   📄 POLSKA-2038-Briefing-Media.pdf
+
+PEŁNA PACZKA (jeśli chcą więcej):
+   Wszystkie dokumenty z folderu DOKUMENTY/ jako PDF
+
+═══════════════════════════════════════════════════════════
+
+⚡ SUPER SZYBKA METODA:
+
+1. Otwórz folder: PDF-GOTOWE\
+2. Dla każdego pliku .html:
+   - Dwuklik
+   - Ctrl+P
+   - Zapisz jako PDF
+   - Zamknij
+3. Gotowe!
+
+CZAS: 2-3 minuty dla wszystkich plików
+
+═══════════════════════════════════════════════════════════
+
+📧 CO WYSŁAĆ?
+
+MINIMALNA WERSJA (zalecana na start):
+   Załącznik: POLSKA 2038.html
+
+PEŁNA WERSJA (dla ekspertów):
+   Załączniki:
+   - POLSKA 2038.html (główna prezentacja)
+   - POLSKA-2038-Executive-Summary.pdf
+   - POLSKA-2038-Briefing-Media.pdf
+
+═══════════════════════════════════════════════════════════
+
+🔥 WAŻNE!
+
+POLSKA 2038.html:
+   ✓ NIE zapisuj jako PDF!
+   ✓ Jest interaktywna (przewijanie slajdów)
+   ✓ Wyślij jako .html
+
+Pozostałe dokumenty:
+   ✓ Zapisz jako PDF
+   ✓ Profesjonalny wygląd
+   ✓ Gotowe do druku
+
+═══════════════════════════════════════════════════════════
+
+💡 WSKAZÓWKI:
+
+• W opcjach drukowania wybierz:
+  - Układ: Pionowy (Portrait)
+  - Rozmiar: A4
+  - Marginesy: Domyślne
+  - Tło graficzne: TAK (żeby zachować kolory)
+
+• Jeśli przeglądarka nie ma opcji "Zapisz jako PDF":
+  - Zainstaluj: https://www.adobe.com/acrobat/pdf-reader.html
+  - Lub użyj: "Microsoft Print to PDF" (wbudowane w Windows 10/11)
+
+═══════════════════════════════════════════════════════════
+
+🚀 NASTĘPNY KROK:
+
+1. Otwórz folder: PDF-GOTOWE\
+2. Zapisz pliki HTML jako PDF (jak wyżej)
+3. Otwórz: INSTRUKCJA-WYSYLKI-FINALNA.txt
+4. Wyślij do PZPN i mediów!
+
+═══════════════════════════════════════════════════════════
+
+🇵🇱 POWODZENIA!
+
+Kontakt: polska2038@proton.me
+
+═══════════════════════════════════════════════════════════
+

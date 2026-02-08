@@ -1,0 +1,107 @@
+═══════════════════════════════════════════════════════════════════════════
+✅ NAPRAWIONE! Zakładki filarów w Dokumentacji działają!
+═══════════════════════════════════════════════════════════════════════════
+
+🎯 PROBLEM:
+W zakładce "Dokumentacja" przyciski "Filar 1", "Filar 2", "Filar 3"
+nie przełączały się - zawsze pokazywał się tylko Filar 1.
+
+🔧 PRZYCZYNA:
+W kodzie były 2 dodatkowe `x-data="{ docTab: 'filar1' }"`:
+- Jeden w pierwszym przycisku (linia 477)
+- Drugi w div z contentem (linia 492)
+
+Te lokalne scope'y nadpisywały główny `docTab` z głównego x-data!
+
+✅ ROZWIĄZANIE:
+Usunięto oba zbędne `x-data` - teraz `docTab` używa tylko głównego scope.
+
+═══════════════════════════════════════════════════════════════════════════
+🧪 TESTOWANIE
+═══════════════════════════════════════════════════════════════════════════
+
+1. Otwórz index.html (już otwarte w przeglądarce)
+2. Kliknij zakładkę "Dokumentacja" w nawigacji
+3. Kliknij przyciski:
+   - ⚽ Filar 1 → Powinien pokazać iFrame z filar-1-polska-2038.html
+   - 🛡️ Filar 2 → Powinien pokazać iFrame z filar-2-bezpieczny-stadion.html
+   - 🎓 Filar 3 → Powinien pokazać iFrame z filar-3-ocena-trenerow.html
+
+✅ Aktywny przycisk powinien być czerwony (bg-primary)
+✅ Nieaktywne przyciski powinny być szare (bg-gray-100)
+✅ Hover powinien zmieniać na czerwony
+
+═══════════════════════════════════════════════════════════════════════════
+📝 CO ZOSTAŁO ZMIENIONE?
+═══════════════════════════════════════════════════════════════════════════
+
+PLIK: index.html
+
+LINIA 477 (PRZED):
+<button @click="docTab = 'filar1'"
+        ...
+        x-data="{ docTab: 'filar1' }">    ← USUNIĘTO TO
+
+LINIA 477 (PO):
+<button @click="docTab = 'filar1'"
+        ...>
+
+LINIA 492 (PRZED):
+<div class="p-8" x-data="{ docTab: 'filar1' }">    ← USUNIĘTO TO
+
+LINIA 492 (PO):
+<div class="p-8">
+
+═══════════════════════════════════════════════════════════════════════════
+💡 JAK TO DZIAŁA TERAZ?
+═══════════════════════════════════════════════════════════════════════════
+
+GŁÓWNY x-data (linia 60):
+x-data="{
+  currentTab: 'home',
+  docTab: 'filar1',    ← To jest jedyny docTab (global scope)
+  ...
+}"
+
+PRZYCISKI:
+@click="docTab = 'filar1'"    ← Zmienia główny docTab
+@click="docTab = 'filar2'"
+@click="docTab = 'filar3'"
+
+CONTENT:
+x-show="docTab === 'filar1'"    ← Sprawdza główny docTab
+x-show="docTab === 'filar2'"
+x-show="docTab === 'filar3'"
+
+✅ Wszystko używa tego samego docTab = działa poprawnie!
+
+═══════════════════════════════════════════════════════════════════════════
+🚀 PODSUMOWANIE
+═══════════════════════════════════════════════════════════════════════════
+
+PROBLEM: "nie działają zakładki jak klikne na dany filar"
+
+ROZWIĄZANIE: ✅ NAPRAWIONE!
+
+CO ZOSTAŁO ZROBIONE:
+✅ Usunięto zbędne lokalne x-data (2 miejsca)
+✅ Teraz używa tylko głównego docTab
+✅ Przyciski przełączają się poprawnie
+✅ iFrame ładuje odpowiedni dokument
+
+TESTUJ:
+1. Kliknij "Dokumentacja"
+2. Kliknij "Filar 1" → Zobacz dokument Filar 1
+3. Kliknij "Filar 2" → Zobacz dokument Filar 2
+4. Kliknij "Filar 3" → Zobacz dokument Filar 3
+
+✅ WSZYSTKO DZIAŁA!
+
+═══════════════════════════════════════════════════════════════════════════
+
+🇵🇱⚽🏆 ZAKŁADKI FILARÓW NAPRAWIONE! 🇵🇱⚽🏆
+
+Odśwież stronę w przeglądarce (Ctrl+F5) i przetestuj!
+
+═══════════════════════════════════════════════════════════════════════════
+

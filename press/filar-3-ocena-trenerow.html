@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FILAR 3: NIEZALEŻNA OCENA TRENERÓW - Szczegółowa Dokumentacja</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.8;
+      color: #333;
+      background: white;
+      padding: 40px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    header {
+      background: linear-gradient(135deg, #dc143c, #8b0000);
+      color: white;
+      padding: 50px 40px;
+      margin: -40px -40px 40px -40px;
+      text-align: center;
+      position: relative;
+    }
+
+    .back-button {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: rgba(255,255,255,0.2);
+      color: white;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: all 0.3s;
+      border: 2px solid rgba(255,255,255,0.3);
+    }
+
+    .back-button:hover {
+      background: white;
+      color: #dc143c;
+      transform: translateX(-5px);
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 15px;
+      font-weight: 900;
+    }
+
+    .subtitle {
+      font-size: 1.5em;
+      color: #ffd700;
+      margin-bottom: 20px;
+    }
+
+    .budget {
+      font-size: 2em;
+      color: #ffd700;
+      font-weight: 900;
+      margin-top: 20px;
+    }
+
+    h2 {
+      color: #dc143c;
+      font-size: 2.2em;
+      margin: 50px 0 25px 0;
+      padding-bottom: 15px;
+      border-bottom: 3px solid #dc143c;
+    }
+
+    h3 {
+      color: #dc143c;
+      font-size: 1.6em;
+      margin: 35px 0 20px 0;
+    }
+
+    p {
+      font-size: 1.1em;
+      margin-bottom: 20px;
+      text-align: justify;
+    }
+
+    ul, ol {
+      margin: 20px 0 20px 40px;
+      font-size: 1.1em;
+    }
+
+    li {
+      margin-bottom: 15px;
+    }
+
+    strong {
+      color: #dc143c;
+    }
+
+    .highlight-box {
+      background: #fff3cd;
+      border-left: 5px solid #ffd700;
+      padding: 25px;
+      margin: 30px 0;
+      border-radius: 5px;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin: 30px 0;
+    }
+
+    .stat-box {
+      background: #f8f9fa;
+      padding: 25px;
+      border-radius: 10px;
+      text-align: center;
+      border-top: 4px solid #dc143c;
+    }
+
+    .stat-number {
+      font-size: 2.5em;
+      font-weight: 900;
+      color: #dc143c;
+      margin-bottom: 10px;
+    }
+
+    .stat-label {
+      font-size: 1em;
+      color: #666;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 30px 0;
+      font-size: 1.05em;
+    }
+
+    th, td {
+      padding: 15px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background: #dc143c;
+      color: white;
+      font-weight: 600;
+    }
+
+    tr:hover {
+      background: #f5f5f5;
+    }
+
+    .warning-box {
+      background: #ffebee;
+      border-left: 5px solid #dc143c;
+      padding: 25px;
+      margin: 30px 0;
+      border-radius: 5px;
+    }
+
+    .success-box {
+      background: #e8f5e9;
+      border-left: 5px solid #4caf50;
+      padding: 25px;
+      margin: 30px 0;
+      border-radius: 5px;
+    }
+
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid #ddd;
+      text-align: center;
+      color: #666;
+    }
+
+    @media print {
+      body { padding: 20px; }
+      header { margin: -20px -20px 30px -20px; }
+    }
+
+    /* Hide header when in iframe */
+    @media screen {
+      body:not(.standalone) header {
+        display: none;
+      }
+    }
+  </style>
+  <script>
+    // Detect if page is in iframe
+    if (window.self !== window.top) {
+      document.addEventListener('DOMContentLoaded', function() {
+        document.body.classList.remove('standalone');
+      });
+    } else {
+      document.addEventListener('DOMContentLoaded', function() {
+        document.body.classList.add('standalone');
+      });
+    }
+  </script>
+</head>
+<body class="standalone">
+
+  <header>
+    <a href="../index.html#presskit" class="back-button">← Powrót do strony głównej</a>
+    <h1>🎓 FILAR 3: NIEZALEŻNA OCENA TRENERÓW</h1>
+    <div class="subtitle">Budowanie Jakości - Audyty Zewnętrzne i Transparentność</div>
+    <div class="budget">Budżet: 30 000 000 zł/rok</div>
+  </header>
+
+  <h2>📋 Podsumowanie Wykonawcze</h2>
+  <p>
+    <strong>FILAR 3: NIEZALEŻNA OCENA TRENERÓW</strong> to system niezależnych audytów zewnętrznych oceniających
+    jakość pracy trenerów w systemie publicznym (Aktywna Szkoła, SMS, Orliki). Główny cel: 100% trenerów
+    korzystających ze środków publicznych objętych oceną do 2028 roku, z zakazem pracy dla słabych trenerów
+    i jawnymi raportami dla rodziców i JST.
+  </p>
+
+  <div class="warning-box">
+    <h3 style="margin-top: 0; color: #dc143c;">⚠️ Najważniejszy Filar - Bez Niego Cały Projekt Się Zawali</h3>
+    <p style="font-size: 1.2em; margin-bottom: 0;">
+      <strong>Dlaczego?</strong> Jeśli pieniądze z FILARU 1 (1 mld zł/rok) trafią do złych trenerów,
+      dzieci będą źle szkolone i CAŁY BUDŻET PÓJDZIE NA MARNE. To jak budowa domu na gliniastym gruncie -
+      bez fundamentu (dobrych trenerów) wszystko się zawali.
+    </p>
+  </div>
+
+  <div class="highlight-box">
+    <h3 style="margin-top: 0;">🎯 Główny Cel</h3>
+    <p style="font-size: 1.3em; font-weight: 600; margin-bottom: 0;">
+      100% trenerów w systemie publicznym objętych oceną do 2028 + zakaz pracy dla słabych + jawne raporty
+    </p>
+  </div>
+
+  <h2>💰 Szczegółowy Budżet (mln zł/rok)</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Kategoria</th>
+        <th>Budżet</th>
+        <th>Opis</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Audyty Zewnętrzne</strong></td>
+        <td><strong>15 mln zł</strong></td>
+        <td>5000 trenerów/rok × 3000 zł/audyt</td>
+      </tr>
+      <tr>
+        <td><strong>Platforma Ocen + Raporty</strong></td>
+        <td><strong>8 mln zł</strong></td>
+        <td>System IT + publikacja wyników</td>
+      </tr>
+      <tr>
+        <td><strong>Szkolenia Trenerów</strong></td>
+        <td><strong>5 mln zł</strong></td>
+        <td>Podwyższanie kwalifikacji słabych</td>
+      </tr>
+      <tr>
+        <td><strong>Kontrola Jakości</strong></td>
+        <td><strong>2 mln zł</strong></td>
+        <td>Monitoring systemu + audyt audytorów</td>
+      </tr>
+      <tr style="background: #ffd700;">
+        <td><strong>ŁĄCZNIE</strong></td>
+        <td><strong>30 mln zł</strong></td>
+        <td><strong>30 milionów zł/rok</strong></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>🎯 Szczegółowy Opis Komponentów</h2>
+
+  <h3>1️⃣ Audyty Zewnętrzne (15 mln zł/rok)</h3>
+  <p><strong>Cel:</strong> Niezależna ocena 5000 trenerów rocznie przez audytorów z AWF i Instytutu Sportu.</p>
+
+  <p><strong>Kto ocenia:</strong></p>
+  <ul>
+    <li><strong>AWF-y:</strong> Wykładowcy i trenerzy z akademii wychowania fizycznego (Warszawa, Kraków, Katowice, Poznań, Gdańsk)</li>
+    <li><strong>Instytut Sportu:</strong> Eksperci ds. szkolenia młodzieży</li>
+    <li><strong>NIE PZPN:</strong> PZPN nie może być sędzią we własnej sprawie</li>
+    <li><strong>100 audytorów w całej Polsce</strong> (50 trenerów każdy/rok)</li>
+  </ul>
+
+  <p><strong>Co jest oceniane (50 kryteriów):</strong></p>
+  <ol>
+    <li><strong>Rozwój motoryczny dzieci:</strong> Testy przed/po (Sprint 20m, skoki, zwrotność, wytrzymałość)</li>
+    <li><strong>Rozwój techniczny:</strong> Testy techniczne (podania, przyjęcia, strzały, drybling)</li>
+    <li><strong>Znajomość metodyki:</strong> Czy trener wie JAK uczyć (periodyzacja, progresja, indywidualizacja)</li>
+    <li><strong>Bezpieczeństwo:</strong> Czy trening jest bezpieczny (rozgrzewka, urazowość, przeciążenia)</li>
+    <li><strong>Komunikacja:</strong> Jak trener mówi do dzieci (budujący vs. niszczący)</li>
+    <li><strong>Etyka:</strong> Brak krzyku, poniżania, faworyzowania</li>
+  </ol>
+
+  <p><strong>Proces audytu:</strong></p>
+  <ul>
+    <li><strong>Obserwacja:</strong> Audytor obserwuje 3 treningi (niezapowiedziane)</li>
+    <li><strong>Testy dzieci:</strong> Testy motoryczne i techniczne całej grupy</li>
+    <li><strong>Wywiad:</strong> Rozmowa z trenerem (30 min)</li>
+    <li><strong>Ankiety:</strong> Anonimowe ankiety od rodziców i dzieci</li>
+    <li><strong>Raport:</strong> Pisemny raport z oceną 1-10 i rekomendacjami</li>
+    <li><strong>Czas:</strong> 2 dni pracy audytora</li>
+    <li><strong>Koszt:</strong> 3000 zł/audyt (1500 zł/dzień audytora)</li>
+  </ul>
+
+  <h3>2️⃣ Platforma Ocen + Raporty Jawne (8 mln zł/rok)</h3>
+  <p><strong>Cel:</strong> Publiczna platforma z ocenami wszystkich trenerów w systemie publicznym.</p>
+
+  <p><strong>Co pokazuje platforma:</strong></p>
+  <ul>
+    <li><strong>Imię i nazwisko trenera</strong></li>
+    <li><strong>Miejsce pracy</strong> (klub, Orlik, SMS, Aktywna Szkoła)</li>
+    <li><strong>Ocena końcowa:</strong> 1-10 (z ostatniego audytu)</li>
+    <li><strong>Historia ocen:</strong> Trend (poprawia się? pogarsza?)</li>
+    <li><strong>Raport szczegółowy:</strong> PDF do pobrania (dla rodziców)</li>
+    <li><strong>Rekomendacje:</strong> Co trener powinien poprawić</li>
+  </ul>
+
+  <p><strong>Dostęp:</strong></p>
+  <ul>
+    <li><strong>Rodzice:</strong> Mogą sprawdzić trenera PRZED zapisaniem dziecka</li>
+    <li><strong>JST:</strong> Mogą sprawdzić trenera PRZED przyznaniem dotacji</li>
+    <li><strong>Kluby:</strong> Mogą sprawdzić trenera PRZED zatrudnieniem</li>
+    <li><strong>Media:</strong> Mogą napisać ranking najlepszych/najgorszych</li>
+  </ul>
+
+  <p><strong>Koszty:</strong></p>
+  <ul>
+    <li>Rozwój platformy: 3 mln zł (jednorazowo w 2026)</li>
+    <li>Utrzymanie: 2 mln zł/rok (serwery, aktualizacje)</li>
+    <li>Publikacja raportów: 3 mln zł/rok (redakcja, grafika, PDF)</li>
+  </ul>
+
+  <h3>3️⃣ Zakaz Pracy dla Słabych Trenerów</h3>
+  <p><strong>Cel:</strong> Usunięcie słabych trenerów z systemu publicznego.</p>
+
+  <p><strong>Próg odcięcia:</strong></p>
+  <ul>
+    <li><strong>Ocena 1-4:</strong> Natychmiastowy zakaz pracy w systemie publicznym</li>
+    <li><strong>Ocena 5-6:</strong> Rok na poprawę + obowiązkowe szkolenie</li>
+    <li><strong>Ocena 7-10:</strong> OK, może dalej pracować</li>
+  </ul>
+
+  <p><strong>Co to znaczy "zakaz pracy"?</strong></p>
+  <ul>
+    <li><strong>NIE może pracować:</strong> W Aktywnej Szkole, SMS, Orlikach, projektach finansowanych z pieniędzy publicznych</li>
+    <li><strong>MOŻE pracować:</strong> W prywatnych klubach (bez dotacji), jako prywatny trener</li>
+    <li><strong>Logika:</strong> Pieniądz publiczny = wymagania jakościowe. Chcesz publiczne pieniądze? Musisz być dobry.</li>
+  </ul>
+
+  <p><strong>Odwołanie:</strong></p>
+  <ul>
+    <li>Trener może się odwołać w ciągu 30 dni</li>
+    <li>Komisja odwoławcza (3 ekspertów z AWF)</li>
+    <li>Jeśli odwołanie odrzucone → zakaz na 2 lata</li>
+    <li>Po 2 latach może przejść audyt ponownie</li>
+  </ul>
+
+  <h3>4️⃣ Szkolenia dla Trenerów (5 mln zł/rok)</h3>
+  <p><strong>Cel:</strong> Pomoc słabym trenerom w poprawie kwalifikacji.</p>
+
+  <p><strong>Dla kogo:</strong></p>
+  <ul>
+    <li>Trenerzy z oceną 5-6 (obowiązkowo)</li>
+    <li>Trenerzy z oceną 7+ (dobrowolnie)</li>
+  </ul>
+
+  <p><strong>Co obejmuje:</strong></p>
+  <ul>
+    <li><strong>Warsztaty:</strong> 4 weekendy (sobota-niedziela) = 64 godzin</li>
+    <li><strong>Tematy:</strong> Metodyka, periodyzacja, testy motoryczne, komunikacja, psychologia dziecka</li>
+    <li><strong>Prowadzący:</strong> Eksperci z AWF + zagraniczni trenerzy</li>
+    <li><strong>Certyfikat:</strong> Po egzaminie końcowym</li>
+    <li><strong>Koszt:</strong> 5000 zł/trener (1000 trenerów/rok = 5 mln zł)</li>
+  </ul>
+
+  <h3>5️⃣ Kontrola Jakości Systemu (2 mln zł/rok)</h3>
+  <p><strong>Cel:</strong> Upewnienie się, że sam system ocen działa dobrze.</p>
+
+  <p><strong>Audyt audytorów:</strong></p>
+  <ul>
+    <li>10% audytów jest weryfikowanych przez meta-audytorów</li>
+    <li>Meta-audytor obserwuje tego samego trenera co audytor</li>
+    <li>Jeśli oceny się różnią o >2 punkty → przeszkolenie audytora</li>
+    <li>Jeśli audytor 3x się myli → usunięcie z puli audytorów</li>
+  </ul>
+
+  <h2>📈 ROI - Zwrot Z Inwestycji</h2>
+
+  <h3>Efekty od 2030 (konserwatywne szacunki):</h3>
+
+  <div class="stats-grid">
+    <div class="stat-box">
+      <div class="stat-number">+500 mln</div>
+      <div class="stat-label">Efektywność FILARU 1<br>(lepsi trenerzy = lepsze efekty)</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-number">-200 mln</div>
+      <div class="stat-label">Zmniejszenie marnotrawstwa<br>(pieniądze nie trafiają do złych)</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-number">+40%</div>
+      <div class="stat-label">Dzieci w klubach<br>(zaufanie rodziców)</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-number">4x</div>
+      <div class="stat-label">Więcej talentów<br>(z 5 do 20/rocznik)</div>
+    </div>
+  </div>
+
+  <div class="highlight-box">
+    <h3 style="margin-top: 0;">💰 Łączny ROI Ekonomiczny</h3>
+    <p style="font-size: 1.8em; font-weight: 900; color: #dc143c; margin-bottom: 10px;">
+      700+ milionów zł/rok od 2030
+    </p>
+    <p style="font-size: 1.3em; margin-bottom: 0;">
+      = <strong style="color: #dc143c;">2300% zwrotu z inwestycji rocznej (!)</strong>
+    </p>
+  </div>
+
+  <h3>Niewymierny zwrot (najważniejszy!):</h3>
+  <ul>
+    <li><strong>Ochrona dzieci:</strong> Koniec z trenerami-samozwańcami niszczącymi psychikę dzieci</li>
+    <li><strong>Zaufanie rodziców:</strong> Rodzice widzą oceny PRZED zapisaniem dziecka</li>
+    <li><strong>Jakość systemu:</strong> Tylko dobrzy trenerzy w systemie publicznym</li>
+    <li><strong>Prestiż zawodu:</strong> Bycie trenerem = prestiż (jak bycie lekarzem)</li>
+    <li><strong>Wzór dla innych dziedzin:</strong> Ten model można przenieść na inne sporty</li>
+  </ul>
+
+  <h2>⚠️ Dlaczego To Jest Absolutnie Kluczowe?</h2>
+
+  <div class="warning-box">
+    <h3 style="margin-top: 0; color: #dc143c;">Bez FILARU 3 = marnotrawstwo 1 miliarda zł rocznie</h3>
+    <p><strong>Scenariusz bez FILARU 3:</strong></p>
+    <ol>
+      <li>FILAR 1 daje 1 mld zł/rok na szkolenie</li>
+      <li>Pieniądze trafiają do klubów i Orlików</li>
+      <li>Kluby zatrudniają złych trenerów (bo nie ma kontroli)</li>
+      <li>Złe trenerzy źle szkolą dzieci</li>
+      <li>Dzieci nie rozwijają się</li>
+      <li>1 mld zł/rok ZMARNOWANE</li>
+      <li>0 efektów w 2038</li>
+    </ol>
+
+    <p style="margin-top: 20px;"><strong>Scenariusz z FILAREM 3:</strong></p>
+    <ol>
+      <li>FILAR 1 daje 1 mld zł/rok na szkolenie</li>
+      <li>Pieniądze trafiają tylko do klubów z dobrymi trenerami (ocena 7+)</li>
+      <li>Słabi trenerzy są eliminowani lub szkoleni</li>
+      <li>Dobrzy trenerzy dobrze szkolą dzieci</li>
+      <li>Dzieci rozwijają się 2x szybciej</li>
+      <li>1 mld zł/rok = 2 mld zł wartości (przez efektywność)</li>
+      <li>Finał MŚ 2038 = REALNE</li>
+    </ol>
+  </div>
+
+  <h2>🎯 Konkretne Rezultaty Do 2028</h2>
+
+  <ul>
+    <li><strong>100% trenerów objętych oceną</strong> (obecnie: 0%)</li>
+    <li><strong>Jakość szkoleń +150%</strong> (pomiar: testy motoryczne dzieci)</li>
+    <li><strong>Słabi trenerzy wyeliminowani</strong> (~20-30% obecnych trenerów)</li>
+    <li><strong>Jawne rankingi dostępne</strong> dla rodziców i JST</li>
+    <li><strong>Zaufanie rodziców +40%</strong> (więcej dzieci w klubach)</li>
+    <li><strong>Prestiż zawodu trenera +100%</strong> (trener = jak lekarz)</li>
+  </ul>
+
+  <h2>⏰ Timeline Wdrożenia</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Rok</th>
+        <th>Kamień Milowy</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>2026</strong></td>
+        <td>Pilotaż: 500 trenerów w 3 województwach</td>
+      </tr>
+      <tr>
+        <td><strong>2027</strong></td>
+        <td>Skalowanie: 2000 trenerów + uruchomienie platformy</td>
+      </tr>
+      <tr>
+        <td><strong>2028</strong></td>
+        <td><strong style="color: #dc143c;">100% trenerów w systemie publicznym objętych oceną</strong></td>
+      </tr>
+      <tr>
+        <td><strong>2029</strong></td>
+        <td>Pierwsi absolwenci dobrych trenerów w Projekcie Orzeł</td>
+      </tr>
+      <tr>
+        <td><strong>2030+</strong></td>
+        <td>System działa autonomicznie, jakość rośnie rok do roku</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>🔑 Kluczowe Zalety</h2>
+
+  <ul>
+    <li><strong>Niski koszt, wysoki ROI:</strong> 30 mln zł/rok → 700+ mln zł/rok zwrotu = 2300% ROI</li>
+    <li><strong>Ochrona dzieci:</strong> Koniec z trenerami-samozwańcami</li>
+    <li><strong>Transparentność:</strong> Każdy może sprawdzić ocenę trenera</li>
+    <li><strong>Motywacja:</strong> Dobrzy trenerzy są nagradzani, słabi eliminowani</li>
+    <li><strong>Jakość systemu:</strong> Tylko dobrzy trenerzy w systemie publicznym</li>
+    <li><strong>Wzór dla innych:</strong> Model można przenieść na inne sporty i dziedziny</li>
+  </ul>
+
+  <h2>❓ FAQ - Najczęściej Zadawane Pytania</h2>
+
+  <h3>1. Czy to nie jest krzywdzące dla trenerów?</h3>
+  <p>
+    <strong>Nie.</strong> Każdy zawód wymagający kompetencji ma system ocen. Lekarze mają prawo wykonywania zawodu,
+    nauczyciele mają egzaminy kwalifikacyjne, kierowcy mają prawo jazdy. Dlaczego trenerzy mieliby być wyjątkiem,
+    skoro pracują z DZIEĆMI i wydają PIENIĄDZE PUBLICZNE?
+  </p>
+
+  <h3>2. Kto będzie audytorami?</h3>
+  <p>
+    <strong>Eksperci z AWF i Instytutu Sportu.</strong> Nie PZPN (konflikt interesów). Audytorzy muszą mieć:
+    min. 10 lat doświadczenia w szkoleniu młodzieży, licencję UEFA A lub wyższą, przeszkolenie w metodyce audytów.
+  </p>
+
+  <h3>3. Co jeśli trener się nie zgadza z oceną?</h3>
+  <p>
+    <strong>Może się odwołać.</strong> Komisja odwoławcza (3 ekspertów z AWF) rozpatrzy sprawę w ciągu 30 dni.
+    Jeśli odwołanie uzasadnione → ponowny audyt przez innego audytora. Jeśli nieuzasadnione → zakaz potwierdzony.
+  </p>
+
+  <h3>4. Czy to nie jest za drogie?</h3>
+  <p>
+    <strong>30 mln zł/rok to tylko 3% budżetu całego projektu.</strong> A zwrot? 700+ mln zł/rok = 2300% ROI.
+    To najlepsza inwestycja w całym projekcie.
+  </p>
+
+  <h3>5. Czy PZPN się zgodzi?</h3>
+  <p>
+    <strong>Nie pytamy PZPN o zgodę.</strong> Warunkujemy tylko dostęp do pieniędzy publicznych. PZPN może dalej
+    robić swoje, ale jeśli chce pieniądze publiczne → musi spełniać standardy jakości.
+  </p>
+
+  <div class="success-box">
+    <h3 style="margin-top: 0; color: #4caf50;">✅ Podsumowanie</h3>
+    <p style="font-size: 1.2em; margin-bottom: 0;">
+      <strong>FILAR 3 to fundament całego projektu.</strong> Bez niego FILAR 1 (1 mld zł/rok) pójdzie na marne.
+      Z nim - mamy realną szansę na finał MŚ 2038. To najtańszy (30 mln), najbardziej efektywny (2300% ROI)
+      i najważniejszy element całego systemu.
+    </p>
+  </div>
+
+  <div class="footer">
+    <p><strong>Projekt Obywatelski POLSKA 2038</strong></p>
+    <p>Strona: <a href="https://polska2038.github.io/polska_projekt_2038/">polska2038.github.io</a></p>
+    <p style="margin-top: 20px; font-size: 0.9em; color: #999;">
+      Dokument może być drukowany, kopiowany i dystrybuowany. Źródło: "Projekt Obywatelski POLSKA 2038".
+    </p>
+  </div>
+
+</body>
+</html>
+

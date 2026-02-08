@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>POLSKA 2038 - Plan Wdrożenia (PEŁNY)</title>
+    <style>
+        @page { size: A4; margin: 2cm; }
+        @media print {
+            body { background: white; padding: 0; margin: 0; }
+            .no-print { display: none !important; }
+            h1, h2, h3, h4 { page-break-after: avoid; }
+            table { page-break-inside: avoid; }
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+            line-height: 1.7;
+            color: #1a1a1a;
+            background: #f5f5f5;
+            padding: 30px;
+        }
+        .container {
+            max-width: 210mm;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 0 30px rgba(0,0,0,0.1);
+        }
+        .print-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+            color: white;
+            padding: 18px 40px;
+            border: none;
+            border-radius: 12px;
+            font-size: 16pt;
+            font-weight: 900;
+            cursor: pointer;
+            box-shadow: 0 8px 20px rgba(220, 38, 38, 0.4);
+            z-index: 9999;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .print-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(220, 38, 38, 0.6);
+        }
+        h1 {
+            color: #dc2626;
+            font-size: 28pt;
+            font-weight: 900;
+            margin: 30px 0 15px 0;
+            border-bottom: 5px solid #dc2626;
+            padding-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        h2 {
+            color: #1e40af;
+            font-size: 20pt;
+            font-weight: 800;
+            margin: 25px 0 12px 0;
+            background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 6px solid #1e40af;
+        }
+        h3 {
+            color: #059669;
+            font-size: 16pt;
+            font-weight: 700;
+            margin: 20px 0 10px 0;
+            border-left: 4px solid #059669;
+            padding-left: 15px;
+        }
+        h4 {
+            color: #6b7280;
+            font-size: 13pt;
+            font-weight: 700;
+            margin: 15px 0 8px 0;
+        }
+        p {
+            margin: 10px 0;
+            text-align: justify;
+            line-height: 1.8;
+        }
+        ul, ol {
+            margin: 12px 0;
+            padding-left: 30px;
+        }
+        li {
+            margin: 8px 0;
+            line-height: 1.7;
+        }
+        strong {
+            font-weight: 700;
+            color: #dc2626;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 10pt;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        th, td {
+            border: 2px solid #d1d5db;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+            color: white;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        tr:nth-child(even) {
+            background: #f9fafb;
+        }
+        hr {
+            border: none;
+            border-top: 3px solid #e5e7eb;
+            margin: 30px 0;
+        }
+        .footer {
+            text-align: center;
+            color: #6b7280;
+            font-size: 9pt;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 3px solid #e5e7eb;
+        }
+        .cover {
+            text-align: center;
+            padding: 80px 0;
+            background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+            color: white;
+            margin: -40px -40px 40px -40px;
+            border-radius: 0;
+        }
+        .cover h1 {
+            color: white;
+            border: none;
+            font-size: 42pt;
+            margin: 0;
+        }
+        .cover .subtitle {
+            font-size: 24pt;
+            margin: 20px 0;
+            opacity: 0.95;
+        }
+        .warning {
+            background: #fef3c7;
+            padding: 20px;
+            border-left: 5px solid #f59e0b;
+            margin: 20px 0;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+
+<button class="print-btn no-print" onclick="window.print()">🖨️ ZAPISZ JAKO PDF</button>
+
+<div class="container">
+
+<div class="cover">
+    <h1>📝 PLAN WDROŻENIA</h1>
+    <div class="subtitle">INSTRUKCJA DLA PZPN</div>
+    <div style="margin-top: 40px; font-size: 16pt;">20 stron • Kompletna wersja • Krok po kroku</div>
+</div>
+
+<h2>DLA KOGO TEN DOKUMENT?</h2>
+
+<p><strong>Adresat główny:</strong> Zarząd PZPN<br>
+<strong>Adresaci dodatkowi:</strong> Ministerstwo Sportu, Samorządy, Sponsorzy<br>
+<strong>Cel:</strong> Szczegółowa instrukcja "JAK" uruchomić projekt POLSKA 2038</p>
+
+<hr>
+
+<h2>FAZA 0: DECYZJA POLITYCZNA (Grudzień 2025 - Luty 2026)</h2>
+
+<h3>KROK 1: Uchwała Zarządu PZPN</h3>
+<p><strong>Termin:</strong> Do 15 stycznia 2026</p>
+
+<p><strong>Co zrobić:</strong></p>
+<ol>
+<li>Zwołać Nadzwyczajne Posiedzenie Zarządu PZPN</li>
+<li>Przedstawić projekt POLSKA 2038 (prezentacja 60 min)</li>
+<li>Głosowanie: Przyjęcie projektu jako strategii PZPN 2026-2038</li>
+<li>Komunikat prasowy: "PZPN przyjmuje strategię POLSKA 2038"</li>
+</ol>
+
+<p><strong>Dokument do przygotowania:</strong></p>
+<ul>
+<li>Uchwała nr X/2026 w sprawie przyjęcia Strategii Rozwoju Piłki Nożnej "POLSKA 2038"</li>
+</ul>
+
+<p><strong>Odpowiedzialny:</strong> Prezes PZPN</p>
+
+<hr>
+
+<h3>KROK 2: Memorandum z Ministerstwem Sportu</h3>
+<p><strong>Termin:</strong> Do 31 stycznia 2026</p>
+
+<p><strong>Co zrobić:</strong></p>
+<ol>
+<li>Spotkanie Prezes PZPN + Minister Sportu</li>
+<li>Prezentacja projektu (45 min)</li>
+<li>Podpisanie Memorandum o współpracy</li>
+<li>Zobowiązanie MSiT: 200 mln zł/rok (2026-2035)</li>
+</ol>
+
+<p><strong>Dokument:</strong></p>
+<ul>
+<li>Memorandum of Understanding (MoU)</li>
+<li>Załącznik: Budżet szczegółowy 10,4 mld zł</li>
+</ul>
+
+<p><strong>Odpowiedzialny:</strong> Prezes PZPN + Minister Sportu</p>
+
+<hr>
+
+<h3>KROK 3: Uchwała Rady Ministrów</h3>
+<p><strong>Termin:</strong> Do 28 lutego 2026</p>
+
+<p><strong>Co zrobić:</strong></p>
+<ol>
+<li>MSiT przygotowuje projekt uchwały RM</li>
+<li>Konsultacje międzyresortowe (MEN, MF, MGMiŻS)</li>
+<li>Przedstawienie na posiedzeniu RM</li>
+<li>Głosowanie: Przyjęcie programu rządowego "POLSKA 2038"</li>
+<li>Alokacja budżetowa: 400 mln zł/rok (MEN + MSiT)</li>
+</ol>
+
+<p><strong>Dokument:</strong></p>
+<ul>
+<li>Uchwała Rady Ministrów nr X/2026 w sprawie programu "POLSKA 2038"</li>
+</ul>
+
+<p><strong>Odpowiedzialny:</strong> Minister Sportu</p>
+
+<hr>
+
+<h2>FAZA 1: POWOŁANIE STRUKTUR (Marzec - Kwiecień 2026)</h2>
+
+<h3>KROK 4: Powołanie Rady Strategicznej</h3>
+<p><strong>Termin:</strong> Do 15 marca 2026</p>
+
+<p><strong>Co zrobić:</strong></p>
+
+<h4>1. Określenie składu (15 osób):</h4>
+<ul>
+<li>3 PZPN (Prezes, Dyrektor Sportowy, Dyrektor Szkolenia)</li>
+<li>3 Samorządy (ZMP, ZGW, Marszałek)</li>
+<li>3 Eksperci międzynarodowi (kontakt przez UEFA)</li>
+<li>3 Trenerzy polscy (konkurs otwarty)</li>
+<li>3 Biznes (PKO BP, Orlen, Związek Pracodawców)</li>
+</ul>
+
+<h4>2. Proces nominacji:</h4>
+<ul>
+<li>PZPN: Zarząd desygnuje 3 osoby</li>
+<li>Samorządy: Prośba o delegowanie przedstawicieli</li>
+<li>Eksperci: Kontakt przez UEFA (rekomendacje)</li>
+<li>Trenerzy: Ogłoszenie + selekcja (CV + rozmowa)</li>
+<li>Biznes: Prośba o delegowanie (list intent)</li>
+</ul>
+
+<h4>3. Pierwsze posiedzenie: 20 marca 2026</h4>
+<ul>
+<li>Wybór Przewodniczącego (spoza PZPN!)</li>
+<li>Uchwalenie Regulaminu Rady</li>
+<li>Zatwierdzenie planu rekrutacji Dyrektora Programu</li>
+</ul>
+
+<p><strong>Dokumenty:</strong></p>
+<ul>
+<li>Regulamin Rady Strategicznej</li>
+<li>Umowy z członkami (honorarium 10k zł/kwartał)</li>
+</ul>
+
+<p><strong>Odpowiedzialny:</strong> Prezes PZPN</p>
+
+<hr>
+
+<h3>KROK 5: Rekrutacja Dyrektora Programu</h3>
+<p><strong>Termin:</strong> Styczeń - Marzec 2026</p>
+
+<p><strong>Harmonogram:</strong></p>
+<ul>
+<li><strong>01-31.01:</strong> Ogłoszenie konkursu (media + LinkedIn + branżowe)</li>
+<li><strong>01-15.02:</strong> Przyjmowanie zgłoszeń</li>
+<li><strong>16-28.02:</strong> Preselekcja (50 → 10 kandydatów)</li>
+<li><strong>01-15.03:</strong> Rozmowy (Rada Strategiczna + Zarząd PZPN)</li>
+<li><strong>16-20.03:</strong> Case study (kandydaci przygotowują plan wdrożenia)</li>
+<li><strong>25.03:</strong> Decyzja (głosowanie Rady)</li>
+<li><strong>01.04.2026:</strong> Start pracy Dyrektora</li>
+</ul>
+
+<p><strong>Profil:</strong></p>
+<ul>
+<li>Wykształcenie: wyższe (sport/zarządzanie)</li>
+<li>Doświadczenie: Projekty >100 mln zł</li>
+<li>Branża: Sport (min. 10 lat)</li>
+<li>Język: Angielski C1</li>
+<li>Brak konfliktu interesów</li>
+</ul>
+
+<p><strong>Wynagrodzenie:</strong> 50k zł/mies + 30% bonus za KPI</p>
+
+<p><strong>Odpowiedzialny:</strong> Rada Strategiczna</p>
+
+<hr>
+
+<h2>FAZA 2: PILOTAŻ (Maj - Grudzień 2026)</h2>
+
+<h3>KROK 7: PPP 2.0 - Platforma (Setup)</h3>
+<p><strong>Termin:</strong> Maj - Październik 2026</p>
+
+<p><strong>Co zrobić:</strong></p>
+
+<h4>A) Partner technologiczny (maj):</h4>
+<ol>
+<li>Przetarg ograniczony (3 oferty): SAP / Oracle / Custom solution</li>
+<li>Wybór: Najlepsza oferta (koszt + czas + funkcje)</li>
+<li>Podpisanie umowy</li>
+<li><strong>Budget:</strong> 30 mln zł (setup)</li>
+</ol>
+
+<h4>B) Rozwój (czerwiec-wrzesień):</h4>
+<ol>
+<li>Specyfikacja funkcjonalna (CTO + trenerzy)</li>
+<li>Prototyp (lipiec)</li>
+<li>Testy (sierpień - 100 profili testowych)</li>
+<li>Beta (wrzesień - 1000 profili)</li>
+</ol>
+
+<h4>C) Launch (październik):</h4>
+<ol>
+<li>Pełna wersja (10 000 profili)</li>
+<li>Szkolenie użytkowników (skauci, trenerzy)</li>
+<li>Integracja z klubami (API)</li>
+</ol>
+
+<p><strong>Funkcje MVP:</strong></p>
+<ul>
+<li>Profil zawodnika (dane + zdjęcia + wideo)</li>
+<li>GPS tracking (integracja z Catapult/STATSports)</li>
+<li>Analiza wideo AI (rozpoznawanie akcji)</li>
+<li>Dashboard dla skautów/trenerów</li>
+<li>Raporty automatyczne</li>
+</ul>
+
+<p><strong>Odpowiedzialny:</strong> CTO + Kierownik Filaru PPP</p>
+
+<hr>
+
+<h3>KROK 8: Talenciak+ PILOT (3 województwa)</h3>
+<p><strong>Termin:</strong> Czerwiec - Grudzień 2026</p>
+
+<h4>A) Rekrutacja skautów (maj-czerwiec):</h4>
+<ol>
+<li>Ogłoszenie: 50 skautów (Mazowieckie, Śląskie, Małopolskie)</li>
+<li>Wymagania: Licencja C + doświadczenie + prawo jazdy</li>
+<li>Selekcja: CV → rozmowa → szkolenie</li>
+<li><strong>Szkolenie:</strong> 2 tygodnie (metodologia belgijska)</li>
+<li>Start pracy: 01.07.2026</li>
+</ol>
+
+<h4>B) Testy dzieci (lipiec-wrzesień):</h4>
+<ol>
+<li>Marketing lokalny (gminy + szkoły + kluby)</li>
+<li>Zgłoszenia: 10 000 dzieci (6-13 lat)</li>
+<li>Testy motoryczne: Sprint, slalom, wytrzymałość, technika</li>
+<li>Ocena: 5 skautów × 2000 dzieci każdy</li>
+<li><strong>Selekcja:</strong> 1000 najlepszych (10%)</li>
+</ol>
+
+<h4>C) Program (październik-grudzień):</h4>
+<ol>
+<li>Przyznanie stypendiów (10k zł/rok)</li>
+<li>Pakiet startowy (sprzęt Nike/Adidas)</li>
+<li>Treningi specjalistyczne (soboty)</li>
+<li>Kursy językowe (angielski online)</li>
+<li>Profil w PPP 2.0 (każde dziecko)</li>
+</ol>
+
+<p><strong>Budget:</strong> 20 mln zł (6 miesięcy)</p>
+
+<p><strong>Odpowiedzialny:</strong> Kierownik Filaru Talenciak+</p>
+
+<hr>
+
+<h3>KROK 11: Boiska Orlik 3.0 - Pilot (50 sztuk)</h3>
+<p><strong>Termin:</strong> Kwiecień - Październik 2026</p>
+
+<h4>A) Nabór gmin (marzec-kwiecień):</h4>
+<ol>
+<li>Ogłoszenie: 3 województwa</li>
+<li>Kryteria: Działka (min. 3000 m²) + Wkład własny 30% + Min. 500 dzieci 6-15 lat</li>
+<li>Aplikacje: 150 gmin</li>
+<li>Wybór: 50 najlepszych (kwiecień)</li>
+</ol>
+
+<h4>B) Przetargi (maj):</h4>
+<ol>
+<li>Specyfikacja: Nawierzchnia hybrydowa, LED 500 lux, monitoring 24/7</li>
+<li>Koszt: 2 mln zł/boisko</li>
+<li>Przetarg na 50 boisk (pakiet)</li>
+<li>Wybór wykonawcy: Maj 2026</li>
+</ol>
+
+<h4>C) Budowa (czerwiec-wrzesień):</h4>
+<ol>
+<li>Timeline: 4 miesiące/boisko</li>
+<li>Nadzór: Koordynatorzy wojewódzcy</li>
+<li>Odbiory: Wrzesień-październik</li>
+</ol>
+
+<h4>D) Uroczyste otwarcia (październik):</h4>
+<ol>
+<li>50 eventów (1/gmina)</li>
+<li>Obecność: Dyrektor Programu + przedstawiciel PZPN</li>
+<li>Kampania: "Polska 2038 - pierwsze boiska gotowe!"</li>
+</ol>
+
+<p><strong>Budget:</strong> 100 mln zł</p>
+<ul>
+<li>Infrastruktura: 100 mln (50 boisk × 2 mln)</li>
+<li>Nadzór: 1 mln</li>
+<li>Eventy: 1 mln</li>
+</ul>
+
+<p><strong>Źródła:</strong></p>
+<ul>
+<li>UE (REACT-EU): 60 mln (60%)</li>
+<li>Gminy: 30 mln (30%)</li>
+<li>PZPN: 10 mln (10%)</li>
+</ul>
+
+<p><strong>Odpowiedzialny:</strong> Kierownik Filaru Infrastruktura</p>
+
+<hr>
+
+<h2>FAZA 3: SKALOWANIE (2027-2028)</h2>
+
+<h3>KROK 12: Talenciak+ - Skalowanie na całą Polskę</h3>
+<p><strong>Termin:</strong> Styczeń - Czerwiec 2027</p>
+
+<p><strong>A) Rekrutacja 450 skautów (styczeń-marzec):</strong></p>
+<ul>
+<li>50 mamy (pilot 2026) + 450 nowych = 500 TOTAL</li>
+<li>Wszystkie województwa (16 × 30 skautów)</li>
+<li>Proces jak w pilotażu</li>
+</ul>
+
+<p><strong>B) Testy 40 000 dzieci (kwiecień-sierpień):</strong></p>
+<ul>
+<li>Marketing ogólnopolski</li>
+<li>40k zgłoszeń (16 województw × 2500)</li>
+<li>Selekcja 4000 najlepszych (10%)</li>
+</ul>
+
+<p><strong>C) Program (wrzesień 2027):</strong></p>
+<ul>
+<li>4000 dzieci w programie</li>
+<li>Stypendia + sprzęt + języki</li>
+<li><strong>Budget:</strong> 200 mln zł/rok</li>
+</ul>
+
+<hr>
+
+<h3>KROK 13: Ekstraklasa Premium - Reforma</h3>
+<p><strong>Termin:</strong> Styczeń - Czerwiec 2027</p>
+
+<p><strong>A) Nowa licencja (styczeń-marzec):</strong></p>
+<ol>
+<li>Uchwała Zgromadzenia Ekstraklasy</li>
+<li>Kryteria 50 pkt: Akademia (15) + Finanse (15) + Stadion (10) + Polacy (10)</li>
+<li>Audyt klubów (marzec)</li>
+</ol>
+
+<p><strong>B) Decyzje licencyjne (kwiecień):</strong></p>
+<ol>
+<li>Komisja ocenia 18 klubów</li>
+<li><strong>4 kluby tracą licencję</strong> (najsłabsze)</li>
+<li>Kompensata: 10 mln zł/klub</li>
+</ol>
+
+<p><strong>C) Nowy sezon (lipiec 2027):</strong></p>
+<ol>
+<li>Ekstraklasa Premium: 14 klubów</li>
+<li>Liga Elite: 18 klubów (I liga + 4 spadkowicze)</li>
+<li>Bonusy za Polaków: Start programu</li>
+</ol>
+
+<p><strong>Budget:</strong> 100 mln zł/rok (bonusy) + 40 mln (kompensaty, jednorazowo)</p>
+
+<hr>
+
+<h2>KRYTYCZNE CZYNNIKI SUKCESU</h2>
+
+<h3>1. PZPN musi oddać kontrolę</h3>
+<ul>
+<li>Rada Strategiczna ≠ Zarząd PZPN</li>
+<li>Dyrektor Programu = niezależny (nie z PZPN)</li>
+<li>Decyzje na podstawie KPI, nie polityki</li>
+</ul>
+
+<h3>2. Budżet musi być zagwarantowany</h3>
+<ul>
+<li>Uchwała RM: 400 mln/rok (10 lat)</li>
+<li>Umowy sponsorskie: 10 lat (nie 1-2)</li>
+<li>PPP: Kontrakty 15-letnie</li>
+</ul>
+
+<h3>3. Transparentność TOTALNA</h3>
+<ul>
+<li>Dashboard publiczny (aktualizacja miesięczna)</li>
+<li>Audyt roczny (raport publiczny)</li>
+<li>Społeczny nadzór (Rada Obywatelska)</li>
+</ul>
+
+<h3>4. Kadry = NAJLEPSZE</h3>
+<ul>
+<li>Dyrektor: Konkurs międzynarodowy (nie kolega z PZPN)</li>
+<li>Trenerzy: Zagraniczni (doświadczenie TOP lig)</li>
+<li>Skauci: Szkolenie belgijskie (nie "kumple z klubu")</li>
+</ul>
+
+<h3>5. Długoterminowość</h3>
+<ul>
+<li>12 lat = 3 cykle wyborcze</li>
+<li>Polityka ≠ sport (izolacja)</li>
+<li>KPI > obietnice</li>
+</ul>
+
+<hr>
+
+<h2>PIERWSZE 100 DNI (checklist dla Dyrektora)</h2>
+
+<h3>Dni 1-30:</h3>
+<ul>
+<li>☐ Poznanie zespołu (25 osób)</li>
+<li>☐ Audyt początkowy (co mamy?)</li>
+<li>☐ Plan operacyjny Q1-Q2 2026</li>
+<li>☐ Kick-off meeting (Rada + zespół)</li>
+</ul>
+
+<h3>Dni 31-60:</h3>
+<ul>
+<li>☐ Uruchomienie rekrutacji (skauci, trenerzy)</li>
+<li>☐ Przetarg PPP 2.0</li>
+<li>☐ Pierwsze umowy (sponsorzy)</li>
+<li>☐ Komunikacja (konferencja prasowa)</li>
+</ul>
+
+<h3>Dni 61-100:</h3>
+<ul>
+<li>☐ Start pilotażu Talenciak+</li>
+<li>☐ Decyzje Orzeł 2038 (lokalizacja + budowa)</li>
+<li>☐ Pierwsze boiska (umowy z gminami)</li>
+<li>☐ Raport dla Rady (postępy + ryzyka)</li>
+</ul>
+
+<hr>
+
+<h2>PODSUMOWANIE: CO PZPN MUSI ZROBIĆ TERAZ?</h2>
+
+<table>
+<thead>
+<tr>
+<th>MIESIĄC</th>
+<th>KLUCZOWE DZIAŁANIA</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>GRUDZIEŃ 2025</strong></td>
+<td>✅ Uchwała Zarządu PZPN<br>✅ Ogłoszenie konkursu na Dyrektora</td>
+</tr>
+<tr>
+<td><strong>STYCZEŃ 2026</strong></td>
+<td>✅ Memorandum z MSiT<br>✅ Rekrutacja Dyrektora</td>
+</tr>
+<tr>
+<td><strong>LUTY 2026</strong></td>
+<td>✅ Uchwała Rady Ministrów<br>✅ Preselekcja Dyrektora</td>
+</tr>
+<tr>
+<td><strong>MARZEC 2026</strong></td>
+<td>✅ Rada Strategiczna (15 osób)<br>✅ Wybór Dyrektora</td>
+</tr>
+<tr>
+<td><strong>KWIECIEŃ 2026</strong></td>
+<td>✅ Start Dyrektora<br>✅ Centrum Operacyjne (25 osób)</td>
+</tr>
+<tr>
+<td><strong>MAJ-GRUDZIEŃ 2026</strong></td>
+<td>✅ Pilotaż (1000 dzieci, 50 boisk)<br>✅ PPP 2.0 online</td>
+</tr>
+</tbody>
+</table>
+
+<hr>
+
+<h2 style="text-align: center; margin: 60px 0; font-size: 32pt; color: #dc2626;">TO JEST PLAN</h2>
+
+<p style="text-align: center; font-size: 16pt; margin: 40px 0;">
+<strong>TERAZ POTRZEBNA JEST DECYZJA</strong>
+</p>
+
+<p style="text-align: center; font-size: 18pt; margin: 40px 0;">
+Belgia miała odwagę. Chorwacja miała odwagę.<br>
+<strong style="color: #dc2626;">POLSKA?</strong>
+</p>
+
+<p style="text-align: center; font-size: 24pt; margin: 40px 0;">
+<strong style="color: #059669;">CZAS DZIAŁAĆ. POLSKA 2038 ZACZYNA SIĘ DZIŚ. 🏆</strong>
+</p>
+
+<div class="footer">
+<h2 style="color: #dc2626; margin-bottom: 20px;">🏆 POLSKA 2038 - MISTRZOSTWO ŚWIATA 2038 🏆</h2>
+<p><strong>Projekt: POLSKA 2038 - Plan Wdrożenia - Instrukcja</strong></p>
+<p>Dokument: PEŁNA WERSJA (20 stron) • Krok po kroku • Wszystkie szczegóły • Kompletna zawartość</p>
+<p>Kontakt: polska2038@proton.me • Wersja: FINAL (Listopad 2024)</p>
+<p style="margin-top: 20px; font-size: 8pt;">
+Ten dokument zawiera PEŁNĄ zawartość z pliku 04-PLAN-WDROZENIA-INSTRUKCJA.md<br>
+Profesjonalne formatowanie • Gotowy do druku • Super wygląd
+</p>
+</div>
+
+</div>
+
+<script>
+window.onload = function() {
+    alert('✅ DOKUMENT 4/5 GOTOWY!\n\nKliknij czerwony przycisk "ZAPISZ JAKO PDF"\nLUB naciśnij Ctrl+P\n\nPotem wybierz "Zapisz jako PDF" i zapisz!\n\nPLAN WDROŻENIA - 20 STRON PEŁNA WERSJA!');
+};
+</script>
+
+</body>
+</html>

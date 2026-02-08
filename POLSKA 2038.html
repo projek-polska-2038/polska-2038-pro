@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>POLSKA 2038 – MISTRZOSTWO ŚWIATA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background: #000; color: #fff; }
+        .slide { display: none; }
+        .slide.active { display: block; }
+        .point { opacity: 0; transform: translateY(20px); transition: all 0.6s ease-out; }
+        .point.visible { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white p-4 md:p-8">
+<div class="max-w-7xl mx-auto">
+    <!-- HEADER -->
+    <div class="mb-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+        <div class="flex items-center space-x-4">
+            <span class="text-4xl">🏆</span>
+            <div>
+                <h1 id="slide-title" class="text-3xl md:text-4xl font-black">POLSKA 2038</h1>
+                <p id="slide-subtitle" class="text-lg text-gray-400">MISTRZOSTWO ŚWIATA LUB NIC</p>
+            </div>
+        </div>
+        <div class="text-right">
+            <div class="text-sm text-gray-400">Slajd <span id="current-num">1</span> / <span id="total-slides">12</span></div>
+            <div id="dots" class="flex space-x-1 mt-2"></div>
+        </div>
+    </div>
+
+    <!-- SLIDES -->
+    <div id="slides" class="bg-gradient-to-br from-gray-900 to-black rounded-3xl p-8 md:p-12 mb-8 min-h-[600px] border border-gray-800">
+        <!-- SLIDE 1 -->
+        <div class="slide active text-center space-y-8">
+            <div class="text-7xl font-black text-red-600 point">POLSKA 2038</div>
+            <div class="text-4xl font-bold text-white point">Mistrzostwo Świata 2038</div>
+            <div class="text-2xl text-gray-300 point">Ekstraklasa w TOP 5 UEFA do 2035</div>
+            <div class="mt-12 grid grid-cols-3 gap-8 text-center">
+                <div class="bg-gradient-to-br from-red-600 to-red-800 p-8 rounded-2xl point"><div class="text-5xl font-black">🏆 2038</div><div class="text-lg mt-3 font-semibold">Złoto MŚ</div></div>
+                <div class="bg-gradient-to-br from-blue-600 to-blue-800 p-8 rounded-2xl point"><div class="text-5xl font-black">TOP 3</div><div class="text-lg mt-3 font-semibold">Ranking FIFA</div></div>
+                <div class="bg-gradient-to-br from-green-600 to-emerald-700 p-8 rounded-2xl point"><div class="text-5xl font-black">150+</div><div class="text-lg mt-3 font-semibold">Polaków w TOP 5 ligach</div></div>
+            </div>
+            <div class="mt-16 bg-gradient-to-r from-yellow-600 to-orange-600 p-6 rounded-xl inline-block mx-auto point">
+                <p class="text-2xl font-bold">Projekt obywatelski • Anonimowy • Gotowy do wdrożenia 2026</p>
+            </div>
+        </div>
+
+        <!-- SLIDE 5 – TALENCIAK+ -->
+        <div class="slide space-y-8">
+            <div class="bg-gradient-to-r from-yellow-500 to-orange-600 p-10 rounded-3xl text-center point">
+                <h3 class="text-5xl font-black mb-4">TALENCIAK+</h3>
+                <p class="text-3xl">1000 dzieci × każdy rocznik (6–13 lat)</p>
+            </div>
+            <div class="grid grid-cols-3 gap-6">
+                <div class="bg-gradient-to-br from-black to-gray-900 p-8 rounded-2xl text-center border-2 border-yellow-500 point">
+                    <div class="text-6xl mb-4">🔍</div>
+                    <h4 class="text-2xl font-black mb-3">IDENTYFIKACJA</h4>
+                    <ul class="text-sm space-y-1 text-left">
+                        <li class="point">500 skautów regionalnych</li>
+                        <li class="point">AI scouting video</li>
+                        <li class="point">Testy motoryczne</li>
+                        <li class="point">Turnieje Talenciak Cup</li>
+                    </ul>
+                </div>
+                <div class="bg-gradient-to-br from-black to-gray-900 p-8 rounded-2xl text-center border-2 border-green-500 point">
+                    <div class="text-6xl mb-4">💰</div>
+                    <h4 class="text-2xl font-black mb-3">WSPARCIE</h4>
+                    <ul class="text-sm space-y-1 text-left">
+                        <li class="point">Pełne stypendium</li>
+                        <li class="point">Sprzęt premium</li>
+                        <li class="point">Dieta indywidualna</li>
+                        <li class="point">Angielski + niemiecki</li>
+                    </ul>
+                </div>
+                <div class="bg-gradient-to-br from-black to-gray-900 p-8 rounded-2xl text-center border-2 border-blue-500 point">
+                    <div class="text-6xl mb-4">📈</div>
+                    <h4 class="text-2xl font-black mb-3">MONITORING</h4>
+                    <ul class="text-sm space-y-1 text-left">
+                        <li class="point">Platforma PPP 2.0</li>
+                        <li class="point">Raporty kwartalne</li>
+                        <li class="point">Profil kariery</li>
+                        <li class="point">Integracja z klubem</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 8 – HARMONOGRAM -->
+        <div class="slide space-y-6">
+            <div class="flex items-center space-x-6 bg-gradient-to-r from-gray-900 to-black p-6 rounded-2xl point">
+                <div class="text-6xl">🚀</div>
+                <div class="flex-1">
+                    <div class="text-2xl font-black text-red-500">2026: START TOTALNY</div>
+                    <p class="text-lg">Talenciak+, PPP, Orzeł, Kadra A'</p>
+                </div>
+            </div>
+            <div class="flex items-center space-x-6 bg-gradient-to-r from-gray-900 to-black p-6 rounded-2xl point">
+                <div class="text-6xl">⚡</div>
+                <div class="flex-1">
+                    <div class="text-2xl font-black text-red-500">2027: REFORMA LIGI</div>
+                    <p class="text-lg">Ekstraklasa Premium, Liga Elite</p>
+                </div>
+            </div>
+            <div class="flex items-center space-x-6 bg-gradient-to-r from-gray-900 to-black p-6 rounded-2xl point">
+                <div class="text-6xl">🏗️</div>
+                <div class="flex-1">
+                    <div class="text-2xl font-black text-red-500">2028: 50% INFRASTRUKTURY</div>
+                </div>
+            </div>
+            <div class="flex items-center space-x-6 bg-gradient-to-r from-gray-900 to-black p-6 rounded-2xl point">
+                <div class="text-6xl">🎯</div>
+                <div class="flex-1">
+                    <div class="text-2xl font-black text-red-500">2030: TOP 8 UEFA</div>
+                </div>
+            </div>
+            <div class="flex items-center space-x-6 bg-gradient-to-r from-gray-900 to-black p-6 rounded-2xl point">
+                <div class="text-6xl">🔥</div>
+                <div class="flex-1">
+                    <div class="text-2xl font-black text-red-500">2033: TOP 4 UEFA</div>
+                </div>
+            </div>
+            <div class="flex items-center space-x-6 bg-gradient-to-r from-gray-900 to-black p-6 rounded-2xl point">
+                <div class="text-6xl">🏆</div>
+                <div class="flex-1">
+                    <div class="text-2xl font-black text-red-500">2035: PÓŁFINAŁ LM</div>
+                </div>
+            </div>
+            <div class="flex items-center space-x-6 bg-gradient-to-r from-gray-900 to-black p-6 rounded-2xl point">
+                <div class="text-6xl">🌍</div>
+                <div class="flex-1">
+                    <div class="text-2xl font-black text-red-500">2038: MISTRZOSTWO ŚWIATA</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 10 – WZORCE -->
+        <div class="slide space-y-8">
+            <div class="grid grid-cols-2 gap-6">
+                <div class="bg-gradient-to-br from-black to-gray-900 p-8 rounded-2xl border-l-8 border-yellow-500 point">
+                    <h4 class="text-2xl font-black mb-4">🇧🇪 BELGIA</h4>
+                    <ul class="space-y-2 text-lg">
+                        <li class="point">Reforma od 2000</li>
+                        <li class="point">8 centrów excellence</li>
+                        <li class="point">Centralna baza danych</li>
+                        <li class="point text-green-400 font-bold">Z 66. na 1. miejsce FIFA</li>
+                    </ul>
+                </div>
+                <div class="bg-gradient-to-br from-black to-gray-900 p-8 rounded-2xl border-l-8 border-red-500 point">
+                    <h4 class="text-2xl font-black mb-4">🇭🇷 CHORWACJA</h4>
+                    <ul class="space-y-2 text-lg">
+                        <li class="point">4 mln mieszkańców</li>
+                        <li class="point">Akademie w każdym klubie</li>
+                        <li class="point text-green-400 font-bold">Finał MŚ 2018</li>
+                        <li class="point text-green-400 font-bold">3. miejsce 2022</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bg-gradient-to-r from-green-600 to-emerald-700 p-8 rounded-2xl text-center point">
+                <h4 class="text-3xl font-black mb-4">🇵🇱 POLSKA MA WSZYSTKO</h4>
+                <div class="grid grid-cols-3 gap-8 text-2xl">
+                    <div class="point"><span class="text-6xl block">38M</span> mieszkańców</div>
+                    <div class="point"><span class="text-6xl block">💰</span> finanse</div>
+                    <div class="point"><span class="text-6xl block">❤️</span> pasja</div>
+                </div>
+                <p class="text-2xl font-black mt-6 text-yellow-400">BRAKUJE TYLKO PLANU</p>
+            </div>
+        </div>
+
+        <!-- SLIDE 2: MOMENT PRZEŁOMOWY -->
+        <div class="slide space-y-8">
+            <div class="bg-gradient-to-r from-red-600 to-red-900 p-10 rounded-3xl text-center point">
+                <h3 class="text-5xl font-black mb-4">MOMENT PRZEŁOMOWY</h3>
+                <p class="text-2xl">Roczniki 2010–2016 czekają</p>
+            </div>
+            <div class="grid grid-cols-2 gap-6">
+                <div class="bg-gradient-to-br from-yellow-600 to-orange-600 p-8 rounded-2xl point">
+                    <div class="text-6xl mb-4">👶</div>
+                    <h4 class="text-3xl font-black mb-3">NAJLEPSZE ROCZNIKI</h4>
+                    <p class="text-lg mb-4">2010-2016: Najwięcej dzieci od 30 lat</p>
+                    <ul class="text-left space-y-2">
+                        <li class="point">✓ 400 000+ dzieci rocznie</li>
+                        <li class="point">✓ Najwyższy potencjał w historii</li>
+                        <li class="point">✓ Kozłowski, Moder, Urbański to dopiero początek</li>
+                    </ul>
+                </div>
+                <div class="bg-gradient-to-br from-red-600 to-red-800 p-8 rounded-2xl point">
+                    <div class="text-6xl mb-4">⏰</div>
+                    <h4 class="text-3xl font-black mb-3">MAMY 5 LAT</h4>
+                    <p class="text-lg mb-4">Okno możliwości: 2026-2030</p>
+                    <ul class="text-left space-y-2">
+                        <li class="point">✓ Rocznik 2010: 16 lat (czas kluczowy!)</li>
+                        <li class="point">✓ Rocznik 2016: 10 lat (złoty wiek)</li>
+                        <li class="point">✓ Potem będzie za późno</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bg-gradient-to-r from-yellow-600 to-orange-600 p-8 rounded-2xl text-center point">
+                <p class="text-3xl font-black">Jeśli nie zaczniemy TERAZ, stracimy całe pokolenie!</p>
+            </div>
+        </div>
+
+        <!-- SLIDE 3: 7 FILARÓW -->
+        <div class="slide space-y-6">
+            <div class="bg-gradient-to-r from-blue-600 to-cyan-600 p-10 rounded-3xl text-center point">
+                <h3 class="text-5xl font-black">7 FILARÓW STRATEGII</h3>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="bg-gradient-to-br from-yellow-600 to-orange-600 p-6 rounded-2xl point">
+                    <h4 class="text-2xl font-black mb-2">1. TALENCIAK+</h4>
+                    <p class="text-sm">1000 dzieci × rocznik | 200 mln zł/rok</p>
+                </div>
+                <div class="bg-gradient-to-br from-red-600 to-red-800 p-6 rounded-2xl point">
+                    <h4 class="text-2xl font-black mb-2">2. ORZEŁ 2038</h4>
+                    <p class="text-sm">60+60 zawodników | 150 mln zł/rok</p>
+                </div>
+                <div class="bg-gradient-to-br from-purple-600 to-pink-600 p-6 rounded-2xl point">
+                    <h4 class="text-2xl font-black mb-2">3. EKSTRAKLASA PREMIUM</h4>
+                    <p class="text-sm">14 klubów (z 18) | TOP 5 UEFA do 2035</p>
+                </div>
+                <div class="bg-gradient-to-br from-green-600 to-emerald-600 p-6 rounded-2xl point">
+                    <h4 class="text-2xl font-black mb-2">4. BOISKA ORLIK 3.0</h4>
+                    <p class="text-sm">2477 boisk | 4 mld zł</p>
+                </div>
+                <div class="bg-gradient-to-br from-blue-600 to-blue-800 p-6 rounded-2xl point">
+                    <h4 class="text-2xl font-black mb-2">5. KADRA A' (U21)</h4>
+                    <p class="text-sm">25 zawodników pełnoetatowo | 30 mln/rok</p>
+                </div>
+                <div class="bg-gradient-to-br from-cyan-600 to-teal-600 p-6 rounded-2xl point">
+                    <h4 class="text-2xl font-black mb-2">6. PPP 2.0</h4>
+                    <p class="text-sm">Centralna baza AI | 50 mln setup</p>
+                </div>
+                <div class="bg-gradient-to-br from-indigo-600 to-purple-600 p-6 rounded-2xl point">
+                    <h4 class="text-2xl font-black mb-2">7. LIGA ELITE</h4>
+                    <p class="text-sm">18 klubów II liga | 36 mln/rok</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 4: ORZEŁ 2038 -->
+        <div class="slide space-y-6">
+            <div class="bg-gradient-to-r from-red-600 to-red-800 p-10 rounded-3xl text-center point">
+                <h3 class="text-5xl font-black mb-4">PROJEKT ORZEŁ 2038</h3>
+                <p class="text-3xl">60+60 najlepszych zawodników (U15-U21)</p>
+            </div>
+            <div class="grid grid-cols-2 gap-6">
+                <div class="bg-gradient-to-br from-red-600 to-red-800 p-8 rounded-2xl point">
+                    <div class="text-6xl mb-4">🦅</div>
+                    <h4 class="text-3xl font-black mb-3">GRUPA A (60)</h4>
+                    <ul class="text-left space-y-2">
+                        <li class="point">✓ Internat w Opalenicy</li>
+                        <li class="point">✓ Pełnoetatowi trenerzy (zagraniczni)</li>
+                        <li class="point">✓ 30+ sparingów z TOP akademiami</li>
+                        <li class="point">✓ Wynagrodzenie 5k zł/mies</li>
+                    </ul>
+                </div>
+                <div class="bg-gradient-to-br from-orange-600 to-red-600 p-8 rounded-2xl point">
+                    <div class="text-6xl mb-4">🏅</div>
+                    <h4 class="text-3xl font-black mb-3">GRUPA B (60)</h4>
+                    <ul class="text-left space-y-2">
+                        <li class="point">✓ Treningi 2x tydzień</li>
+                        <li class="point">✓ Sparingi regionalne</li>
+                        <li class="point">✓ Monitoring w PPP 2.0</li>
+                        <li class="point">✓ Gotowi do awansu</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bg-gradient-to-r from-black to-gray-900 p-6 rounded-2xl border-2 border-red-600 point">
+                <h4 class="text-2xl font-black mb-3 text-center">KOSZT: 150 mln zł/rok</h4>
+                <p class="text-center text-lg">Infrastruktura Opalenica: 80 mln (modernizacja 2026-2027)</p>
+            </div>
+        </div>
+
+        <!-- SLIDE 6: EKSTRAKLASA PREMIUM -->
+        <div class="slide space-y-6">
+            <div class="bg-gradient-to-r from-purple-600 to-pink-600 p-10 rounded-3xl text-center point">
+                <h3 class="text-5xl font-black mb-4">EKSTRAKLASA PREMIUM</h3>
+                <p class="text-3xl">TOP 5 UEFA do 2035</p>
+            </div>
+            <div class="grid grid-cols-3 gap-6">
+                <div class="bg-gradient-to-br from-red-600 to-red-800 p-8 rounded-2xl text-center point">
+                    <div class="text-6xl mb-4">⬇️</div>
+                    <h4 class="text-3xl font-black mb-3">18 → 14</h4>
+                    <p class="text-lg">Redukcja klubów<br/>(sezon 2027/28)</p>
+                </div>
+                <div class="bg-gradient-to-br from-blue-600 to-cyan-600 p-8 rounded-2xl text-center point">
+                    <div class="text-6xl mb-4">🇵🇱</div>
+                    <h4 class="text-3xl font-black mb-3">MIN. 6</h4>
+                    <p class="text-lg">Polaków w podstawowym składzie</p>
+                </div>
+                <div class="bg-gradient-to-br from-green-600 to-emerald-600 p-8 rounded-2xl text-center point">
+                    <div class="text-6xl mb-4">💰</div>
+                    <h4 class="text-3xl font-black mb-3">BONUSY</h4>
+                    <p class="text-lg">8-9 Polaków: +5 mln<br/>10+: +10 mln</p>
+                </div>
+            </div>
+            <div class="bg-gradient-to-r from-black to-gray-900 p-6 rounded-2xl border-2 border-purple-600 point">
+                <h4 class="text-2xl font-black mb-3 text-center">CEL:</h4>
+                <div class="grid grid-cols-3 gap-4 text-center">
+                    <div><div class="text-3xl font-black text-green-400">2030</div><p>TOP 10 UEFA</p></div>
+                    <div><div class="text-3xl font-black text-yellow-400">2033</div><p>TOP 7 UEFA</p></div>
+                    <div><div class="text-3xl font-black text-red-400">2035</div><p>TOP 5 UEFA</p></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 7: BOISKA -->
+        <div class="slide space-y-6">
+            <div class="bg-gradient-to-r from-green-600 to-emerald-600 p-10 rounded-3xl text-center point">
+                <h3 class="text-5xl font-black mb-4">BOISKO W KAŻDEJ GMINIE</h3>
+                <p class="text-3xl">2477 boisk Orlik 3.0</p>
+            </div>
+            <div class="grid grid-cols-2 gap-6">
+                <div class="bg-gradient-to-br from-green-600 to-emerald-600 p-8 rounded-2xl point">
+                    <div class="text-6xl mb-4">⚽</div>
+                    <h4 class="text-3xl font-black mb-3">SPECYFIKACJA</h4>
+                    <ul class="text-left space-y-2">
+                        <li class="point">✓ Nawierzchnia hybrydowa (jak Bernabéu)</li>
+                        <li class="point">✓ Oświetlenie LED 500 lux</li>
+                        <li class="point">✓ Monitoring 24/7</li>
+                        <li class="point">✓ System rezerwacji online</li>
+                    </ul>
+                </div>
+                <div class="bg-gradient-to-br from-blue-600 to-cyan-600 p-8 rounded-2xl point">
+                    <div class="text-6xl mb-4">💰</div>
+                    <h4 class="text-3xl font-black mb-3">FINANSOWANIE</h4>
+                    <ul class="text-left space-y-2">
+                        <li class="point">✓ 60% UE (fundusze kohesyjne)</li>
+                        <li class="point">✓ 30% Gminy</li>
+                        <li class="point">✓ 10% PPP/sponsorzy</li>
+                        <li class="point">✓ 2 mln zł/boisko</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bg-gradient-to-r from-black to-gray-900 p-6 rounded-2xl border-2 border-green-600 point">
+                <h4 class="text-2xl font-black mb-3 text-center">HARMONOGRAM</h4>
+                <div class="grid grid-cols-3 gap-4 text-center">
+                    <div><div class="text-3xl font-black text-green-400">2026</div><p>50 boisk (pilot)</p></div>
+                    <div><div class="text-3xl font-black text-yellow-400">2027-28</div><p>1000 boisk</p></div>
+                    <div><div class="text-3xl font-black text-red-400">2029-30</div><p>1427 boisk (finalizacja)</p></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 9: QUICK WINS - NOWY -->
+        <div class="slide space-y-6">
+            <div class="bg-gradient-to-r from-green-600 to-emerald-700 p-10 rounded-3xl text-center point">
+                <h3 class="text-4xl font-black mb-4">✅ QUICK WINS – EFEKTY W 12 MIESIĘCY</h3>
+                <p class="text-2xl">Pierwsze wymierne rezultaty już w 2027</p>
+            </div>
+            <div class="grid grid-cols-2 gap-6">
+                <div class="bg-gradient-to-br from-yellow-600 to-orange-600 p-8 rounded-2xl point">
+                    <div class="text-6xl mb-4">🌟</div>
+                    <h4 class="text-3xl font-black mb-3">1000 DZIECI</h4>
+                    <p class="text-xl">Talenciak+ PILOT<br/>3 województwa testowe</p>
+                    <div class="mt-4 bg-black/30 p-4 rounded-xl text-left">
+                        <p class="text-sm">✓ 500 skautów aktywnych<br/>✓ Pierwsze stypendia przyznane<br/>✓ 50 sparingów międzynarodowych U13</p>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-blue-600 to-cyan-600 p-8 rounded-2xl point">
+                    <div class="text-6xl mb-4">⚽</div>
+                    <h4 class="text-3xl font-black mb-3">50 BOISK</h4>
+                    <p class="text-xl">Orlik 3.0<br/>Nawierzchnia hybrydowa</p>
+                    <div class="mt-4 bg-black/30 p-4 rounded-xl text-left">
+                        <p class="text-sm">✓ LED + monitoring 24/7<br/>✓ Strefy treningowe<br/>✓ 100k+ dzieci rocznie</p>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-purple-600 to-pink-600 p-8 rounded-2xl point">
+                    <div class="text-6xl mb-4">🦅</div>
+                    <h4 class="text-3xl font-black mb-3">KADRA A'</h4>
+                    <p class="text-xl">U21 pełnoetatowa<br/>25 zawodników</p>
+                    <div class="mt-4 bg-black/30 p-4 rounded-xl text-left">
+                        <p class="text-sm">✓ 10+ sparingów międzynarodowych<br/>✓ Trenerzy z Hiszpanii/Niemiec<br/>✓ Baza w Opalenicy</p>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-red-600 to-red-800 p-8 rounded-2xl point">
+                    <div class="text-6xl mb-4">📊</div>
+                    <h4 class="text-3xl font-black mb-3">PPP 2.0</h4>
+                    <p class="text-xl">Centralna baza AI<br/>10 000+ zawodników</p>
+                    <div class="mt-4 bg-black/30 p-4 rounded-xl text-left">
+                        <p class="text-sm">✓ GPS tracking każdego meczu<br/>✓ Analiza wideo automatyczna<br/>✓ Rekomendacje rozwoju AI</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 10: BUDŻET -->
+        <div class="slide space-y-6">
+            <div class="bg-gradient-to-r from-gray-600 to-gray-800 p-10 rounded-3xl text-center point">
+                <h3 class="text-5xl font-black mb-4">BUDŻET: 8–10 MLD ZŁ</h3>
+                <p class="text-3xl">2026-2035 (1 mld/rok średnio)</p>
+            </div>
+            <div class="grid grid-cols-2 gap-6">
+                <div class="bg-gradient-to-br from-blue-600 to-cyan-600 p-8 rounded-2xl point">
+                    <h4 class="text-2xl font-black mb-4">WYDATKI</h4>
+                    <div class="space-y-2 text-left">
+                        <div class="flex justify-between"><span>Boiska</span><span class="font-bold">4,0 mld</span></div>
+                        <div class="flex justify-between"><span>Talenciak+</span><span class="font-bold">2,0 mld</span></div>
+                        <div class="flex justify-between"><span>Orzeł 2038</span><span class="font-bold">1,5 mld</span></div>
+                        <div class="flex justify-between"><span>PPP 2.0</span><span class="font-bold">0,5 mld</span></div>
+                        <div class="flex justify-between"><span>Pozostałe</span><span class="font-bold">2,4 mld</span></div>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-green-600 to-emerald-600 p-8 rounded-2xl point">
+                    <h4 class="text-2xl font-black mb-4">ŹRÓDŁA</h4>
+                    <div class="space-y-2 text-left">
+                        <div class="flex justify-between"><span>Budżet państwa</span><span class="font-bold">40%</span></div>
+                        <div class="flex justify-between"><span>Fundusze UE</span><span class="font-bold">30%</span></div>
+                        <div class="flex justify-between"><span>Sponsorzy</span><span class="font-bold">20%</span></div>
+                        <div class="flex justify-between"><span>PPP</span><span class="font-bold">10%</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-gradient-to-r from-yellow-600 to-orange-600 p-6 rounded-2xl text-center point">
+                <p class="text-2xl font-black">27 zł/Polaka/rok = Mniej niż 2 bilety do kina</p>
+            </div>
+        </div>
+
+        <!-- SLIDE 12: CO STRACIMY - NOWY -->
+        <div class="slide space-y-6">
+            <div class="bg-gradient-to-r from-red-900 to-black p-10 rounded-3xl text-center point">
+                <h3 class="text-4xl font-black mb-6 text-red-500">⚠️ CO STRACIMY BEZ DZIAŁANIA?</h3>
+                <p class="text-xl text-gray-400">Scenariusz bez reformy</p>
+            </div>
+            <div class="grid grid-cols-2 gap-6">
+                <div class="bg-gradient-to-br from-red-900 to-black p-8 rounded-2xl border-l-8 border-red-600 point">
+                    <div class="text-5xl mb-4">💔</div>
+                    <h4 class="text-2xl font-black mb-3 text-red-400">2030</h4>
+                    <p class="text-lg">KOLEJNA KOMPROMITACJA<br/>Mistrzostwa Świata bez Polaków<br/>Utracone pokolenie 2010-2016</p>
+                </div>
+                <div class="bg-gradient-to-br from-red-900 to-black p-8 rounded-2xl border-l-8 border-orange-600 point">
+                    <div class="text-5xl mb-4">📉</div>
+                    <h4 class="text-2xl font-black mb-3 text-orange-400">2035</h4>
+                    <p class="text-lg">EKSTRAKLASA POZA TOP 15<br/>Spadek poniżej Turcji, Czech<br/>Utrata młodych graczy za granicę</p>
+                </div>
+                <div class="bg-gradient-to-br from-red-900 to-black p-8 rounded-2xl border-l-8 border-yellow-600 point">
+                    <div class="text-5xl mb-4">🚫</div>
+                    <h4 class="text-2xl font-black mb-3 text-yellow-400">2040</h4>
+                    <p class="text-lg">STRACONE POKOLENIE<br/>Brak wzorców dla młodzieży<br/>Piłka jako sport marginalny</p>
+                </div>
+                <div class="bg-gradient-to-br from-red-900 to-black p-8 rounded-2xl border-l-8 border-red-800 point">
+                    <div class="text-5xl mb-4">💀</div>
+                    <h4 class="text-2xl font-black mb-3 text-red-300">2050</h4>
+                    <p class="text-lg">POLSKA JAK TURCJA<br/>Potencjał 38 mln ludzi<br/>CAŁKOWICIE ZMARNOWANY</p>
+                </div>
+            </div>
+            <div class="bg-gradient-to-r from-yellow-600 to-orange-600 p-8 rounded-2xl text-center point">
+                <p class="text-3xl font-black">⏰ MAMY 12 LAT. POTEM ZA PÓŹNO.</p>
+            </div>
+        </div>
+
+        <!-- SLIDE 13: KONTAKT -->
+        <div class="slide text-center space-y-8">
+            <div class="bg-gradient-to-r from-gray-800 to-black p-12 rounded-3xl border-4 border-gray-600 point">
+                <h3 class="text-4xl font-black">KONTAKT: polska2038@proton.me</h3>
+            </div>
+        </div>
+
+        <!-- SLIDE 14: WEZWANIE -->
+        <div class="slide text-center space-y-8">
+            <div class="bg-gradient-to-r from-red-600 to-orange-600 p-12 rounded-3xl point">
+                <h3 class="text-5xl font-black">CZAS DZIAŁAĆ – NATYCHMIAST</h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+        <button id="prev-btn" class="bg-gray-800 hover:bg-gray-700 px-8 py-4 rounded-2xl text-lg font-bold">Poprzedni</button>
+        <div id="quick-nav" class="flex space-x-2"></div>
+        <button id="next-btn" class="bg-red-600 hover:bg-red-700 px-8 py-4 rounded-2xl text-lg font-bold">Następny</button>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="mt-12 text-center text-gray-500 text-sm">
+        <p>Projekt obywatelski • Anonimowy • Kontakt: <span class="font-mono text-red-500">polska2038@proton.me</span></p>
+    </div>
+</div>
+
+<script>
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+    let current = 0;
+
+    const titleEl = document.getElementById('slide-title');
+    const subtitleEl = document.getElementById('slide-subtitle');
+    const currentNumEl = document.getElementById('current-num');
+    const totalEl = document.getElementById('total-slides');
+    const dotsContainer = document.getElementById('dots');
+    const quickNav = document.getElementById('quick-nav');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+
+    const slideData = [
+        { title: "POLSKA 2038", subtitle: "MISTRZOSTWO ŚWIATA LUB NIC" },
+        { title: "MOMENT PRZEŁOMOWY", subtitle: "Roczniki 2010–2016 czekają" },
+        { title: "7 FILARÓW DOMINACJI", subtitle: "Kompletny system" },
+        { title: "PROJEKT ORZEŁ 2038", subtitle: "60+60 talentów" },
+        { title: "TALENCIAK+", subtitle: "1000 dzieci × rocznik" },
+        { title: "EKSTRAKLASA PREMIUM", subtitle: "TOP 5 Europy" },
+        { title: "BOISKO W KAŻDEJ GMINIE", subtitle: "Dostępność totalna" },
+        { title: "HARMONOGRAM 2026–2038", subtitle: "Zero opóźnień" },
+        { title: "QUICK WINS", subtitle: "Efekty w 12 miesięcy" },
+        { title: "BUDŻET: 8–10 MLD ZŁ", subtitle: "2026–2035" },
+        { title: "WZORCE SUKCESU", subtitle: "Belgia • Chorwacja" },
+        { title: "CO STRACIMY", subtitle: "Bez działania" },
+        { title: "KONTAKT ANONIMOWY", subtitle: "polska2038@proton.me" },
+        { title: "WEZWANIE DO DZIAŁANIA", subtitle: "Czas start!" }
+    ];
+
+    function animatePoints() {
+        const points = slides[current].querySelectorAll('.point');
+        points.forEach((p, i) => setTimeout(() => p.classList.add('visible'), i * 200));
+    }
+
+    function showSlide(n) {
+        slides.forEach((s, i) => s.classList.toggle('active', i === n));
+        current = n;
+        titleEl.textContent = slideData[n].title;
+        subtitleEl.textContent = slideData[n].subtitle;
+        currentNumEl.textContent = n + 1;
+        updateNav();
+        animatePoints();
+    }
+
+    function updateNav() {
+        prevBtn.disabled = current === 0;
+        nextBtn.disabled = current === totalSlides - 1;
+        dotsContainer.innerHTML = '';
+        quickNav.innerHTML = '';
+        for (let i = 0; i < totalSlides; i++) {
+            const dot = document.createElement('div');
+            dot.className = `h-2 w-8 rounded-full cursor-pointer ${i === current ? 'bg-red-500 w-12' : 'bg-gray-600'}`;
+            dot.onclick = () => showSlide(i);
+            dotsContainer.appendChild(dot);
+            if ([0, 3, 6, 9].includes(i)) {
+                const btn = document.createElement('button');
+                btn.className = `px-6 py-3 rounded-xl text-sm font-bold ${i === current ? 'bg-red-600' : 'bg-gray-800 hover:bg-gray-700'}`;
+                btn.textContent = i === 0 ? 'START' : `S${i + 1}`;
+                btn.onclick = () => showSlide(i);
+                quickNav.appendChild(btn);
+            }
+        }
+    }
+
+    prevBtn.onclick = () => current > 0 && showSlide(current - 1);
+    nextBtn.onclick = () => current < totalSlides - 1 && showSlide(current + 1);
+    document.addEventListener('keydown', e => {
+        if (e.key === 'ArrowLeft') prevBtn.click();
+        if (e.key === 'ArrowRight') nextBtn.click();
+    });
+
+    totalEl.textContent = totalSlides;
+    updateNav();
+    animatePoints();
+</script>
+</body>
+</html>

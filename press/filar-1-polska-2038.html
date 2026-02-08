@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FILAR 1: POLSKA 2038 - Szczegółowa Dokumentacja</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.8;
+      color: #333;
+      background: white;
+      padding: 40px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    header {
+      background: linear-gradient(135deg, #dc143c, #8b0000);
+      color: white;
+      padding: 50px 40px;
+      margin: -40px -40px 40px -40px;
+      text-align: center;
+      position: relative;
+    }
+
+    .back-button {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: rgba(255,255,255,0.2);
+      color: white;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: all 0.3s;
+      border: 2px solid rgba(255,255,255,0.3);
+    }
+
+    .back-button:hover {
+      background: white;
+      color: #dc143c;
+      transform: translateX(-5px);
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 15px;
+      font-weight: 900;
+    }
+
+    .subtitle {
+      font-size: 1.5em;
+      color: #ffd700;
+      margin-bottom: 20px;
+    }
+
+    .budget {
+      font-size: 2em;
+      color: #ffd700;
+      font-weight: 900;
+      margin-top: 20px;
+    }
+
+    h2 {
+      color: #dc143c;
+      font-size: 2.2em;
+      margin: 50px 0 25px 0;
+      padding-bottom: 15px;
+      border-bottom: 3px solid #dc143c;
+    }
+
+    h3 {
+      color: #dc143c;
+      font-size: 1.6em;
+      margin: 35px 0 20px 0;
+    }
+
+    p {
+      font-size: 1.1em;
+      margin-bottom: 20px;
+      text-align: justify;
+    }
+
+    ul, ol {
+      margin: 20px 0 20px 40px;
+      font-size: 1.1em;
+    }
+
+    li {
+      margin-bottom: 15px;
+    }
+
+    strong {
+      color: #dc143c;
+    }
+
+    .highlight-box {
+      background: #fff3cd;
+      border-left: 5px solid #ffd700;
+      padding: 25px;
+      margin: 30px 0;
+      border-radius: 5px;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin: 30px 0;
+    }
+
+    .stat-box {
+      background: #f8f9fa;
+      padding: 25px;
+      border-radius: 10px;
+      text-align: center;
+      border-top: 4px solid #dc143c;
+    }
+
+    .stat-number {
+      font-size: 2.5em;
+      font-weight: 900;
+      color: #dc143c;
+      margin-bottom: 10px;
+    }
+
+    .stat-label {
+      font-size: 1em;
+      color: #666;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 30px 0;
+      font-size: 1.05em;
+    }
+
+    th, td {
+      padding: 15px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background: #dc143c;
+      color: white;
+      font-weight: 600;
+    }
+
+    tr:hover {
+      background: #f5f5f5;
+    }
+
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid #ddd;
+      text-align: center;
+      color: #666;
+    }
+
+    @media print {
+      body { padding: 20px; }
+      header { margin: -20px -20px 30px -20px; }
+    }
+
+    /* Hide header when in iframe */
+    @media screen {
+      body:not(.standalone) header {
+        display: none;
+      }
+    }
+  </style>
+  <script>
+    // Detect if page is in iframe
+    if (window.self !== window.top) {
+      document.addEventListener('DOMContentLoaded', function() {
+        document.body.classList.remove('standalone');
+      });
+    } else {
+      document.addEventListener('DOMContentLoaded', function() {
+        document.body.classList.add('standalone');
+      });
+    }
+  </script>
+</head>
+<body class="standalone">
+
+  <header>
+    <a href="../index.html#presskit" class="back-button">← Powrót do strony głównej</a>
+    <h1>⚽ FILAR 1: POLSKA 2038</h1>
+    <div class="subtitle">Budowanie Mistrzów - System Szkolenia Najlepszych Talentów</div>
+    <div class="budget">Budżet: 1 000 000 000 zł/rok</div>
+  </header>
+
+  <h2>📋 Podsumowanie Wykonawcze</h2>
+  <p>
+    <strong>FILAR 1: POLSKA 2038</strong> to kompleksowy system identyfikacji, szkolenia i rozwoju najlepszych
+    młodych piłkarzy w Polsce. Program obejmuje 1000 dzieci rocznie w wieku 6-21 lat i ma na celu
+    wyprodukowanie 100+ zawodników na poziomie TOP 5 lig europejskich do 2035 roku.
+  </p>
+
+  <div class="highlight-box">
+    <h3 style="margin-top: 0;">🎯 Główny Cel</h3>
+    <p style="font-size: 1.3em; font-weight: 600; margin-bottom: 0;">
+      Finał Mistrzostw Świata 2038 + Ekstraklasa w TOP 5 UEFA do 2035
+    </p>
+  </div>
+
+  <h2>💰 Szczegółowy Budżet (mln zł/rok)</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Kategoria</th>
+        <th>Budżet</th>
+        <th>Opis</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Program Talenciak+</strong></td>
+        <td><strong>250 mln zł</strong></td>
+        <td>1000 dzieci/rocznik, wiek 6-13 lat</td>
+      </tr>
+      <tr>
+        <td><strong>Projekt Orzeł 2038</strong></td>
+        <td><strong>180 mln zł</strong></td>
+        <td>120 najlepszych (60 U15 + 60 U18)</td>
+      </tr>
+      <tr>
+        <td><strong>Kadra U21 Pełnoetatowa</strong></td>
+        <td><strong>120 mln zł</strong></td>
+        <td>25 zawodników, kontrakty zawodowe</td>
+      </tr>
+      <tr>
+        <td><strong>Orlik 3.0</strong></td>
+        <td><strong>300 mln zł</strong></td>
+        <td>2477 boisk - modernizacja i AI</td>
+      </tr>
+      <tr>
+        <td><strong>Centralna Baza AI</strong></td>
+        <td><strong>100 mln zł</strong></td>
+        <td>10 000+ zawodników w systemie</td>
+      </tr>
+      <tr>
+        <td><strong>Ekstraklasa Premium</strong></td>
+        <td><strong>50 mln zł</strong></td>
+        <td>Bonusy za Polaków w składzie</td>
+      </tr>
+      <tr style="background: #ffd700;">
+        <td><strong>ŁĄCZNIE</strong></td>
+        <td><strong>1 000 mln zł</strong></td>
+        <td><strong>1 miliard zł/rok</strong></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>🎯 Szczegółowy Opis Komponentów</h2>
+
+  <h3>1️⃣ Program Talenciak+ (250 mln zł/rok)</h3>
+  <p><strong>Cel:</strong> Identyfikacja i wczesne szkolenie 1000 najlepszych dzieci w wieku 6-13 lat rocznie.</p>
+
+  <p><strong>Jak działa:</strong></p>
+  <ul>
+    <li><strong>Rekrutacja:</strong> Testy motoryczne i piłkarskie w każdym z 16 województw</li>
+    <li><strong>Selekcja:</strong> Top 1000 dzieci rocznie (60-70 na województwo)</li>
+    <li><strong>Szkolenie:</strong> 4-5 treningów/tydzień + mecze + obozy</li>
+    <li><strong>Trenerzy:</strong> Wyłącznie licencja UEFA A lub wyższa + ocena zewnętrzna</li>
+    <li><strong>Monitoring:</strong> Testy co 6 miesięcy, baza AI śledzi rozwój</li>
+    <li><strong>Koszt:</strong> 250 000 zł/dziecko/rok (treningi, obozy, testy, trenerzy, sprzęt)</li>
+  </ul>
+
+  <h3>2️⃣ Projekt Orzeł 2038 (180 mln zł/rok)</h3>
+  <p><strong>Cel:</strong> Intensywne szkolenie 120 absolutnie najlepszych zawodników U15-U21.</p>
+
+  <p><strong>Struktura:</strong></p>
+  <ul>
+    <li><strong>Orzeł U15:</strong> 60 zawodników (15-16 lat) - 1,5 mln zł/zawodnik/rok</li>
+    <li><strong>Orzeł U18:</strong> 60 zawodników (17-18 lat) - 1,5 mln zł/zawodnik/rok</li>
+    <li><strong>Ścieżka:</strong> Talenciak+ → Orzeł U15 → Orzeł U18 → U21 → Kadra A</li>
+    <li><strong>Szkolenie:</strong> 10+ treningów/tydzień + mecze międzynarodowe + akademie zagraniczne</li>
+    <li><strong>Trenerzy:</strong> Wyłącznie UEFA Pro + doświadczenie w TOP 5 ligach</li>
+    <li><strong>Wspłółpraca:</strong> Z TOP klubami w Europie (Barca, Ajax, Dortmund)</li>
+  </ul>
+
+  <h3>3️⃣ Kadra U21 Pełnoetatowa (120 mln zł/rok)</h3>
+  <p><strong>Cel:</strong> 25 najlepszych zawodników U21 na kontraktach zawodowych z PZPN.</p>
+
+  <p><strong>Model:</strong></p>
+  <ul>
+    <li><strong>Kontrakty:</strong> 2-3 letnie kontrakty z PZPN (3-5 mln zł/zawodnik/rok)</li>
+    <li><strong>Praca:</strong> Pełnoetatowa kadra U21 (nie tylko zgrupowania)</li>
+    <li><strong>Treningi:</strong> Codziennie, jak w klubie (nie tylko przed meczami)</li>
+    <li><strong>Mecze:</strong> 40-50 meczów/rok (przyjazne + eliminacje + turnieje)</li>
+    <li><strong>Transfer:</strong> Po 2-3 latach → transfer do TOP klubów w Europie</li>
+    <li><strong>Wzór:</strong> Model Red Bull Salzburg (fabryka zawodników)</li>
+  </ul>
+
+  <h3>4️⃣ Orlik 3.0 (300 mln zł/rok)</h3>
+  <p><strong>Cel:</strong> Modernizacja 2477 boisk Orlik w całej Polsce + technologia AI.</p>
+
+  <p><strong>Co się zmienia:</strong></p>
+  <ul>
+    <li><strong>Nawierzchnia:</strong> Wymiana na profesjonalne murawy hybrydowe</li>
+    <li><strong>Oświetlenie:</strong> LED + możliwość treningów wieczornych</li>
+    <li><strong>Kamery AI:</strong> Analiza ruchu i techniki zawodników</li>
+    <li><strong>Aplikacja:</strong> Rodzice widzą postępy dziecka w czasie rzeczywistym</li>
+    <li><strong>Sieć:</strong> Wszystkie Orliki połączone w jedną sieć treningową</li>
+    <li><strong>Koszt:</strong> ~120 000 zł/boisko/rok (modernizacja + utrzymanie)</li>
+  </ul>
+
+  <h3>5️⃣ Centralna Baza AI (100 mln zł/rok)</h3>
+  <p><strong>Cel:</strong> System AI monitorujący rozwój 10 000+ zawodników w czasie rzeczywistym.</p>
+
+  <p><strong>Funkcje:</strong></p>
+  <ul>
+    <li><strong>Profil zawodnika:</strong> Wzrost, waga, testy motoryczne, technika, mecze</li>
+    <li><strong>Analiza wideo:</strong> AI analizuje każdy mecz i trening</li>
+    <li><strong>Predykcja:</strong> AI przewiduje potencjał zawodnika (jak w FM/FIFA)</li>
+    <li><strong>Ranking:</strong> Dynamiczny ranking zawodników w każdej kategorii wiekowej</li>
+    <li><strong>Scouting:</strong> Klub może sprawdzić każdego zawodnika w systemie</li>
+    <li><strong>Transfer:</strong> Historia transferów i wartość rynkowa</li>
+  </ul>
+
+  <h3>6️⃣ Ekstraklasa Premium (50 mln zł/rok)</h3>
+  <p><strong>Cel:</strong> Motywacja klubów Ekstraklasy do gry Polakami.</p>
+
+  <p><strong>Bonusy:</strong></p>
+  <ul>
+    <li><strong>Za minut:</strong> 10 000 zł za każde 90 minut młodego Polaka (U23)</li>
+    <li><strong>Za debiut:</strong> 100 000 zł za debiut młodego Polaka w Ekstraklasie</li>
+    <li><strong>Za transfer:</strong> 10% z kwoty transferu Polaka za granicę (do 1 mln zł)</li>
+    <li><strong>Za wyniki:</strong> Dodatkowe bonusy za miejsce w tabeli z min. 50% Polaków</li>
+    <li><strong>Redukcja ligi:</strong> Z 18 do 14 klubów = wyższa jakość = więcej minut dla Polaków</li>
+  </ul>
+
+  <h2>📈 ROI - Zwrot Z Inwestycji</h2>
+
+  <h3>Przychody od 2030 (konserwatywne szacunki):</h3>
+
+  <div class="stats-grid">
+    <div class="stat-box">
+      <div class="stat-number">2,1 mld</div>
+      <div class="stat-label">Transfer fees<br>(500+ mln EUR/rok)</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-number">+80 mln</div>
+      <div class="stat-label">Sponsoring kadry<br>(wzrost ze 20 do 100 mln)</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-number">+200 mln</div>
+      <div class="stat-label">Transmisje TV<br>(wzrost o 300%)</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-number">+200 mln</div>
+      <div class="stat-label">Turystyka meczowa<br>(50k kibiców/rok)</div>
+    </div>
+  </div>
+
+  <div class="highlight-box">
+    <h3 style="margin-top: 0;">💰 Łączny ROI Ekonomiczny</h3>
+    <p style="font-size: 1.8em; font-weight: 900; color: #dc143c; margin-bottom: 10px;">
+      3-5 miliardów zł/rok od 2035
+    </p>
+    <p style="font-size: 1.3em; margin-bottom: 0;">
+      = <strong style="color: #dc143c;">300-500% zwrotu z inwestycji rocznej</strong>
+    </p>
+  </div>
+
+  <h2>🎯 Konkretne Rezultaty Do 2035</h2>
+
+  <ul>
+    <li><strong>100+ Polaków w TOP 5 ligach europejskich</strong> (obecnie: ~30)</li>
+    <li><strong>Ekstraklasa w TOP 5 UEFA</strong> (obecnie: 24. miejsce)</li>
+    <li><strong>Kadra narodowa w TOP 10 FIFA</strong> (obecnie: ~30. miejsce)</li>
+    <li><strong>Wartość eksportu zawodników: 500+ mln EUR/rok</strong> (obecnie: ~100 mln EUR)</li>
+    <li><strong>3-4 Polaków w finale Ligi Mistrzów co roku</strong></li>
+    <li><strong>Polski klub w fazie grupowej LM co roku</strong></li>
+  </ul>
+
+  <h2>⏰ Timeline Wdrożenia</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Rok</th>
+        <th>Kamień Milowy</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>2026</strong></td>
+        <td>Pilotaż Talenciak+ w 3 województwach (300 dzieci)</td>
+      </tr>
+      <tr>
+        <td><strong>2027</strong></td>
+        <td>Pełne wdrożenie Talenciak+ (1000 dzieci/rocznik)</td>
+      </tr>
+      <tr>
+        <td><strong>2028</strong></td>
+        <td>Start Projekt Orzeł U15 (60 zawodników)</td>
+      </tr>
+      <tr>
+        <td><strong>2030</strong></td>
+        <td>U21 pełnoetatowa w pełnej sile (25 zawodników)</td>
+      </tr>
+      <tr>
+        <td><strong>2032</strong></td>
+        <td>Pierwsi absolwenci Talenciak+ w TOP 5 ligach</td>
+      </tr>
+      <tr>
+        <td><strong>2035</strong></td>
+        <td>Ekstraklasa w TOP 5 UEFA, 100+ Polaków w TOP 5</td>
+      </tr>
+      <tr>
+        <td><strong>2038</strong></td>
+        <td><strong style="color: #dc143c; font-size: 1.3em;">FINAŁ MISTRZOSTW ŚWIATA</strong></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>🔑 Kluczowe Zalety</h2>
+
+  <ul>
+    <li><strong>Systematyczność:</strong> Nie czekamy na "złoty rocznik" - produkujemy mistrzów co roku</li>
+    <li><strong>Skala:</strong> 1000 dzieci/rok = 10x więcej niż obecnie w systemie profesjonalnym</li>
+    <li><strong>Jakość:</strong> Najlepsi trenerzy (UEFA A/Pro) + audyt zewnętrzny (AWF)</li>
+    <li><strong>Technologia:</strong> AI + Big Data = przewaga nad innymi krajami</li>
+    <li><strong>Model biznesowy:</strong> Polska = fabryka zawodników dla TOP 5 lig (jak Chorwacja, Portugalia)</li>
+  </ul>
+
+  <div class="footer">
+    <p><strong>Projekt Obywatelski POLSKA 2038</strong></p>
+    <p>Strona: <a href="https://polska2038.github.io/polska_projekt_2038/">polska2038.github.io</a></p>
+    <p style="margin-top: 20px; font-size: 0.9em; color: #999;">
+      Dokument może być drukowany, kopiowany i dystrybuowany. Źródło: "Projekt Obywatelski POLSKA 2038".
+    </p>
+  </div>
+
+</body>
+</html>
+

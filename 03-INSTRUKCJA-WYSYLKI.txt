@@ -1,0 +1,58 @@
+=== INSTRUKCJA WYSYŁKI ANONIMOWEJ ===
+
+KROK 1: PRZYGOTOWANIE (5 min)
+□ Pobierz ProtonVPN (darmowy): https://protonvpn.com
+□ Zainstaluj i uruchom ProtonVPN
+□ Włącz VPN (wybierz serwer: Niemcy lub Szwajcaria)
+□ Otwórz przeglądarkę w trybie prywatnym (Ctrl+Shift+N w Chrome/Edge)
+
+KROK 2: WYSYŁKA Z PROTONMAIL
+□ Zaloguj się na: polska2038@proton.me
+□ Kliknij "Nowa wiadomość"
+□ TEMAT: skopiuj z pliku "01-email-treść.txt"
+□ DO: prezes@pzpn.pl, biuro@pzpn.pl
+□ UDW/BCC: wszystkie adresy mediów (z pliku "02-adresy-email.txt")
+   WAŻNE: Media MUSZĄ być w BCC (ukryte kopie), nie w TO!
+□ TREŚĆ: wklej całość z pliku "01-email-treść.txt"
+□ ZAŁĄCZNIK: dodaj plik "POLSKA 2038.html"
+
+KROK 3: WERYFIKACJA PRZED WYSŁANIEM
+□ Czy VPN jest włączony? (sprawdź ikonę w zasobniku systemowym)
+□ Czy media są w BCC (nie TO)?
+□ Czy załączono HTML?
+□ Czy jesteś w trybie prywatnym przeglądarki?
+
+KROK 4: WYŚLIJ
+⏰ OPTYMALNY CZAS: Poniedziałek, 8:00 rano
+   (maksymalna widoczność w mediach)
+
+□ Kliknij przycisk WYŚLIJ
+□ Poczekaj na potwierdzenie wysłania
+□ Zamknij przeglądarkę
+□ Wyłącz VPN
+
+KROK 5: PO WYSŁANIU
+• NIE odpowiadaj na emaile przez pierwsze 48 godzin
+• Obserwuj media (reakcje powinny pojawić się w ciągu 24-72h)
+• Jeśli po 7 dniach cisza – możesz wysłać follow-up
+
+=== BEZPIECZEŃSTWO ===
+✅ ProtonMail = szyfrowanie end-to-end (nikt nie przeczyta)
+✅ VPN = ukryta lokalizacja IP (nie da się namierzyć)
+✅ BCC dla mediów = nie widzą się nawzajem (brak przecieków)
+✅ Tryb prywatny = brak śladów lokalnych na komputerze
+
+=== NAJCZĘSTSZE BŁĘDY (UNIKAJ!) ===
+❌ Media w TO zamiast BCC
+❌ Wysyłka bez VPN
+❌ Odpowiadanie z prywatnego konta email
+❌ Używanie prawdziwego imienia/nazwiska w treści
+
+=== CO DALEJ? ===
+1. Pierwsze reakcje mediów: 24-72h
+2. Możliwa debata publiczna: 3-7 dni
+3. Oficjalna odpowiedź PZPN: 7-14 dni
+4. Jeśli PZPN milczy: uruchom petycję obywatelską (50k podpisów)
+
+POWODZENIA! 🇵🇱⚽🏆
+

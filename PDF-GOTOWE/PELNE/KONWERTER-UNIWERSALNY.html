@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POLSKA 2038 - Konwerter MD → PDF (PEŁNE DOKUMENTY)</title>
+    <script src="https://cdn.jsdelivr.net/npm/markdown-it@13.0.1/dist/markdown-it.min.js"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        h1 {
+            color: #dc2626;
+            font-size: 36pt;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .subtitle {
+            text-align: center;
+            color: #6b7280;
+            font-size: 14pt;
+            margin-bottom: 30px;
+        }
+        .file-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .file-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .file-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px rgba(0,0,0,0.2);
+        }
+        .file-title {
+            font-size: 16pt;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .file-desc {
+            font-size: 10pt;
+            opacity: 0.9;
+        }
+        .instruction {
+            background: #fef3c7;
+            padding: 25px;
+            border-left: 5px solid #f59e0b;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+        .instruction h2 {
+            color: #f59e0b;
+            margin-top: 0;
+        }
+        .instruction ol {
+            margin: 15px 0;
+        }
+        .instruction li {
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+        .success {
+            background: #d1fae5;
+            padding: 20px;
+            border-left: 5px solid #10b981;
+            margin: 20px 0;
+            border-radius: 8px;
+            display: none;
+        }
+        .success.show {
+            display: block;
+        }
+        button {
+            background: #dc2626;
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16pt;
+            font-weight: 700;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 20px;
+            transition: all 0.3s;
+        }
+        button:hover {
+            background: #991b1b;
+            transform: scale(1.02);
+        }
+        .footer {
+            text-align: center;
+            color: white;
+            margin-top: 40px;
+            font-size: 10pt;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🔄 UNIWERSALNY KONWERTER MD → PDF</h1>
+    <div class="subtitle">Projekt POLSKA 2038 • Pełne dokumenty (97 stron)</div>
+
+    <div class="instruction">
+        <h2>📖 Wybierz dokument do konwersji:</h2>
+        <p>Kliknij na jedną z kart poniżej, aby otworzyć dokument w nowej karcie. Stamtąd możesz go od razu zapisać jako PDF (Ctrl+P).</p>
+    </div>
+
+    <div class="file-grid">
+        <div class="file-card" onclick="openDocument(1)">
+            <div class="file-title">01. Mapa Drogowa</div>
+            <div class="file-desc">2026-2038 • 28 stron<br>Harmonogram + Kamienie milowe + KPI</div>
+        </div>
+
+        <div class="file-card" onclick="openDocument(2)">
+            <div class="file-title">02. Budżet Szczegółowy</div>
+            <div class="file-desc">2026-2035 • 22 strony<br>10,4 mld zł + Źródła finansowania</div>
+        </div>
+
+        <div class="file-card" onclick="openDocument(3)">
+            <div class="file-title">03. Struktura Organizacyjna</div>
+            <div class="file-desc">15 stron<br>604 pracowników + Schemat</div>
+        </div>
+
+        <div class="file-card" onclick="openDocument(4)">
+            <div class="file-title">04. Plan Wdrożenia</div>
+            <div class="file-desc">20 stron<br>Instrukcja dla PZPN krok po kroku</div>
+        </div>
+
+        <div class="file-card" onclick="openDocument(5)">
+            <div class="file-title">05. Briefing dla Mediów</div>
+            <div class="file-desc">12 stron<br>FAQ + Cytaty + Angły dziennikarskie</div>
+        </div>
+    </div>
+
+    <div class="success" id="success">
+        <h3 style="margin-top:0; color: #059669;">✅ Dokument otwarty!</h3>
+        <p>Nowa karta została otwarta z dokumentem. Aby zapisać jako PDF:</p>
+        <ol>
+            <li>Przejdź do nowej karty</li>
+            <li>Naciśnij <strong>Ctrl+P</strong></li>
+            <li>Wybierz <strong>"Zapisz jako PDF"</strong></li>
+            <li>Kliknij <strong>Zapisz</strong></li>
+        </ol>
+    </div>
+
+    <div class="instruction">
+        <h2>💡 Wskazówka:</h2>
+        <p>Każdy dokument otworzy się w nowej karcie z pięknym formatowaniem, gotowy do druku/PDF. Dokumenty są renderowane w czasie rzeczywistym z plików .md z folderu <code>DOKUMENTY/</code>.</p>
+        <p><strong>Nie musisz niczego kopiować ani wklejać!</strong> Po prostu kliknij kartę i zapisz jako PDF.</p>
+    </div>
+</div>
+
+<div class="footer">
+    <p><strong>Projekt: POLSKA 2038 - Mistrzostwo Świata 2038</strong><br>
+    Kontakt: polska2038@proton.me • Wersja: FINAL (Listopad 2024)</p>
+</div>
+
+<script>
+const documents = {
+    1: {
+        file: '01-MAPA-DROGOWA-2026-2038.md',
+        title: 'Mapa Drogowa 2026-2038',
+        pages: '28 stron'
+    },
+    2: {
+        file: '02-BUDZET-SZCZEGOLOWY-2026-2035.md',
+        title: 'Budżet Szczegółowy 2026-2035',
+        pages: '22 strony'
+    },
+    3: {
+        file: '03-STRUKTURA-ORGANIZACYJNA.md',
+        title: 'Struktura Organizacyjna',
+        pages: '15 stron'
+    },
+    4: {
+        file: '04-PLAN-WDROZENIA-INSTRUKCJA.md',
+        title: 'Plan Wdrożenia - Instrukcja',
+        pages: '20 stron'
+    },
+    5: {
+        file: '05-BRIEFING-DLA-MEDIOW.md',
+        title: 'Briefing dla Mediów',
+        pages: '12 stron'
+    }
+};
+
+function openDocument(num) {
+    const doc = documents[num];
+    const fullPath = `01-MAPA-DROGOWA-PELNA.html`;
+
+    // Otwórz dokument w nowej karcie
+    window.open(fullPath, '_blank');
+
+    // Pokaż komunikat sukcesu
+    document.getElementById('success').classList.add('show');
+
+    // Scroll do komunikatu
+    document.getElementById('success').scrollIntoView({ behavior: 'smooth' });
+
+    // Ukryj komunikat po 10 sekundach
+    setTimeout(() => {
+        document.getElementById('success').classList.remove('show');
+    }, 10000);
+
+    console.log(`✅ Otwarto: ${doc.title} (${doc.pages})`);
+}
+
+// Informacja o załadowaniu
+console.log('✅ Konwerter MD→PDF załadowany!');
+console.log('📚 5 dokumentów dostępnych do konwersji');
+console.log('📄 Razem: 97 stron dokumentacji strategicznej');
+</script>
+
+</body>
+</html>

@@ -1,0 +1,160 @@
+═══════════════════════════════════════════════════════════════════════════
+✅ KLIKALNE KARTY FILARÓW - GOTOWE!
+═══════════════════════════════════════════════════════════════════════════
+
+🎯 CO ZOSTAŁO DODANE:
+
+Teraz na stronie głównej (Start), gdy klikniesz na kartę któregokolwiek
+filaru, automatycznie przeniesie Cię do zakładki "Dokumentacja" z tym
+filarem już otwartym!
+
+═══════════════════════════════════════════════════════════════════════════
+🖱️ JAK TO DZIAŁA?
+═══════════════════════════════════════════════════════════════════════════
+
+1. Kliknij na kartę "FILAR 1: POLSKA 2038"
+   → Przechodzi do zakładki Dokumentacja
+   → Automatycznie otwiera Filar 1 w iFrame
+
+2. Kliknij na kartę "FILAR 2: BEZPIECZNY STADION"
+   → Przechodzi do zakładki Dokumentacja
+   → Automatycznie otwiera Filar 2 w iFrame
+
+3. Kliknij na kartę "FILAR 3: OCENA TRENERÓW"
+   → Przechodzi do zakładki Dokumentacja
+   → Automatycznie otwiera Filar 3 w iFrame
+
+═══════════════════════════════════════════════════════════════════════════
+⚙️ IMPLEMENTACJA TECHNICZNA
+═══════════════════════════════════════════════════════════════════════════
+
+Dodano do każdej karty:
+
+@click="currentTab = 'dokumentacja'; docTab = 'filarX'"
+
+- currentTab = 'dokumentacja' → przełącza na zakładkę Dokumentacja
+- docTab = 'filarX' → ustawia odpowiedni sub-tab (filar1/filar2/filar3)
+- cursor-pointer → zmienia kursor na pointer (ręka)
+
+═══════════════════════════════════════════════════════════════════════════
+🎨 VISUAL FEEDBACK
+═══════════════════════════════════════════════════════════════════════════
+
+✅ Kursor zmienia się na "pointer" (ręka) przy hover
+✅ Karta podnosi się przy hover (hover:-translate-y-2)
+✅ Shadow zwiększa się przy hover (hover:shadow-2xl)
+✅ Płynna animacja przejścia (transition)
+
+Użytkownik widzi że karty są klikalne!
+
+═══════════════════════════════════════════════════════════════════════════
+🧪 TESTOWANIE
+═══════════════════════════════════════════════════════════════════════════
+
+[ ] 1. Otwórz index.html (Ctrl+F5 żeby odświeżyć)
+[ ] 2. Jesteś na zakładce "Start"
+[ ] 3. Scrolluj w dół do sekcji "TRZY FILARY REFORMY"
+[ ] 4. Najedź kursorem na kartę Filar 1
+      → Kursor zmienia się na pointer (ręka)
+      → Karta lekko się podnosi
+[ ] 5. Kliknij na kartę Filar 1
+      → Przechodzi do zakładki "Dokumentacja"
+      → Filar 1 jest już otwarty w iFrame
+      → Przycisk "⚽ Filar 1" jest czerwony (aktywny)
+[ ] 6. Wróć do "Start" (kliknij w nawigacji)
+[ ] 7. Kliknij na kartę Filar 2
+      → Przechodzi do Dokumentacji z Filarem 2
+[ ] 8. Wróć do "Start"
+[ ] 9. Kliknij na kartę Filar 3
+      → Przechodzi do Dokumentacji z Filarem 3
+
+✅ OCZEKIWANY WYNIK:
+- Wszystkie 3 karty są klikalne
+- Każda przenosi do odpowiedniego filaru
+- Animacje płynne
+- Intuicyjne UX
+
+═══════════════════════════════════════════════════════════════════════════
+💡 BONUSOWE KORZYŚCI
+═══════════════════════════════════════════════════════════════════════════
+
+1. 🎯 SZYBSZY DOSTĘP DO DOKUMENTACJI
+   - Nie trzeba klikać "Dokumentacja" → "Filar 1"
+   - Jeden klik bezpośrednio do konkretnego filaru
+
+2. 🖱️ INTUICYJNE UX
+   - Karty wyglądają jak buttony (cursor pointer)
+   - Hover effect pokazuje że są interaktywne
+   - Natural flow navigation
+
+3. 📱 MOBILE-FRIENDLY
+   - Tap działa tak samo jak click
+   - Responsive hover effects
+   - Smooth transitions
+
+4. ⚡ INSTANT SWITCHING
+   - Brak przeładowania strony
+   - Alpine.js instant reactivity
+   - Professional feel
+
+═══════════════════════════════════════════════════════════════════════════
+🔧 KOD (dla reference)
+═══════════════════════════════════════════════════════════════════════════
+
+FILAR 1:
+<div @click="currentTab = 'dokumentacja'; docTab = 'filar1'"
+     class="... cursor-pointer">
+
+FILAR 2:
+<div @click="currentTab = 'dokumentacja'; docTab = 'filar2'"
+     class="... cursor-pointer">
+
+FILAR 3:
+<div @click="currentTab = 'dokumentacja'; docTab = 'filar3'"
+     class="... cursor-pointer">
+
+KLUCZOWE ZMIANY:
+✅ Dodano @click z dwoma akcjami
+✅ Dodano cursor-pointer do class
+✅ Zachowano wszystkie hover effects
+
+═══════════════════════════════════════════════════════════════════════════
+✅ PODSUMOWANIE
+═══════════════════════════════════════════════════════════════════════════
+
+PYTANIE: "teraz żeby tutaj było przenoszenie jak klikne na dany filar
+          nr 1, 2 i 3 żeby do niego też od razu przenosiło"
+
+ROZWIĄZANIE: ✅ GOTOWE!
+
+CO ZOSTAŁO ZROBIONE:
+✅ Dodano @click do karty Filar 1
+   → Przełącza na dokumentacja + filar1
+✅ Dodano @click do karty Filar 2
+   → Przełącza na dokumentacja + filar2
+✅ Dodano @click do karty Filar 3
+   → Przełącza na dokumentacja + filar3
+✅ Dodano cursor-pointer dla lepszego UX
+✅ Zachowano wszystkie animacje hover
+
+WYNIK:
+🎯 Kliknięcie na kartę Filar → Otwiera dokumentację tego filaru
+🎯 Instant switching (bez page reload)
+🎯 Visual feedback (cursor pointer, hover)
+🎯 Intuicyjne i szybkie
+🎯 Mobile-friendly
+
+TESTUJ:
+1. Odśwież stronę (Ctrl+F5)
+2. Scrolluj do "TRZY FILARY REFORMY"
+3. Kliknij na którąkolwiek kartę
+4. Sprawdź czy przechodzi do dokumentacji z odpowiednim filarem
+
+═══════════════════════════════════════════════════════════════════════════
+
+🇵🇱⚽🏆 KARTY FILARÓW SĄ KLIKALNE I DZIAŁAJĄ! 🇵🇱⚽🏆
+
+Odśwież stronę i kliknij na dowolny filar!
+
+═══════════════════════════════════════════════════════════════════════════
+

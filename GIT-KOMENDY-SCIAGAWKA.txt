@@ -1,0 +1,261 @@
+═══════════════════════════════════════════════════════════════════
+🔧 GIT - PRZYDATNE KOMENDY DLA POLSKA 2038
+═══════════════════════════════════════════════════════════════════
+
+📋 PODSTAWOWE KOMENDY - UŻYWAJ ICH CODZIENNIE
+═══════════════════════════════════════════════════════════════════
+
+# 1. Sprawdź status projektu (co się zmieniło)
+git status
+
+# 2. Dodaj wszystkie zmienione pliki
+git add .
+
+# 3. Zatwierdź zmiany z opisem
+git commit -m "Zaktualizowano budżet Filaru 2"
+
+# 4. Wyślij na GitHub (opublikuj zmiany)
+git push
+
+# 5. Pobierz najnowsze zmiany z GitHub
+git pull
+
+
+═══════════════════════════════════════════════════════════════════
+📝 TYPOWY WORKFLOW - AKTUALIZACJA STRONY
+═══════════════════════════════════════════════════════════════════
+
+# Edytujesz pliki (np. index.html, README.md)
+# Potem w PowerShell:
+
+cd "C:\Users\tomiz\Desktop\POLSKA 2038"
+git add .
+git commit -m "Dodano nowe statystyki"
+git push
+
+# Strona zaktualizuje się automatycznie w 1-2 minuty!
+
+
+═══════════════════════════════════════════════════════════════════
+🔍 KOMENDY DIAGNOSTYCZNE
+═══════════════════════════════════════════════════════════════════
+
+# Sprawdź historię zmian
+git log --oneline
+
+# Sprawdź ostatnie 5 commitów
+git log --oneline -5
+
+# Zobacz jakie pliki się zmieniły
+git diff
+
+# Sprawdź zdalne repozytorium
+git remote -v
+
+# Sprawdź na jakiej gałęzi jesteś
+git branch
+
+
+═══════════════════════════════════════════════════════════════════
+🆘 KOMENDY RATUNKOWE
+═══════════════════════════════════════════════════════════════════
+
+# Cofnij zmiany w pliku (PRZED git add)
+git checkout -- nazwa_pliku.txt
+
+# Cofnij ostatni commit (zachowaj zmiany)
+git reset --soft HEAD~1
+
+# Cofnij ostatni commit (USUŃ zmiany - OSTROŻNIE!)
+git reset --hard HEAD~1
+
+# Wymuś push (gdy normalny nie działa - OSTROŻNIE!)
+git push -f origin main
+
+# Usuń wszystkie lokalne zmiany (przywróć jak na GitHub)
+git reset --hard origin/main
+
+
+═══════════════════════════════════════════════════════════════════
+🔄 AKTUALIZACJA PO ZMIANACH NA GITHUB
+═══════════════════════════════════════════════════════════════════
+
+# Jeśli ktoś zmienił coś przez GitHub Web Interface:
+git pull origin main
+
+
+═══════════════════════════════════════════════════════════════════
+🌿 PRACA Z GAŁĘZIAMI (ZAAWANSOWANE)
+═══════════════════════════════════════════════════════════════════
+
+# Stwórz nową gałąź (np. do testowania zmian)
+git checkout -b testowa-wersja
+
+# Przełącz się między gałęziami
+git checkout main
+git checkout testowa-wersja
+
+# Scal gałąź do main
+git checkout main
+git merge testowa-wersja
+
+# Usuń gałąź
+git branch -d testowa-wersja
+
+
+═══════════════════════════════════════════════════════════════════
+📊 PRZYKŁADOWE SCENARIUSZE
+═══════════════════════════════════════════════════════════════════
+
+SCENARIUSZ 1: Zaktualizowałem budżet w pliku index.html
+────────────────────────────────────────────────────────────────
+git add index.html
+git commit -m "Zaktualizowano budżet Filaru 1 na 2027"
+git push
+
+
+SCENARIUSZ 2: Dodałem nowy dokument PDF
+────────────────────────────────────────────────────────────────
+git add PDF-GOTOWE/nowy-dokument.pdf
+git commit -m "Dodano dokument: Plan wdrożenia 2027"
+git push
+
+
+SCENARIUSZ 3: Zmieniłem wiele plików
+────────────────────────────────────────────────────────────────
+git add .
+git commit -m "Aktualizacja: nowe statystyki i layout strony"
+git push
+
+
+SCENARIUSZ 4: Coś się zepsuło, chcę wrócić do poprzedniej wersji
+────────────────────────────────────────────────────────────────
+git log --oneline                    # Zobacz historię
+git reset --hard abc123              # Wróć do commita abc123
+git push -f origin main              # Wymuś aktualizację na GitHub
+
+
+SCENARIUSZ 5: Zapomniałem o pliku w poprzednim commit
+────────────────────────────────────────────────────────────────
+git add zapomniany-plik.txt
+git commit --amend --no-edit         # Dodaj do ostatniego commita
+git push -f origin main              # Jeśli już wysłałeś poprzednio
+
+
+═══════════════════════════════════════════════════════════════════
+🎯 NAJCZĘSTSZE BŁĘDY I ROZWIĄZANIA
+═══════════════════════════════════════════════════════════════════
+
+❌ BŁĄD: "fatal: not a git repository"
+✅ ROZWIĄZANIE:
+   cd "C:\Users\tomiz\Desktop\POLSKA 2038"
+   git init
+   git remote add origin https://github.com/TWOJA-NAZWA/polska-2038.git
+
+
+❌ BŁĄD: "failed to push some refs"
+✅ ROZWIĄZANIE:
+   git pull origin main --rebase
+   git push origin main
+
+
+❌ BŁĄD: "Permission denied (publickey)"
+✅ ROZWIĄZANIE: Użyj HTTPS zamiast SSH:
+   git remote set-url origin https://github.com/TWOJA-NAZWA/polska-2038.git
+
+
+❌ BŁĄD: "Authentication failed"
+✅ ROZWIĄZANIE: Użyj Personal Access Token zamiast hasła:
+   https://github.com/settings/tokens/new
+
+
+❌ BŁĄD: "merge conflict"
+✅ ROZWIĄZANIE:
+   # Jeśli nie wiesz co robić:
+   git merge --abort          # Anuluj merge
+   git reset --hard origin/main   # Przywróć wersję z GitHub
+
+
+═══════════════════════════════════════════════════════════════════
+💡 DOBRE PRAKTYKI
+═══════════════════════════════════════════════════════════════════
+
+✅ Commituj często (małe zmiany)
+✅ Używaj opisowych wiadomości commit
+✅ Testuj lokalnie przed push
+✅ Sprawdzaj git status przed commit
+✅ Czytaj komunikaty o błędach
+
+❌ Nie commituj wrażliwych danych (hasła, klucze API)
+❌ Nie używaj git add . bez sprawdzenia co dodajesz
+❌ Nie rób git push -f bez zastanowienia
+❌ Nie commituj ogromnych plików (>100MB)
+
+
+═══════════════════════════════════════════════════════════════════
+📖 PRZYKŁADOWE WIADOMOŚCI COMMIT
+═══════════════════════════════════════════════════════════════════
+
+DOBRE ✅:
+• "Zaktualizowano budżet Filaru 2 na rok 2027"
+• "Poprawiono literówki w sekcji O Projekcie"
+• "Dodano nowy dokument PDF: Mapa Drogowa 2028"
+• "Ulepszono responsywność na urządzeniach mobilnych"
+• "Zmieniono kolory zgodnie z wytycznymi brandu"
+
+ZŁE ❌:
+• "update"
+• "fixes"
+• "asdf"
+• "zmiana"
+• "test123"
+
+
+═══════════════════════════════════════════════════════════════════
+🔗 PRZYDATNE LINKI
+═══════════════════════════════════════════════════════════════════
+
+📘 Git Documentation:
+   https://git-scm.com/doc
+
+📙 GitHub Guides:
+   https://guides.github.com/
+
+📕 Git Cheatsheet:
+   https://education.github.com/git-cheat-sheet-education.pdf
+
+📗 GitHub Pages:
+   https://docs.github.com/en/pages
+
+💬 GitHub Community:
+   https://github.community/
+
+
+═══════════════════════════════════════════════════════════════════
+⚡ SZYBKA ŚCIĄGAWKA - WYTNIJ I ZACHOWAJ
+═══════════════════════════════════════════════════════════════════
+
+# Podstawowy flow:
+git status          # Co się zmieniło?
+git add .           # Dodaj wszystko
+git commit -m "..."  # Zatwierdź
+git push            # Wyślij na GitHub
+
+# Cofnij zmiany:
+git checkout -- plik.txt    # Cofnij plik
+git reset --soft HEAD~1     # Cofnij commit
+
+# Historia:
+git log --oneline           # Pokaż historię
+git diff                    # Co się zmieniło?
+
+# Synchronizacja:
+git pull                    # Pobierz z GitHub
+git push                    # Wyślij na GitHub
+
+═══════════════════════════════════════════════════════════════════
+
+Zapisz ten plik w zakładkach - przyda się! 🔖
+
+═══════════════════════════════════════════════════════════════════
+

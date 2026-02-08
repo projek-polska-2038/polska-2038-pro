@@ -1,0 +1,138 @@
+═══════════════════════════════════════════════════════════════════════════
+✅ PRZYCISK "INSTRUKCJA WYSYŁKI" USUNIĘTY!
+═══════════════════════════════════════════════════════════════════════════
+
+🎯 CO ZOSTAŁO ZROBIONE:
+
+Usunięto przycisk "📧 Instrukcja Wysyłki" ze strony głównej w sekcji
+"OSTATNIA SZANSA".
+
+═══════════════════════════════════════════════════════════════════════════
+📊 PRZED VS PO
+═══════════════════════════════════════════════════════════════════════════
+
+PRZED (2 przyciski):
+┌─────────────────────────────────────────────┐
+│  MAMY 12 LAT. POTEM ZA PÓŹNO.               │
+│                                             │
+│  [📄 Zobacz Dokumentację]                   │
+│  [📧 Instrukcja Wysyłki]     ← USUNIĘTY    │
+└─────────────────────────────────────────────┘
+
+PO (1 przycisk - większy i bardziej prominent):
+┌─────────────────────────────────────────────┐
+│  MAMY 12 LAT. POTEM ZA PÓŹNO.               │
+│                                             │
+│    [📄 Zobacz Pełną Dokumentację]           │
+│         (większy, wycentrowany)             │
+└─────────────────────────────────────────────┘
+
+═══════════════════════════════════════════════════════════════════════════
+🎨 ZMIANY W DESIGNIE
+═══════════════════════════════════════════════════════════════════════════
+
+PRZED:
+- 2 przyciski obok siebie (flex-row)
+- Mniejsze (px-8 py-4, text-lg)
+- "Zobacz Dokumentację" (krótszy tekst)
+
+PO:
+- 1 przycisk wycentrowany
+- Większy (px-10 py-5, text-xl)
+- Shadow-2xl (lepszy akcent)
+- "Zobacz Pełną Dokumentację" (bardziej opisowy)
+- Lepszy focus na głównym CTA
+
+═══════════════════════════════════════════════════════════════════════════
+💡 DLACZEGO TA ZMIANA?
+═══════════════════════════════════════════════════════════════════════════
+
+1. ✅ PROSTSZA NAWIGACJA
+   - Tylko 1 główny przycisk (clear CTA)
+   - Mniej dystrakcji
+   - Lepszy focus
+
+2. ✅ BARDZIEJ PROMINENT
+   - Większy przycisk
+   - Wycentrowany
+   - Shadow dla lepszego akcentu
+
+3. ✅ KONSYSTENCJA
+   - Zakładka "Wysyłka" już usunięta z nawigacji
+   - Teraz też usunięty przycisk do niej
+   - Brak martwych linków
+
+4. ✅ LEPSZY UX
+   - Użytkownik nie jest zdezorientowany
+   - Jeden jasny następny krok: "Zobacz Pełną Dokumentację"
+   - Professional presentation
+
+═══════════════════════════════════════════════════════════════════════════
+🧪 TESTOWANIE
+═══════════════════════════════════════════════════════════════════════════
+
+[ ] 1. Otwórz stronę (już otwarta)
+[ ] 2. Sprawdź sekcję "OSTATNIA SZANSA" (czerwone tło)
+[ ] 3. Czy widzisz tylko 1 przycisk?
+      [ ] "📄 Zobacz Pełną Dokumentację" (żółty)
+      [ ] Czy przycisk "Instrukcja Wysyłki" ZNIKNĄŁ?
+[ ] 4. Kliknij przycisk "Zobacz Pełną Dokumentację"
+      [ ] Czy przechodzi do zakładki Dokumentacja?
+[ ] 5. Sprawdź mobile (zmień rozmiar okna)
+      [ ] Czy przycisk jest wycentrowany?
+      [ ] Czy jest wystarczająco duży?
+
+✅ OCZEKIWANY WYNIK:
+- Tylko 1 przycisk w sekcji "OSTATNIA SZANSA"
+- Większy i bardziej prominent
+- Kliknięcie przenosi do Dokumentacji
+
+═══════════════════════════════════════════════════════════════════════════
+✅ PODSUMOWANIE
+═══════════════════════════════════════════════════════════════════════════
+
+PYTANIE: "usuń jeszcze tylko zakładkę instrukcja wysyłki tak jak widać
+          ja na screanie"
+
+ROZWIĄZANIE: ✅ DONE!
+
+CO ZOSTAŁO ZROBIONE:
+✅ Usunięto przycisk "📧 Instrukcja Wysyłki" ze strony głównej
+✅ Zostawiono tylko 1 przycisk: "📄 Zobacz Pełną Dokumentację"
+✅ Powiększono pozostały przycisk (px-10 py-5, text-xl)
+✅ Dodano shadow-2xl dla lepszego akcentu
+✅ Wycentrowano (lepszy focus)
+
+WYNIK:
+🎯 Prostsza nawigacja (1 CTA zamiast 2)
+🎯 Bardziej prominent (większy przycisk)
+🎯 Lepszy focus na dokumentacji
+🎯 Brak martwych linków (Wysyłka już nie istnieje)
+🎯 Professional presentation
+
+TESTUJ:
+1. Odśwież stronę (Ctrl+F5)
+2. Scrolluj do sekcji "OSTATNIA SZANSA"
+3. Sprawdź czy jest tylko 1 przycisk
+4. Kliknij - czy idzie do Dokumentacji?
+
+═══════════════════════════════════════════════════════════════════════════
+
+🇵🇱⚽🏆 PRZYCISK "INSTRUKCJA WYSYŁKI" USUNIĘTY! 🇵🇱⚽🏆
+
+Odśwież stronę i zobacz czysty, pojedynczy przycisk CTA!
+
+═══════════════════════════════════════════════════════════════════════════
+
+KOMPLETNA LISTA USUNIĘTYCH ELEMENTÓW "WYSYŁKI":
+
+1. ✅ Przycisk "Wysyłka" w nawigacji desktop
+2. ✅ Przycisk "Wysyłka" w nawigacji mobile
+3. ✅ Cała sekcja WYSYŁKA TAB (content)
+4. ✅ Przycisk "Instrukcja Wysyłki" w sekcji OSTATNIA SZANSA
+
+WSZYSTKO ZWIĄZANE Z "WYSYŁKĄ" ZOSTAŁO USUNIĘTE!
+STRONA JEST TERAZ CZYSTSZA I BARDZIEJ FOCUSED!
+
+═══════════════════════════════════════════════════════════════════════════
+

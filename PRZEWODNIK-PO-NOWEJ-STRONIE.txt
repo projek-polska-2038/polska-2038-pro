@@ -1,0 +1,253 @@
+═══════════════════════════════════════════════════════════════════════════
+PRZEWODNIK PO NOWEJ STRONIE - SEKCJA PO SEKCJI
+═══════════════════════════════════════════════════════════════════════════
+
+📍 NAWIGACJA (Górny pasek)
+├─ Start → Hero section z głównym hasłem
+├─ 3 Filary → Podstawowy opis 3 filarów
+├─ Szczegóły ⭐ NOWE → Szczegółowy budżet + ROI każdego filaru
+├─ Porównanie ⭐ NOWE → Polska vs Chorwacja vs Portugalia
+├─ Dlaczego Teraz ⭐ NOWE → Demografia + okno możliwości
+├─ Timeline → Harmonogram 2026-2038
+├─ Ministerstwo ⭐ NOWE → Konkretny plan dla MSiT + argumenty polityczne
+├─ Zalety → 5 kluczowych zalet projektu
+└─ Działaj → CTA + linki do dokumentacji
+
+═══════════════════════════════════════════════════════════════════════════
+⭐ SEKCJA: SZCZEGÓŁY FILARÓW (NOWA!)
+═══════════════════════════════════════════════════════════════════════════
+
+Co znajdziesz:
+✓ 3 rozwinięte sekcje (po jednej na każdy filar)
+✓ Szczegółowy budżet z podziałem na kategorie
+✓ 6 pudełek ze statystykami dla każdego filaru (np. "250 mln - Talenciak+")
+✓ Żółte pudełko "Konkretne Rezultaty Do 2035"
+✓ Lista ROI z konkretnymi liczbami
+✓ WIELKA LICZBA na końcu: "Łączny ROI ekonomiczny: X mld zł/rok"
+
+Przykład dla FILARU 1:
+┌─────────────────────────────────────────────────────────────┐
+│ 🏗️ FILAR 1: POLSKA 2038                                     │
+│ 1 000 000 000 zł/rok                                        │
+├─────────────────────────────────────────────────────────────┤
+│ 💰 Szczegółowy Budżet (mln zł/rok)                          │
+│ [250 Talenciak+] [180 Orzeł] [120 U21] [300 Orlik]...      │
+│                                                              │
+│ 🎯 Konkretne Rezultaty Do 2035                               │
+│ 100+ Polaków w TOP 5 ligach                                 │
+│ Ekstraklasa w TOP 5 UEFA                                    │
+│ Wartość eksportu: 500+ mln EUR/rok                         │
+│                                                              │
+│ 📈 ROI - Zwrot Z Inwestycji                                 │
+│ • Transfer fees: 2,1+ mld zł/rok                           │
+│ • Sponsoring kadry: +80 mln zł/rok                         │
+│ • Transmisje TV: wzrost o 300%                             │
+│ 💰 Łączny ROI: 3-5 mld zł/rok = 300-500% zwrotu            │
+└─────────────────────────────────────────────────────────────┘
+
+DLACZEGO TO DZIAŁA:
+→ Ministerstwo widzi DOKŁADNIE gdzie idzie każda złotówka
+→ ROI 370% to lepsze niż większość inwestycji publicznych
+→ Konkretne liczby = trudniej zignorować
+
+═══════════════════════════════════════════════════════════════════════════
+⭐ SEKCJA: PORÓWNANIE (NOWA!)
+═══════════════════════════════════════════════════════════════════════════
+
+Co znajdziesz:
+✓ 3 karty krajów: Chorwacja 🇭🇷 | Portugalia 🇵🇹 | Polska 🇵🇱
+✓ Każda karta ma: flagę, populację, budżet piłki, osiągnięcia
+✓ Polska w środku = wyróżniona (złota ramka)
+✓ Na dole: wielkie pudełko "POLSKA = BIGGEST UNDERACHIEVER"
+
+Layout:
+┌────────────┬────────────┬────────────┐
+│ 🇭🇷        │ 🇵🇹        │ 🇵🇱        │
+│ CHORWACJA  │ PORTUGALIA │ POLSKA     │
+│            │            │            │
+│ 4 mln      │ 10 mln     │ 38 mln     │
+│ Finał MŚ   │ Mistrz UE  │ 0 sukcesów │
+│ 2018, 2022 │ 2016       │ od 1982    │
+└────────────┴────────────┴────────────┘
+
+┌──────────────────────────────────────────────┐
+│ 💡 POLSKA = BIGGEST UNDERACHIEVER W EUROPIE │
+│                                              │
+│ [4. Populacja UE] [~30. Ranking FIFA]       │
+│ [24. Liga UEFA]  [0 Sukcesów od 1982]       │
+│                                              │
+│ 🔥 NIE JEST TO KWESTIA TALENTU.             │
+│ 🔥 TO KWESTIA SYSTEMU.                      │
+└──────────────────────────────────────────────┘
+
+DLACZEGO TO DZIAŁA:
+→ Pokazuje, że inne kraje z mniejszą populacją osiągnęły sukces
+→ Chorwacja = 4 mln = 10x mniej ludzi = 2 finały MŚ
+→ Polska = 38 mln = 0 sukcesów = WSTYD
+→ Jasny wniosek: MAMY POTENCJAŁ, brakuje SYSTEMU
+
+═══════════════════════════════════════════════════════════════════════════
+⭐ SEKCJA: DLACZEGO TERAZ? (NOWA!)
+═══════════════════════════════════════════════════════════════════════════
+
+Co znajdziesz:
+✓ Wielkie czerwone tło z czarnym pudełkiem
+✓ 3 duże liczby: "2010-2016" | "2026-2030" | "2038"
+✓ 2 scenariusze: "Nie robimy nic" vs "Wdrażamy POLSKA 2038"
+✓ WIELKA LICZBA na końcu: "RÓŻNICA = 100 MILIARDÓW ZŁ"
+
+Layout:
+┌──────────────────────────────────────────────────────────────┐
+│ ⏰                                                            │
+│ MAMY 12 LAT. POTEM ZA PÓŹNO.                                 │
+├──────────────────────────────────────────────────────────────┤
+│ [2010-2016]       [2026-2030]         [2038]                 │
+│ Najwięcej dzieci  Okno możliwości    Rocznik 2010           │
+│ od 30 lat         dla roczników      będzie miał 28 lat     │
+├──────────────────────────────────────────────────────────────┤
+│ 📊 Demografia Nie Kłamie                                     │
+│ 2010-2016: ~400 000 urodzeń/rok                             │
+│ 2017-2025: ~320 000 urodzeń/rok (spadek 20%)               │
+│ Po 2025: Jeszcze mniej = mniejsza baza talentów            │
+└──────────────────────────────────────────────────────────────┘
+
+┌──────────────┬──────────────┐
+│ ❌ NIE ROBIMY│ ✅ WDRAŻAMY  │
+│    NIC       │    POLSKA    │
+│              │    2038      │
+├──────────────┼──────────────┤
+│ 2026-2030:   │ 2026-2030:   │
+│ Słabi        │ Talenciak+   │
+│ trenerzy     │ Orzeł 2038   │
+│              │              │
+│ 2038:        │ 2038:        │
+│ Bez szans    │ FINAŁ MŚ!    │
+│              │              │
+│ Utrata:      │ Zysk:        │
+│ 50 mld zł    │ 50 mld zł    │
+└──────────────┴──────────────┘
+
+┌──────────────────────────────────────┐
+│ ⚡ RÓŻNICA: 100 MILIARDÓW ZŁ         │
+│                                      │
+│ Koszt: 13 mld zł (1,08 mld × 12 lat) │
+│ Zysk: 50+ mld zł (4+ mld × 12 lat)  │
+│ Utrata: 50 mld zł (brak działania)  │
+│                                      │
+│ = 100 MILIARDÓW ZŁ + PRESTIŻ        │
+└──────────────────────────────────────┘
+
+DLACZEGO TO DZIAŁA:
+→ Drama! Czerwone tło, wielkie liczby, emocje
+→ Argument demograficzny nie do podważenia
+→ "Okno możliwości" = pilność, trzeba działać TERAZ
+→ 100 mld zł różnicy = ogromna liczba, nie do zignorowania
+
+═══════════════════════════════════════════════════════════════════════════
+⭐ SEKCJA: MINISTERSTWO SPORTU (NAJWAŻNIEJSZA!)
+═══════════════════════════════════════════════════════════════════════════
+
+Co znajdziesz:
+✓ Białe pudełko z 5-stopniowym planem wdrożenia
+✓ Każdy krok ma numerek w czerwonym kółku
+✓ Czerwone pudełko z 6 argumentami politycznymi (grid 2×3)
+✓ Szare pudełko "Okno Polityczne: MAJ-CZERWIEC 2026"
+✓ Wielki żółty przycisk "POBIERZ KOMPLETNĄ DOKUMENTACJĘ"
+
+Layout:
+┌──────────────────────────────────────────────────────┐
+│ 🎯 Ministerstwo Sportu i Turystyki - Konkretne Kroki│
+│ Gotowy plan wdrożenia. Potrzeba tylko decyzji.       │
+├──────────────────────────────────────────────────────┤
+│ 📋 Plan Wdrożenia - Q2 2026                          │
+│                                                      │
+│ [1] MAJ 2026: Decyzja Polityczna                    │
+│     • Minister powołuje Zespół Projektowy            │
+│     • Budżet pilotażu: 100 mln zł                   │
+│                                                      │
+│ [2] CZERWIEC 2026: Wybór 3 Województw               │
+│     • Województwo A: duże miasto (Śląskie)          │
+│     • Województwo B: średnie (Kujawsko-Pomorskie)   │
+│     • Województwo C: wiejskie (Podkarpackie)        │
+│                                                      │
+│ [3] LIPIEC-GRUDZIEŃ 2026: Realizacja Pilotażu      │
+│     • Monitoring przez AWF + Instytut Sportu        │
+│     • Comiesięczne raporty dla Ministra             │
+│                                                      │
+│ [4] STYCZEŃ 2027: Decyzja o Pełnym Wdrożeniu       │
+│     • Jeśli OK → pełne wdrożenie w 16 województwach │
+│     • Budżet 2027-2038: 1,08 mld zł/rok             │
+│                                                      │
+│ [5] 2027-2038: Realizacja Pełnego Programu         │
+│     • Wszystkie 3 filary we wszystkich województwach│
+│     • Roczne sprawozdania do Sejmu                  │
+└──────────────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────────────┐
+│ 💼 Argumenty Dla Decydentów Politycznych             │
+│                                                      │
+│ [🗳️ Poparcie]  [💰 ROI]        [🏆 Legacy]          │
+│ [⚖️ Ryzyko]    [🇪🇺 UE]        [📱 Gotowość]         │
+│                                                      │
+│ Każdy box ma:                                        │
+│ • Tytuł argumentu                                    │
+│ • 3-4 punkty wyjaśniające                           │
+│ • Złoty wniosek na końcu                            │
+└──────────────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────────────┐
+│ ⏰ Okno Polityczne: MAJ-CZERWIEC 2026                │
+│                                                      │
+│ Euro 2024: Polska nie wyszła z grupy                │
+│           = frustracja społeczna                     │
+│                                                      │
+│ Q2 2026: Idealny moment na WIELKĄ REFORMĘ           │
+│                                                      │
+│ 🔥 TERAZ LUB NIGDY. TO JEST WASZ MOMENT.            │
+└──────────────────────────────────────────────────────┘
+
+[WIELKI ŻÓŁTY PRZYCISK]
+📄 POBIERZ KOMPLETNĄ DOKUMENTACJĘ
+
+DLACZEGO TO DZIAŁA:
+→ Konkretny plan krok po kroku = nie ma wymówki "nie wiemy jak"
+→ Pilotaż 100 mln = niskie ryzyko = łatwa decyzja
+→ 6 argumentów politycznych = odpowiedź na każdy sprzeciw
+→ "Okno polityczne" = pilność + opportunizm polityczny
+→ Wielki przycisk = jasne CTA, łatwe pobranie materiałów
+
+═══════════════════════════════════════════════════════════════════════════
+PODSUMOWANIE ZMIAN
+═══════════════════════════════════════════════════════════════════════════
+
+PRZED:
+- Podstawowa strona z 3 filarami
+- Brak konkretnych liczb ROI
+- Brak argumentów dla ministerstwa
+- Brak porównania z innymi krajami
+- Brak dramatyzmu "dlaczego teraz"
+
+PO:
+- Profesjonalna strona z 9 sekcjami
+- ROI 370% dla całego projektu
+- Dedykowana sekcja dla ministerstwa z planem i argumentami
+- Porównanie z Chorwacją/Portugalią (pokazuje potencjał)
+- Dramatyczna sekcja demograficzna (okno 2026-2030)
+
+REZULTAT:
+Ministerstwo NIE MA WYMÓWKI.
+- "Nie wiemy gdzie pieniądze idą?" → Masz szczegółowy budżet
+- "Nie wiemy czy się zwróci?" → Masz ROI 370%
+- "Nie wiemy jak wdrożyć?" → Masz plan krok po kroku
+- "Za ryzykowne?" → Pilotaż to tylko 100 mln
+- "Społeczeństwo nie poprze?" → Bezpieczne stadiony = poparcie
+- "Nie teraz?" → Okno demograficzne 2026-2030 = TERAZ LUB NIGDY
+
+═══════════════════════════════════════════════════════════════════════════
+
+🔥 STRONA JEST GOTOWA.
+🔥 NIEMOŻLIWA DO ZIGNOROWANIA.
+🔥 TERAZ TYLKO WYSŁAĆ.
+
+🇵🇱⚽🏆
+

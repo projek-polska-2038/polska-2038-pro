@@ -1,0 +1,115 @@
+╔════════════════════════════════════════════════════════════╗
+║                                                            ║
+║         📦 JAK PRZYGOTOWAĆ PACZKĘ DO WYSŁANIA 📦          ║
+║                                                            ║
+╚════════════════════════════════════════════════════════════╝
+
+=== OPCJA 1: WYŚLIJ TYLKO HTML (NAJPROSTSZE) ===
+
+Minimalny załącznik - wystarczy do zaprezentowania całej idei:
+
+1. Otwórz ProtonMail (z włączonym VPN)
+2. Dodaj JEDEN załącznik: "POLSKA 2038.html"
+3. Gotowe!
+
+Media i PZPN otworzą HTML w przeglądarce i zobaczą całą prezentację.
+
+---
+
+=== OPCJA 2: PEŁNY PAKIET ZIP (REKOMENDOWANE) ===
+
+Jeśli chcesz wysłać kompletne dokumenty strategiczne:
+
+KROK 1: Stwórz folder "POLSKA-2038-PAKIET"
+□ Utwórz nowy folder na pulpicie
+□ Nazwa: "POLSKA-2038-PAKIET"
+
+KROK 2: Skopiuj pliki do folderu
+□ POLSKA 2038.html (główna prezentacja)
+□ 04-executive-summary.md (streszczenie 3 str)
+□ Cały folder DOKUMENTY/ (5 plików strategicznych)
+□ README-PAKIET.txt (co jest w środku - utworzony poniżej)
+
+KROK 3: Zapakuj do ZIP
+□ Zaznacz folder "POLSKA-2038-PAKIET"
+□ Prawy przycisk → "Wyślij do" → "Folder skompresowany (zip)"
+□ Nazwa: "POLSKA-2038-PAKIET.zip"
+
+KROK 4: Wyślij ZIP jako załącznik
+□ W ProtonMail dodaj załącznik "POLSKA-2038-PAKIET.zip"
+□ Limit ProtonMail: 25 MB (nasz pakiet: ~2-3 MB - OK!)
+
+---
+
+=== OPCJA 3: LINK DO POBRANIA (ZAAWANSOWANE) ===
+
+Dla większych plików lub jeśli chcesz śledzić pobrania:
+
+1. Zapakuj pakiet do ZIP (jak wyżej)
+2. Wgraj na anonimowy serwis:
+   - https://www.swisstransfer.com (20 GB, bez rejestracji)
+   - https://send.vis.ee (2 GB, szyfrowane)
+3. Skopiuj link do pobrania
+4. W emailu napisz:
+   "Pełna dokumentacja (97 stron PDF + HTML): [LINK]"
+
+---
+
+=== REKOMENDACJA ===
+
+✅ NAJLEPSZE: OPCJA 2 (pełny pakiet ZIP)
+
+DLACZEGO?
+✓ Profesjonalny wygląd
+✓ Wszystkie dokumenty w jednym miejscu
+✓ Adresat nie musi niczego pobierać z internetu
+✓ ZIP zmniejsza rozmiar plików o 40-60%
+✓ Łatwy do przekazania innym osobom w PZPN/mediach
+
+---
+
+=== CO BĘDZIE W ZIP-IE (STRUKTURA) ===
+
+POLSKA-2038-PAKIET.zip (rozmiar: ~2-3 MB)
+│
+├── README-PAKIET.txt ← Instrukcja co jest w środku
+├── POLSKA 2038.html ← Główna prezentacja (14 slajdów)
+├── 04-executive-summary.md ← Streszczenie 3 str
+│
+└── DOKUMENTY/ (folder)
+    ├── README.md ← Przegląd dokumentów
+    ├── 01-MAPA-DROGOWA-2026-2038.md (28 str)
+    ├── 02-BUDZET-SZCZEGOLOWY-2026-2035.md (22 str)
+    ├── 03-STRUKTURA-ORGANIZACYJNA.md (15 str)
+    ├── 04-PLAN-WDROZENIA-INSTRUKCJA.md (20 str)
+    └── 05-BRIEFING-DLA-MEDIOW.md (12 str)
+
+RAZEM: 97 stron + prezentacja HTML
+
+---
+
+=== TROUBLESHOOTING ===
+
+❓ Jak sprawdzić rozmiar ZIP-a?
+→ Prawy przycisk na plik → Właściwości
+→ Jeśli >25 MB użyj swisstransfer.com
+
+❓ ZIP się nie otwiera u adresata?
+→ Upewnij się że używasz standardowego ZIP (nie RAR/7z)
+→ Windows ma wbudowaną obsługę ZIP
+
+❓ Adresat nie może otworzyć .md plików?
+→ Napisz w emailu: "Pliki .md otwierać w Notatniku"
+→ Lub skonwertuj do PDF przez: https://md2pdf.netlify.app
+
+---
+
+=== TERAZ WYKONAJ ===
+
+□ Zdecyduj: Opcja 1 (tylko HTML) czy Opcja 2 (pełny ZIP)?
+□ Jeśli Opcja 2: wykonaj KROK 1-3 powyżej
+□ Przejdź do pliku "03-INSTRUKCJA-WYSYLKI.txt"
+□ Wyślij email z załącznikiem
+
+🚀 Powodzenia!
+

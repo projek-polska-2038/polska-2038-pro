@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POLSKA 2038 - Viewer MD → PDF</title>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        @page { size: A4; margin: 1.5cm; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f9fafb;
+        }
+        .controls {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        select {
+            width: 100%;
+            padding: 12px;
+            font-size: 14pt;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        button {
+            background: #dc2626;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 14pt;
+            font-weight: 700;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s;
+        }
+        button:hover {
+            background: #991b1b;
+        }
+        #preview {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            min-height: 400px;
+        }
+        #preview h1 {
+            color: #dc2626;
+            font-size: 20pt;
+            font-weight: 900;
+            margin-top: 20pt;
+            margin-bottom: 10pt;
+            border-bottom: 3px solid #dc2626;
+            padding-bottom: 10pt;
+        }
+        #preview h2 {
+            color: #1e40af;
+            font-size: 15pt;
+            font-weight: 700;
+            margin-top: 18pt;
+            margin-bottom: 8pt;
+            background: #dbeafe;
+            padding: 8pt;
+            border-radius: 4pt;
+        }
+        #preview h3 {
+            color: #059669;
+            font-size: 12pt;
+            font-weight: 700;
+            margin-top: 12pt;
+            margin-bottom: 6pt;
+        }
+        #preview h4 {
+            color: #6b7280;
+            font-size: 10pt;
+            font-weight: 700;
+            margin-top: 10pt;
+            margin-bottom: 5pt;
+        }
+        #preview table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10pt 0;
+            font-size: 9pt;
+        }
+        #preview th, #preview td {
+            border: 1px solid #d1d5db;
+            padding: 5pt;
+            text-align: left;
+        }
+        #preview th {
+            background: #f3f4f6;
+            font-weight: 700;
+        }
+        #preview ul, #preview ol {
+            margin: 8pt 0;
+            padding-left: 20pt;
+        }
+        #preview li {
+            margin: 4pt 0;
+        }
+        #preview strong {
+            font-weight: 700;
+        }
+        #preview hr {
+            border: none;
+            border-top: 2px solid #e5e7eb;
+            margin: 15pt 0;
+        }
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #6b7280;
+        }
+        @media print {
+            body { background: white; padding: 0; margin: 0; }
+            .controls { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="controls">
+    <h1 style="margin-top:0; color: #dc2626;">📄 Viewer MD → PDF</h1>
+    <p>Wybierz dokument z listy, kliknij "Załaduj", a następnie <strong>Ctrl+P</strong> aby zapisać jako PDF.</p>
+
+    <select id="fileSelect">
+        <option value="">-- Wybierz dokument --</option>
+        <option value="01-MAPA-DROGOWA-2026-2038.md">01. Mapa Drogowa 2026-2038 (28 stron)</option>
+        <option value="02-BUDZET-SZCZEGOLOWY-2026-2035.md">02. Budżet Szczegółowy 2026-2035 (22 strony)</option>
+        <option value="03-STRUKTURA-ORGANIZACYJNA.md">03. Struktura Organizacyjna (15 stron)</option>
+        <option value="04-PLAN-WDROZENIA-INSTRUKCJA.md">04. Plan Wdrożenia - Instrukcja (20 stron)</option>
+        <option value="05-BRIEFING-DLA-MEDIOW.md">05. Briefing dla Mediów (12 stron)</option>
+    </select>
+
+    <button onclick="loadDocument()">📥 Załaduj dokument</button>
+</div>
+
+<div id="preview">
+    <div class="loading">
+        <h2>👆 Wybierz dokument powyżej</h2>
+        <p>Po załadowaniu naciśnij <strong>Ctrl+P</strong> aby zapisać jako PDF</p>
+    </div>
+</div>
+
+<script>
+// Konfiguracja Marked
+marked.setOptions({
+    breaks: true,
+    gfm: true
+});
+
+function loadDocument() {
+    const select = document.getElementById('fileSelect');
+    const fileName = select.value;
+
+    if (!fileName) {
+        alert('Wybierz dokument z listy!');
+        return;
+    }
+
+    const preview = document.getElementById('preview');
+    preview.innerHTML = '<div class="loading"><h2>⏳ Ładowanie...</h2><p>Proszę czekać...</p></div>';
+
+    // Załaduj plik MD
+    fetch(fileName)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`Nie można załadować pliku: ${fileName}`);
+            }
+            return response.text();
+        })
+        .then(markdown => {
+            // Konwertuj Markdown na HTML
+            const html = marked.parse(markdown);
+            preview.innerHTML = html + `
+                <div style="text-align: center; color: #6b7280; font-size: 8pt; margin-top: 30pt; padding-top: 15pt; border-top: 1px solid #e5e7eb;">
+                    <p><strong>Projekt: POLSKA 2038 - Mistrzostwo Świata 2038</strong><br>
+                    Kontakt: polska2038@proton.me • Wersja: FINAL (Listopad 2024)</p>
+                </div>
+            `;
+
+            // Scroll do góry
+            window.scrollTo(0, 0);
+
+            // Informacja
+            alert(`✅ Dokument załadowany!\n\nTeraz naciśnij Ctrl+P aby zapisać jako PDF.`);
+        })
+        .catch(error => {
+            preview.innerHTML = `
+                <div class="loading">
+                    <h2 style="color: #dc2626;">❌ Błąd!</h2>
+                    <p>${error.message}</p>
+                    <p style="font-size: 9pt; color: #6b7280; margin-top: 20px;">
+                        <strong>Możliwe rozwiązania:</strong><br>
+                        1. Upewnij się że pliki .md są w tym samym folderze co plik HTML<br>
+                        2. Spróbuj otworzyć plik HTML z dysku lokalnego (nie z przeglądarki plików)<br>
+                        3. Użyj przeglądarki Chrome lub Firefox
+                    </p>
+                </div>
+            `;
+        });
+}
+
+console.log('✅ Viewer MD→PDF załadowany!');
+console.log('📚 5 dokumentów dostępnych');
+console.log('⚠️ Pliki .md muszą być w tym samym folderze!');
+</script>
+
+</body>
+</html>

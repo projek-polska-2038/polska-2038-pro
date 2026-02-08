@@ -1,0 +1,14 @@
+=== WYŚLIJ DO (TO:) ===
+prezes@pzpn.pl
+biuro@pzpn.pl
+
+=== MEDIA (BCC - ukryte kopie) ===
+kontakt@tvn24.pl
+redakcja@polsatsport.pl
+redakcja@przegladsportowy.pl
+sport@wp.pl
+kontakt@meczyki.pl
+redakcja@goal.pl
+sekretariat@tvpsport.pl
+kontakt@sportowefakty.wp.pl
+

@@ -1,0 +1,658 @@
+/*! HTML5 Boilerplate v9.0.1 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* Detailed Pillars Section */
+.pillar-details {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+}
+
+.pillar-details h2 {
+  font-size: 2.5em;
+  color: #dc143c;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.pillar-details .subtitle {
+  text-align: center;
+  font-size: 1.3em;
+  color: #666;
+  margin-bottom: 60px;
+}
+
+.detail-section {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  margin-bottom: 40px;
+  box-shadow: 0 5px 30px rgba(0,0,0,0.1);
+}
+
+.detail-header {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 40px;
+  padding-bottom: 30px;
+  border-bottom: 3px solid #dc143c;
+}
+
+.detail-icon {
+  font-size: 4em;
+}
+
+.detail-title h3 {
+  font-size: 2em;
+  color: #dc143c;
+  margin-bottom: 10px;
+}
+
+.detail-title .budget {
+  font-size: 1.8em;
+  color: #666;
+  font-weight: 600;
+}
+
+.detail-content h4 {
+  font-size: 1.8em;
+  color: #333;
+  margin: 40px 0 20px 0;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.stat-box {
+  background: linear-gradient(135deg, #dc143c, #8b0000);
+  color: white;
+  padding: 30px 20px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(220,20,60,0.3);
+  transition: transform 0.3s;
+}
+
+.stat-box:hover {
+  transform: translateY(-5px);
+}
+
+.stat-number {
+  font-size: 3em;
+  font-weight: 900;
+  color: #ffd700;
+  margin-bottom: 10px;
+}
+
+.stat-label {
+  font-size: 1.1em;
+  line-height: 1.5;
+}
+
+.highlight-box {
+  background: linear-gradient(135deg, #ffd700, #ffed4e);
+  padding: 30px;
+  border-radius: 15px;
+  margin: 30px 0;
+  box-shadow: 0 5px 20px rgba(255,215,0,0.3);
+}
+
+.highlight-box h4 {
+  color: #dc143c;
+  font-size: 1.8em;
+  margin-bottom: 20px;
+}
+
+.highlight-box p {
+  font-size: 1.2em;
+  line-height: 1.8;
+  color: #333;
+}
+
+.detail-content ul {
+  font-size: 1.2em;
+  line-height: 2;
+  color: #333;
+  margin: 20px 0;
+  padding-left: 30px;
+}
+
+.detail-content ul li {
+  margin-bottom: 15px;
+}
+
+/* Comparison Section */
+.comparison {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+  color: white;
+}
+
+.comparison h2 {
+  font-size: 2.5em;
+  color: #ffd700;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.comparison .subtitle {
+  text-align: center;
+  font-size: 1.3em;
+  color: #ccc;
+  margin-bottom: 60px;
+}
+
+.comparison-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.comparison-card {
+  background: rgba(255,255,255,0.05);
+  border-radius: 20px;
+  padding: 40px;
+  border: 2px solid rgba(255,255,255,0.1);
+  transition: all 0.3s;
+}
+
+.comparison-card:hover {
+  transform: translateY(-10px);
+  border-color: #ffd700;
+  box-shadow: 0 10px 40px rgba(255,215,0,0.3);
+}
+
+.comparison-card.highlight {
+  background: linear-gradient(135deg, rgba(220,20,60,0.3), rgba(139,0,0,0.3));
+  border: 3px solid #ffd700;
+}
+
+.country-flag {
+  font-size: 5em;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.comparison-card h3 {
+  font-size: 2.2em;
+  text-align: center;
+  color: #ffd700;
+  margin-bottom: 30px;
+}
+
+.country-stats {
+  margin: 30px 0;
+}
+
+.stat-item {
+  margin-bottom: 25px;
+  font-size: 1.1em;
+  line-height: 1.8;
+}
+
+.stat-item strong {
+  color: #ffd700;
+}
+
+.stat-item ul {
+  margin-top: 10px;
+  padding-left: 25px;
+}
+
+.stat-item ul li {
+  margin-bottom: 8px;
+}
+
+.country-conclusion {
+  background: rgba(255,215,0,0.1);
+  padding: 25px;
+  border-radius: 10px;
+  margin-top: 30px;
+  text-align: center;
+  font-size: 1.1em;
+  line-height: 1.8;
+}
+
+/* Why Now Section */
+.why-now {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #8b0000, #dc143c);
+  color: white;
+}
+
+.why-now h2 {
+  font-size: 2.5em;
+  color: #ffd700;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.urgency-box {
+  background: rgba(0,0,0,0.3);
+  border-radius: 20px;
+  padding: 50px;
+  text-align: center;
+}
+
+.urgency-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  margin: 50px 0;
+}
+
+.urgency-stat {
+  background: rgba(255,255,255,0.1);
+  padding: 40px 30px;
+  border-radius: 15px;
+  border: 2px solid rgba(255,215,0,0.3);
+}
+
+.big-number {
+  font-size: 3.5em;
+  font-weight: 900;
+  color: #ffd700;
+  margin-bottom: 20px;
+}
+
+.urgency-label {
+  font-size: 1.5em;
+  font-weight: 600;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.urgency-detail {
+  font-size: 1.1em;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.scenarios {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 40px;
+  margin: 40px 0;
+}
+
+.scenario {
+  background: rgba(255,255,255,0.1);
+  border-radius: 20px;
+  padding: 40px;
+  border: 3px solid;
+}
+
+.scenario.bad {
+  border-color: rgba(220,20,60,0.5);
+  background: rgba(220,20,60,0.1);
+}
+
+.scenario.good {
+  border-color: rgba(255,215,0,0.5);
+  background: rgba(255,215,0,0.1);
+}
+
+.scenario h4 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  color: #ffd700;
+}
+
+.scenario ul {
+  font-size: 1.1em;
+  line-height: 1.8;
+  padding-left: 25px;
+}
+
+.scenario ul li {
+  margin-bottom: 15px;
+}
+
+/* Call to Action Specific */
+.cta-specific {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #f8f8f8, #e0e0e0);
+}
+
+.cta-specific h2 {
+  font-size: 2.5em;
+  color: #dc143c;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.cta-specific .subtitle {
+  text-align: center;
+  font-size: 1.3em;
+  color: #666;
+  margin-bottom: 60px;
+}
+
+.implementation-steps {
+  margin: 40px 0;
+}
+
+.step {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 40px;
+  align-items: flex-start;
+}
+
+.step-number {
+  background: linear-gradient(135deg, #dc143c, #8b0000);
+  color: white;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5em;
+  font-weight: 900;
+  flex-shrink: 0;
+  box-shadow: 0 5px 20px rgba(220,20,60,0.3);
+}
+
+.step-content {
+  flex: 1;
+}
+
+.step-content h4 {
+  font-size: 1.8em;
+  color: #dc143c;
+  margin-bottom: 20px;
+}
+
+.step-content ul {
+  font-size: 1.1em;
+  line-height: 1.8;
+  color: #333;
+  padding-left: 25px;
+}
+
+.step-content ul li {
+  margin-bottom: 12px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .pillar-details h2,
+  .comparison h2,
+  .why-now h2,
+  .cta-specific h2 {
+    font-size: 1.8em;
+  }
+
+  .stats-grid,
+  .comparison-grid,
+  .urgency-stats,
+  .scenarios {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .step {
+    flex-direction: column;
+  }
+
+  .step-number {
+    width: 60px;
+    height: 60px;
+    font-size: 2em;
+  }
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .visually-hidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visually-hidden.focusable:active,
+.visually-hidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * The use of `table` rather than `block` is only necessary if using
+ * `::before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+

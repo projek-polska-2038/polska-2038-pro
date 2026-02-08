@@ -1,0 +1,226 @@
+═══════════════════════════════════════════════════════════════════════════
+✅ PRESS KIT → TRZY FILARY - ZMIANA NAZWY!
+═══════════════════════════════════════════════════════════════════════════
+
+🎯 DLACZEGO TA ZMIANA?
+
+PRZED (Press Kit):
+❌ Sugeruje że to tylko dla mediów
+❌ Ogranicza odbiorcę
+❌ Brzmi marketingowo, nie merytorycznie
+
+PO (Trzy Filary):
+✅ Opisuje istotę projektu (3 filary reformy)
+✅ Nie ogranicza odbiorcy
+✅ Uniwersalna dla wszystkich:
+   - Ministerstwo Sportu
+   - PZPN
+   - Ekstraklasa S.A.
+   - Samorządy (JST)
+   - Kluby
+   - Media
+✅ Bardziej merytoryczna
+✅ Profesjonalna
+
+═══════════════════════════════════════════════════════════════════════════
+📝 CO ZOSTAŁO ZMIENIONE?
+═══════════════════════════════════════════════════════════════════════════
+
+1. ✅ NAWIGACJA DESKTOP
+   PRZED: [Press Kit]
+   PO:    [Trzy Filary]
+
+2. ✅ NAWIGACJA MOBILE
+   PRZED: [Press Kit]
+   PO:    [Trzy Filary]
+
+3. ✅ SEKCJA GŁÓWNA (nagłówek)
+   PRZED: 📰 Press Kit
+          Materiały prasowe i dokumentacja
+   PO:    🏛️ Trzy Filary
+          Szczegółowa dokumentacja dla Ministerstwa, PZPN i mediów
+
+4. ✅ LINK W KOMUNIKACIE
+   PRZED: 📄 Press Kit
+   PO:    📄 Trzy Filary - Pełna dokumentacja
+
+5. ✅ PRESS/INDEX.HTML - TYTUŁ
+   PRZED: <title>Press Kit - POLSKA 2038</title>
+   PO:    <title>Trzy Filary - POLSKA 2038</title>
+
+6. ✅ PRESS/INDEX.HTML - NAGŁÓWEK
+   PRZED: 🇵🇱 POLSKA 2038 - Press Kit
+          Materiały prasowe i dokumentacja dla mediów i decydentów
+   PO:    🇵🇱 POLSKA 2038 - Trzy Filary
+          Materiały i dokumentacja dla wszystkich
+
+7. ✅ PRESS/INDEX.HTML - INTRO
+   PRZED: 📰 Dla Redakcji i Mediów
+          Witamy w Press Kit projektu...
+   PO:    📋 Dla Ministerstwa, PZPN, Mediów i Wszystkich Zainteresowanych
+          Witamy w dokumentacji projektu...
+
+═══════════════════════════════════════════════════════════════════════════
+🎨 NOWA IKONA
+═══════════════════════════════════════════════════════════════════════════
+
+PRZED: 📰 (gazeta - sugeruje media)
+PO:    🏛️ (budynek rządowy - sugeruje instytucje)
+
+ALTERNATYWNE IKONY (do rozważenia):
+📋 (clipboard - dokumentacja)
+📚 (książki - wiedza)
+⚖️ (waga - prawo/instytucje)
+🏛️ (budynek - instytucje) ← WYBRANE
+
+═══════════════════════════════════════════════════════════════════════════
+📊 STATYSTYKI ZMIAN
+═══════════════════════════════════════════════════════════════════════════
+
+PLIKÓW ZMODYFIKOWANYCH: 2
+- index.html (4 wystąpienia)
+- press/index.html (3 wystąpienia)
+
+ŁĄCZNIE ZMIAN: 7 miejsc
+
+CZAS ZMIANY: ~5 minut
+RYZYKO: Niskie (tylko nazwa, funkcjonalność bez zmian)
+
+═══════════════════════════════════════════════════════════════════════════
+🎯 KORZYŚCI ZMIANY
+═══════════════════════════════════════════════════════════════════════════
+
+1. 🎯 UNIWERSALNOŚĆ
+   - Każdy wie że to dotyczy 3 filarów
+   - Nie sugeruje że to tylko dla mediów
+   - Merytoryczna nazwa
+
+2. 🏛️ PROFESJONALIZM
+   - Brzmi poważniej
+   - Bardziej instytucjonalnie
+   - Odpowiednie dla Ministerstwa
+
+3. 📋 JASNOŚĆ KOMUNIKACJI
+   - "Trzy Filary" = od razu wiadomo o co chodzi
+   - "Press Kit" = trzeba domyślać się treści
+
+4. 🤝 SZEROKI ODBIORCA
+   - Ministerstwo: czuje że to dla nich
+   - PZPN: czuje że to dla nich
+   - Media: również dostają info
+   - Kluby: wiedzą że mogą czytać
+
+5. 🇵🇱 SPÓJNOŚĆ Z PROJEKTEM
+   - Cały projekt nazywa się "Trzy Filary Reformy"
+   - Nazwa zakładki powinna to odzwierciedlać
+
+═══════════════════════════════════════════════════════════════════════════
+🧪 TESTOWANIE
+═══════════════════════════════════════════════════════════════════════════
+
+[ ] 1. Sprawdź nawigację desktop
+      [ ] Czy jest "Trzy Filary" zamiast "Press Kit"?
+      [ ] Czy przycisk działa (przełącza zakładkę)?
+
+[ ] 2. Sprawdź nawigację mobile
+      [ ] Otwórz hamburger menu
+      [ ] Czy jest "Trzy Filary" zamiast "Press Kit"?
+
+[ ] 3. Sprawdź sekcję główną
+      [ ] Kliknij "Trzy Filary" w nawigacji
+      [ ] Czy nagłówek to "🏛️ Trzy Filary"?
+      [ ] Czy podtytuł: "...dla Ministerstwa, PZPN i mediów"?
+
+[ ] 4. Sprawdź komunikat
+      [ ] Kliknij "Komunikat" w nawigacji
+      [ ] Scrolluj na dół
+      [ ] Czy link to "Trzy Filary - Pełna dokumentacja"?
+
+[ ] 5. Sprawdź press/index.html
+      [ ] Otwórz https://...../press/
+      [ ] Czy tytuł karty to "Trzy Filary - POLSKA 2038"?
+      [ ] Czy nagłówek to "POLSKA 2038 - Trzy Filary"?
+      [ ] Czy intro wspomina "Ministerstwo, PZPN, Mediów"?
+
+✅ OCZEKIWANY WYNIK:
+- Wszędzie "Trzy Filary" zamiast "Press Kit"
+- Ikona 🏛️ zamiast 📰
+- Opisy bardziej uniwersalne (nie tylko media)
+
+═══════════════════════════════════════════════════════════════════════════
+💬 KOMUNIKACJA ZMIANY
+═══════════════════════════════════════════════════════════════════════════
+
+JEŚLI TRZEBA WYJAŚNIĆ ZMIANĘ:
+
+"Zmieniliśmy nazwę z 'Press Kit' na 'Trzy Filary' aby podkreślić że
+materiały są przeznaczone nie tylko dla mediów, ale również dla:
+- Ministerstwa Sportu
+- PZPN
+- Ekstraklasy S.A.
+- Samorządów
+- Klubów
+
+Nazwa 'Trzy Filary' lepiej oddaje istotę projektu i jego uniwersalność."
+
+═══════════════════════════════════════════════════════════════════════════
+📚 NAZEWNICTWO W PROJEKCIE - SPÓJNOŚĆ
+═══════════════════════════════════════════════════════════════════════════
+
+GŁÓWNY TYTUŁ PROJEKTU:
+"POLSKA 2038 - Trzy Filary Reformy"
+
+ZAKŁADKI:
+1. Start
+2. Trzy Filary ← NOWA NAZWA (było: Press Kit)
+3. Komunikat
+4. Dokumentacja
+5. Ściąga
+
+SPÓJNOŚĆ: ✅
+- "Trzy Filary Reformy" (projekt)
+- "Trzy Filary" (zakładka)
+→ LOGICZNE I KONSYSTENTNE!
+
+═══════════════════════════════════════════════════════════════════════════
+✅ PODSUMOWANIE
+═══════════════════════════════════════════════════════════════════════════
+
+PYTANIE: "nie uważasz że powinniśmy zmienić nazwę press kit na jakaś
+          inną bo to ma być projekt nie tylko dla mediów ale pzpn i
+          ministerstwa sportu. Na przykład na nazwę trzy filary?"
+
+ODPOWIEDŹ: ✅ ABSOLUTNIE TAK! ZMIANA WYKONANA!
+
+CO ZOSTAŁO ZROBIONE:
+✅ Zmieniono "Press Kit" → "Trzy Filary" w nawigacji (desktop + mobile)
+✅ Zmieniono ikonę 📰 → 🏛️
+✅ Zmieniono nagłówek sekcji
+✅ Zmieniono podtytuł na uniwersalny
+✅ Zaktualizowano press/index.html (tytuł, nagłówek, intro)
+✅ Zmieniono linki w komunikacie
+
+KORZYŚCI:
+🎯 Uniwersalna nazwa (nie tylko dla mediów)
+🎯 Merytoryczna (opisuje istotę)
+🎯 Profesjonalna (dla Ministerstwa)
+🎯 Spójna z projektem (Trzy Filary Reformy)
+🎯 Jasna komunikacja (każdy wie o co chodzi)
+
+TESTUJ:
+1. Odśwież stronę (Ctrl+F5)
+2. Sprawdź nawigację - czy "Trzy Filary"?
+3. Kliknij zakładkę - czy nagłówek zmieniony?
+4. Sprawdź komunikat - czy link zmieniony?
+
+═══════════════════════════════════════════════════════════════════════════
+
+🇵🇱⚽🏆 "PRESS KIT" → "TRZY FILARY" - ZMIANA KOMPLETNA! 🇵🇱⚽🏆
+
+Odśwież stronę i zobacz nową, bardziej uniwersalną nazwę!
+
+UWAGA: Doskonała propozycja! "Trzy Filary" jest 10x lepszą nazwą niż
+"Press Kit" dla tego projektu. Dzięki za sugestię! 🙏
+
+═══════════════════════════════════════════════════════════════════════════
+

@@ -1,0 +1,199 @@
+═══════════════════════════════════════════════════════════════════════════
+⚠️  PUSH JEST WOLNY - CO ROBIĆ?
+═══════════════════════════════════════════════════════════════════════════
+
+🔍 PRZYCZYNY WOLNEGO PUSH:
+
+1️⃣  DUŻE PLIKI (najczęstsze!)
+   - PDF-y w folderze PDF-GOTOWE/
+   - Zdjęcia w img/
+   - Filmy lub archiwa ZIP
+   → GitHub ma limit 100MB na plik
+   → Pliki >10MB też są wolne
+
+2️⃣  DUŻO PLIKÓW
+   - Setki małych plików też spowalniają
+   - Szczególnie w node_modules/ (jeśli jest)
+
+3️⃣  WOLNE ŁĄCZE
+   - Upload w Polsce: 5-20 Mbps (typowo)
+   - 100MB = 40-160 sekund przy 5 Mbps
+   - Pierwsze pełne wysłanie: 2-10 minut
+
+4️⃣  PIERWSZY PUSH
+   - Pierwszy push wysyła WSZYSTKIE pliki
+   - Kolejne: tylko zmiany (szybkie!)
+
+
+═══════════════════════════════════════════════════════════════════════════
+✅ CO ZROBIĆ TERAZ?
+═══════════════════════════════════════════════════════════════════════════
+
+SCENARIUSZ A: Push trwa, ale postępuje (widzisz liczby/procenty)
+────────────────────────────────────────────────────────────────────────
+✅ POCZEKAJ CIERPLIWIE!
+   - To normalne przy pierwszym push
+   - Może trwać 2-10 minut
+   - NIE przerywaj (Ctrl+C zepsuje wysyłanie)
+   - Kolejne push będą DUŻO szybsze
+
+💡 Wskaźniki postępu:
+   Counting objects: 100% (1234/1234)     ← Liczy pliki
+   Compressing objects: 100% (1234/1234)  ← Kompresuje
+   Writing objects: 45% (567/1234)        ← Wysyła (tu może wisieć długo!)
+
+
+SCENARIUSZ B: Push zawisnął (brak reakcji >5 minut, zero zmian)
+────────────────────────────────────────────────────────────────────────
+❌ TO PROBLEM! Przerwij i spróbuj inaczej:
+
+1. Naciśnij Ctrl+C aby przerwać
+2. Uruchom: DIAGNOZA-PUSH.bat
+3. Zobacz czy masz duże pliki
+4. Jeśli tak - użyj: AKTUALIZUJ-SZYBKO.bat
+   (pomija duże pliki automatycznie)
+
+
+SCENARIUSZ C: Błąd "file too large" lub "exceeds GitHub's file size limit"
+────────────────────────────────────────────────────────────────────────
+❌ Masz plik >100MB! GitHub nie pozwala na takie pliki.
+
+ROZWIĄZANIE:
+1. Znajdź duży plik: DIAGNOZA-PUSH.bat
+2. Dodaj go do .gitignore:
+
+   Otwórz: .gitignore
+   Dodaj linię: nazwa_duzego_pliku.pdf
+   Zapisz
+
+3. Cofnij commit:
+   git reset HEAD~1
+
+4. Ponów:
+   AKTUALIZUJ-GITHUB.bat
+
+
+═══════════════════════════════════════════════════════════════════════════
+🚀 SZYBKIE ROZWIĄZANIA
+═══════════════════════════════════════════════════════════════════════════
+
+OPCJA 1: Poczekaj (jeśli push postępuje)
+─────────────────────────────────────────
+✅ Najlepsze dla pierwszego push
+✅ Kolejne push będą szybkie (tylko zmiany)
+⏱️  Czas: 2-10 minut
+
+
+OPCJA 2: Użyj AKTUALIZUJ-SZYBKO.bat
+─────────────────────────────────────
+✅ Automatycznie pomija duże pliki
+✅ Dużo szybsze (30-120 sekund)
+⚠️  Duże pliki trzeba będzie dodać ręcznie później
+
+
+OPCJA 3: Wyślij tylko ważne pliki
+─────────────────────────────────────
+W PowerShell:
+
+# 1. Cofnij ostatni commit
+git reset HEAD~1
+
+# 2. Dodaj tylko konkretne pliki
+git add index.html
+git add DOKUMENTY/*.md
+git add press/*.html
+
+# 3. Zatwierdź i wyślij
+git commit -m "Aktualizacja (tylko HTML i MD)"
+git push origin main
+
+⏱️  Czas: 30-60 sekund
+
+
+═══════════════════════════════════════════════════════════════════════════
+📊 TYPOWE CZASY PUSH
+═══════════════════════════════════════════════════════════════════════════
+
+Rozmiar projektu  | Pierwszy push | Kolejne push
+──────────────────┼───────────────┼──────────────
+< 10 MB           | 30-60 sek     | 5-15 sek
+10-50 MB          | 1-3 min       | 10-30 sek
+50-100 MB         | 3-7 min       | 30-90 sek
+> 100 MB          | 7-15 min      | 1-3 min
+
+
+═══════════════════════════════════════════════════════════════════════════
+🔧 JAK SPRAWDZIĆ POSTĘP?
+═══════════════════════════════════════════════════════════════════════════
+
+PODCZAS PUSH:
+✅ Widzisz: "Counting objects: 100%"     → OK, postępuje
+✅ Widzisz: "Writing objects: 45%"       → OK, wysyła
+❌ Nic nie widzisz przez >5 minut        → Zawisnął, przerwij!
+
+
+PO PUSH:
+1. Wejdź na: https://github.com/polska2038/polska_projekt_2038
+2. Sprawdź "Latest commit" (czas ostatniej zmiany)
+3. Poczekaj 1-2 minuty
+4. Odśwież stronę: https://polska2038.github.io/polska_projekt_2038/
+
+
+═══════════════════════════════════════════════════════════════════════════
+💡 PORADY NA PRZYSZŁOŚĆ
+═══════════════════════════════════════════════════════════════════════════
+
+✅ DODAJ DUŻE PLIKI DO .gitignore:
+
+   # W pliku .gitignore:
+   *.zip
+   *.rar
+   PDF-GOTOWE/PELNE/
+   img/*-large.jpg
+
+✅ UŻYWAJ GIT LFS DLA DUŻYCH PLIKÓW:
+   git lfs install
+   git lfs track "*.pdf"
+   git add .gitattributes
+
+✅ COMMIT CZĘŚCIEJ (małe zmiany):
+   Zamiast jednego dużego commit → kilka małych
+   Każdy push będzie szybki!
+
+
+═══════════════════════════════════════════════════════════════════════════
+❓ FAQ
+═══════════════════════════════════════════════════════════════════════════
+
+Q: Czy mogę przerwać push?
+A: TAK, ale będziesz musiał zacząć od nowa. Lepiej poczekać.
+
+Q: Push zawisnął na "Writing objects: 45%", co robić?
+A: Poczekaj jeszcze 2-3 minuty. To normalne przy dużych plikach.
+
+Q: Czy kolejne push też będą wolne?
+A: NIE! Kolejne push wysyłają tylko zmiany (DUŻO szybciej).
+
+Q: Jak sprawdzić rozmiar projektu?
+A: Uruchom: DIAGNOZA-PUSH.bat
+
+Q: Gdzie są duże pliki?
+A: Prawdopodobnie w PDF-GOTOWE/ lub img/
+
+
+═══════════════════════════════════════════════════════════════════════════
+📞 SZYBKA POMOC
+═══════════════════════════════════════════════════════════════════════════
+
+1. Push postępuje (widzę procenty)    → Poczekaj cierpliwie
+2. Push zawisnął (brak zmian >5 min)  → Ctrl+C → AKTUALIZUJ-SZYBKO.bat
+3. Błąd "file too large"              → DIAGNOZA-PUSH.bat → dodaj do .gitignore
+4. Chcę szybko wysłać                 → AKTUALIZUJ-SZYBKO.bat
+
+
+═══════════════════════════════════════════════════════════════════════════
+
+🇵🇱⚽🏆 Cierpliwości! Po pierwszym push kolejne będą DUŻO szybsze! 🇵🇱⚽🏆
+
+═══════════════════════════════════════════════════════════════════════════
+

@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>POLSKA 2038 - Finał Mistrzostw Świata 2038</title>
+
+  <!-- Tailwind CSS v3 -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#dc143c',
+            'primary-dark': '#8b0000',
+            accent: '#ffd700',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+
+    [x-cloak] {
+      display: none !important;
+    }
+
+    .tab-content {
+      animation: fadeIn 0.3s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .gradient-primary {
+      background: linear-gradient(135deg, #dc143c 0%, #8b0000 50%, #5a0000 100%);
+    }
+
+    .gradient-accent {
+      background: linear-gradient(135deg, #ffd700, #ffed4e);
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50">
+
+  <div x-data="{
+    currentTab: window.location.hash ? window.location.hash.slice(1) : 'home',
+    mobileMenuOpen: false,
+    docTab: 'filar1',
+    init() {
+      // Handle hash changes (browser back/forward)
+      window.addEventListener('hashchange', () => {
+        this.currentTab = window.location.hash.slice(1) || 'home';
+      });
+      // Update URL when tab changes
+      this.$watch('currentTab', value => {
+        window.location.hash = value;
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+  }" x-cloak>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 gradient-primary shadow-lg">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="flex justify-between items-center h-20">
+          <!-- Logo -->
+          <button @click="currentTab = 'home'" class="text-white font-black text-2xl flex items-center gap-2 hover:scale-105 transition">
+            <span class="text-3xl">🇵🇱</span>
+            <span>POLSKA 2038</span>
+          </button>
+
+          <!-- Desktop Menu -->
+          <div class="hidden md:flex items-center space-x-2">
+            <button @click="currentTab = 'home'"
+                    :class="currentTab === 'home' ? 'bg-white/20' : 'hover:bg-white/10'"
+                    class="px-4 py-2 rounded-lg text-white font-semibold transition">
+              Start
+            </button>
+            <button @click="currentTab = 'presskit'"
+                    :class="currentTab === 'presskit' ? 'bg-white/20' : 'hover:bg-white/10'"
+                    class="px-4 py-2 rounded-lg text-white font-semibold transition">
+              Trzy Filary
+            </button>
+            <button @click="currentTab = 'komunikat'"
+                    :class="currentTab === 'komunikat' ? 'bg-white/20' : 'hover:bg-white/10'"
+                    class="px-4 py-2 rounded-lg text-white font-semibold transition">
+              Komunikat
+            </button>
+            <button @click="currentTab = 'dokumentacja'"
+                    :class="currentTab === 'dokumentacja' ? 'bg-white/20' : 'hover:bg-white/10'"
+                    class="px-4 py-2 rounded-lg text-white font-semibold transition">
+              Dokumentacja
+            </button>
+            <button @click="currentTab = 'sciaga'"
+                    :class="currentTab === 'sciaga' ? 'bg-white/20' : 'hover:bg-white/10'"
+                    class="px-4 py-2 rounded-lg text-white font-semibold transition">
+              Ściąga
+            </button>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button @click="mobileMenuOpen = !mobileMenuOpen" class="md:hidden text-white p-2">
+            <svg x-show="!mobileMenuOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+            <svg x-show="mobileMenuOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div x-show="mobileMenuOpen" x-transition class="md:hidden pb-4">
+          <button @click="currentTab = 'home'; mobileMenuOpen = false"
+                  class="block w-full text-left px-4 py-3 text-white font-semibold hover:bg-white/10 rounded-lg mb-1">
+            Start
+          </button>
+          <button @click="currentTab = 'presskit'; mobileMenuOpen = false"
+                  class="block w-full text-left px-4 py-3 text-white font-semibold hover:bg-white/10 rounded-lg mb-1">
+            Trzy Filary
+          </button>
+          <button @click="currentTab = 'komunikat'; mobileMenuOpen = false"
+                  class="block w-full text-left px-4 py-3 text-white font-semibold hover:bg-white/10 rounded-lg mb-1">
+            Komunikat
+          </button>
+          <button @click="currentTab = 'dokumentacja'; mobileMenuOpen = false"
+                  class="block w-full text-left px-4 py-3 text-white font-semibold hover:bg-white/10 rounded-lg mb-1">
+            Dokumentacja
+          </button>
+          <button @click="currentTab = 'sciaga'; mobileMenuOpen = false"
+                  class="block w-full text-left px-4 py-3 text-white font-semibold hover:bg-white/10 rounded-lg mb-1">
+            Ściąga
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="pt-20">
+
+      <!-- HOME TAB -->
+      <div x-show="currentTab === 'home'" class="tab-content">
+        <section class="gradient-primary text-white py-20">
+          <div class="max-w-7xl mx-auto px-4 text-center">
+            <h1 class="text-5xl md:text-7xl font-black mb-6">
+              🇵🇱 POLSKA 2038 🇵🇱
+            </h1>
+            <p class="text-2xl md:text-4xl mb-12">
+              TRZY FILARY REFORMY PIŁKI NOŻNEJ
+            </p>
+
+            <!-- Stats -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 max-w-5xl mx-auto">
+              <div class="bg-white/10 backdrop-blur-lg p-6 rounded-2xl">
+                <div class="text-4xl font-black text-accent mb-2">1,08 mld</div>
+                <div class="text-sm">zł/rok budżet</div>
+              </div>
+              <div class="bg-white/10 backdrop-blur-lg p-6 rounded-2xl">
+                <div class="text-4xl font-black text-accent mb-2">370%</div>
+                <div class="text-sm">ROI zwrot</div>
+              </div>
+              <div class="bg-white/10 backdrop-blur-lg p-6 rounded-2xl">
+                <div class="text-4xl font-black text-accent mb-2">28,50 zł</div>
+                <div class="text-sm">na Polaka/rok</div>
+              </div>
+              <div class="bg-white/10 backdrop-blur-lg p-6 rounded-2xl">
+                <div class="text-4xl font-black text-accent mb-2">2038</div>
+                <div class="text-sm">Finał MŚ</div>
+              </div>
+            </div>
+
+            <h2 class="text-3xl md:text-5xl font-black mb-8">
+              ⚽ MISTRZOSTWO ŚWIATA 2038 🏆
+            </h2>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+              <button @click="currentTab = 'dokumentacja'"
+                      class="gradient-accent text-gray-900 px-8 py-4 rounded-full font-bold text-lg hover:scale-105 transition shadow-xl">
+                📄 Pełna Dokumentacja
+              </button>
+              <button @click="currentTab = 'komunikat'"
+                      class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-primary transition">
+                📋 Komunikat Publiczny
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Vision -->
+        <section class="py-20 bg-white">
+          <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-primary mb-8">
+              🎯 Wizja Jednym Zdaniem
+            </h2>
+            <p class="text-xl md:text-2xl text-gray-700 italic">
+              "Nie zbudujemy mistrzów świata bez: <strong class="text-primary">systemu szkolenia</strong>,
+              <strong class="text-primary">społeczeństwa które będzie chciało ich wspierać</strong>,
+              i <strong class="text-primary">trenerów którzy umieją rozwijać dzieci</strong>."
+            </p>
+          </div>
+        </section>
+
+        <!-- Three Pillars -->
+        <section class="py-20 bg-gray-50">
+          <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+              <h2 class="text-4xl md:text-5xl font-black text-primary mb-4">
+                🏗️ TRZY FILARY REFORMY
+              </h2>
+              <p class="text-xl text-gray-600">Kompleksowy system budowania mistrzów świata</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+              <!-- Pillar 1 -->
+              <div @click="currentTab = 'dokumentacja'; docTab = 'filar1'"
+                   class="bg-white rounded-3xl shadow-xl p-8 hover:shadow-2xl transition hover:-translate-y-2 cursor-pointer">
+                <div class="text-6xl mb-4">⚽</div>
+                <h3 class="text-2xl font-black text-primary mb-3">FILAR 1: POLSKA 2038</h3>
+                <div class="gradient-accent text-gray-900 px-4 py-2 rounded-xl font-bold inline-block mb-4">
+                  1 mld zł/rok
+                </div>
+                <p class="text-lg font-semibold mb-4">Budowanie mistrzów</p>
+                <ul class="space-y-2 text-gray-700">
+                  <li class="flex items-start">
+                    <span class="text-primary mr-2">✓</span>
+                    <span>Program Talenciak+ (1000 dzieci/rok)</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-primary mr-2">✓</span>
+                    <span>Projekt Orzeł 2038 (120 najlepszych)</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-primary mr-2">✓</span>
+                    <span>Kadra U21 pełnoetatowa</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-primary mr-2">✓</span>
+                    <span>Orlik 3.0 (2477 boisk)</span>
+                  </li>
+                </ul>
+                <div class="mt-6 p-4 bg-yellow-50 rounded-lg">
+                  <strong class="text-primary">Cel:</strong> Finał MŚ 2038, TOP 5 UEFA do 2035
+                </div>
+              </div>
+
+              <!-- Pillar 2 -->
+              <div @click="currentTab = 'dokumentacja'; docTab = 'filar2'"
+                   class="bg-white rounded-3xl shadow-xl p-8 hover:shadow-2xl transition hover:-translate-y-2 cursor-pointer">
+                <div class="text-6xl mb-4">🛡️</div>
+                <h3 class="text-2xl font-black text-primary mb-3">FILAR 2: BEZPIECZNY STADION</h3>
+                <div class="gradient-accent text-gray-900 px-4 py-2 rounded-xl font-bold inline-block mb-4">
+                  50 mln zł/rok
+                </div>
+                <p class="text-lg font-semibold mb-4">Budowanie kibiców</p>
+                <ul class="space-y-2 text-gray-700">
+                  <li class="flex items-start">
+                    <span class="text-primary mr-2">✓</span>
+                    <span>Strefy rodzinne</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-primary mr-2">✓</span>
+                    <span>Czarna lista wykluczeń</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-primary mr-2">✓</span>
+                    <span>Pieniądz za kulturę</span>
+                  </li>
+                </ul>
+                <div class="mt-6 p-4 bg-yellow-50 rounded-lg">
+                  <strong class="text-primary">Cel:</strong> Frekwencja +30%, incydenty -80%
+                </div>
+              </div>
+
+              <!-- Pillar 3 -->
+              <div @click="currentTab = 'dokumentacja'; docTab = 'filar3'"
+                   class="bg-white rounded-3xl shadow-xl p-8 hover:shadow-2xl transition hover:-translate-y-2 cursor-pointer">
+                <div class="text-6xl mb-4">🎓</div>
+                <h3 class="text-2xl font-black text-primary mb-3">FILAR 3: OCENA TRENERÓW</h3>
+                <div class="gradient-accent text-gray-900 px-4 py-2 rounded-xl font-bold inline-block mb-4">
+                  30 mln zł/rok
+                </div>
+                <p class="text-lg font-semibold mb-4">Budowanie jakości</p>
+                <ul class="space-y-2 text-gray-700">
+                  <li class="flex items-start">
+                    <span class="text-primary mr-2">✓</span>
+                    <span>Audyty zewnętrzne (AWF, NIE PZPN)</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-primary mr-2">✓</span>
+                    <span>Ocena rozwoju dzieci</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-primary mr-2">✓</span>
+                    <span>Zakaz dla słabych trenerów</span>
+                  </li>
+                </ul>
+                <div class="mt-6 p-4 bg-yellow-50 rounded-lg">
+                  <strong class="text-primary">Cel:</strong> 100% trenerów objętych oceną do 2028
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="py-20 gradient-primary text-white text-center">
+          <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-4xl md:text-6xl font-black mb-8">
+              ⚡ OSTATNIA SZANSA
+            </h2>
+            <p class="text-xl md:text-2xl mb-6">
+              Roczniki 2010-2016: <strong class="text-accent">Najwięcej dzieci od 30 lat</strong>
+            </p>
+            <div class="bg-white/10 backdrop-blur-lg p-6 rounded-2xl inline-block mb-8">
+              <p class="text-2xl md:text-3xl font-bold text-accent">
+                MAMY 12 LAT. POTEM ZA PÓŹNO.
+              </p>
+            </div>
+            <div class="flex justify-center">
+              <button @click="currentTab = 'dokumentacja'"
+                      class="gradient-accent text-gray-900 px-10 py-5 rounded-full font-bold text-xl hover:scale-105 transition shadow-2xl">
+                📄 Zobacz Pełną Dokumentację
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- PRESS KIT TAB -->
+      <div x-show="currentTab === 'presskit'" class="tab-content">
+        <section class="py-20 bg-gray-50">
+          <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+              <h1 class="text-4xl md:text-6xl font-black text-primary mb-4">
+                🏛️ Trzy Filary
+              </h1>
+              <p class="text-xl text-gray-600">Szczegółowa dokumentacja dla Ministerstwa, PZPN i mediów</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-2xl transition">
+                <div class="text-5xl mb-4">⚽</div>
+                <h3 class="text-xl font-bold text-primary mb-3">Filar 1: POLSKA 2038</h3>
+                <p class="text-gray-600 mb-4">Szczegółowa dokumentacja (12 stron)</p>
+                <a href="press/filar-1-polska-2038.html" target="_blank"
+                   class="gradient-primary text-white px-6 py-3 rounded-full inline-block hover:scale-105 transition">
+                  Pobierz
+                </a>
+              </div>
+
+              <div class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-2xl transition">
+                <div class="text-5xl mb-4">🛡️</div>
+                <h3 class="text-xl font-bold text-primary mb-3">Filar 2: Bezpieczny Stadion</h3>
+                <p class="text-gray-600 mb-4">Szczegółowa dokumentacja (10 stron)</p>
+                <a href="press/filar-2-bezpieczny-stadion.html" target="_blank"
+                   class="gradient-primary text-white px-6 py-3 rounded-full inline-block hover:scale-105 transition">
+                  Pobierz
+                </a>
+              </div>
+
+              <div class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-2xl transition">
+                <div class="text-5xl mb-4">🎓</div>
+                <h3 class="text-xl font-bold text-primary mb-3">Filar 3: Ocena Trenerów</h3>
+                <p class="text-gray-600 mb-4">Szczegółowa dokumentacja (12 stron)</p>
+                <a href="press/filar-3-ocena-trenerow.html" target="_blank"
+                   class="gradient-primary text-white px-6 py-3 rounded-full inline-block hover:scale-105 transition">
+                  Pobierz
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- KOMUNIKAT TAB -->
+      <div x-show="currentTab === 'komunikat'" class="tab-content">
+        <section class="py-20 bg-gray-50">
+          <div class="max-w-5xl mx-auto px-4">
+            <div class="bg-white rounded-3xl shadow-2xl p-8 md:p-12">
+              <!-- Header -->
+              <div class="text-center mb-12">
+                <h1 class="text-4xl md:text-6xl font-black text-primary mb-4">
+                  🇵🇱 TRZY FILARY REFORMY 🇵🇱
+                </h1>
+                <p class="text-xl text-gray-600">POLSKA 2038 - Komunikat Publiczny</p>
+              </div>
+
+              <!-- Three Pillars -->
+              <div class="space-y-8 mb-12">
+                <!-- Pillar 1 -->
+                <div class="border-l-4 border-primary pl-6">
+                  <h2 class="text-3xl font-black text-primary mb-3">FILAR 1: POLSKA 2038</h2>
+                  <div class="inline-block bg-accent text-gray-900 px-4 py-2 rounded-full font-bold mb-3">
+                    1 miliard zł/rok
+                  </div>
+                  <p class="text-lg font-semibold mb-4 text-gray-700">Budowanie mistrzów</p>
+                  <ul class="space-y-2 text-gray-700 mb-4">
+                    <li class="flex items-start">
+                      <span class="text-primary mr-2">✓</span>
+                      <span>Program Talenciak+ (1000 dzieci/rocznik, 6-13 lat)</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="text-primary mr-2">✓</span>
+                      <span>Projekt Orzeł 2038 (60+60 najlepszych, U15-U21)</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="text-primary mr-2">✓</span>
+                      <span>Kadra U21 pełnoetatowa (25 zawodników)</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="text-primary mr-2">✓</span>
+                      <span>Orlik 3.0 (2477 boisk w całej Polsce)</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="text-primary mr-2">✓</span>
+                      <span>Centralna baza AI (10 000+ zawodników)</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="text-primary mr-2">✓</span>
+                      <span>Ekstraklasa Premium (14 klubów, bonusy za Polaków)</span>
+                    </li>
+                  </ul>
+                  <div class="bg-yellow-50 border-l-4 border-accent p-4 rounded">
+                    <strong class="text-primary">Cel:</strong> Finał Mistrzostw Świata 2038, TOP 5 UEFA do 2035
+                  </div>
+                </div>
+
+                <!-- Pillar 2 -->
+                <div class="border-l-4 border-primary pl-6">
+                  <h2 class="text-3xl font-black text-primary mb-3">FILAR 2: BEZPIECZNY STADION</h2>
+                  <div class="inline-block bg-accent text-gray-900 px-4 py-2 rounded-full font-bold mb-3">
+                    50 mln zł/rok
+                  </div>
+                  <p class="text-lg font-semibold mb-4 text-gray-700">Budowanie kibiców</p>
+                  <ul class="space-y-2 text-gray-700 mb-4">
+                    <li class="flex items-start">
+                      <span class="text-primary mr-2">✓</span>
+                      <span>Strefy rodzinne (chronione, oddzielone, zero tolerancji)</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="text-primary mr-2">✓</span>
+                      <span>Ogólnopolska czarna lista wykluczeń</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="text-primary mr-2">✓</span>
+                      <span>Pieniądz za kulturę, nie za krzyk</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="text-primary mr-2">✓</span>
+                      <span>Odpowiedzialność organizatora</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="text-primary mr-2">✓</span>
+                      <span>Standard bezpieczeństwa jako warunek dotacji</span>
+                    </li>
+                  </ul>
+                  <div class="bg-yellow-50 border-l-4 border-accent p-4 rounded">
+                    <strong class="text-primary">Cel:</strong> Frekwencja +30%, incydenty -80% do 2035
+                  </div>
+                </div>
+
+                <!-- Pillar 3 -->
+                <div class="border-l-4 border-primary pl-6">
+                  <h2 class="text-3xl font-black text-primary mb-3">FILAR 3: OCENA TRENERÓW</h2>
+                  <div class="inline-block bg-accent text-gray-900 px-4 py-2 rounded-full font-bold mb-3">
+                    30 mln zł/rok
+                  </div>
+                  <p class="text-lg font-semibold mb-4 text-gray-700">Budowanie jakości</p>
+                  <ul class="space-y-2 text-gray-700 mb-4">
+                    <li class="flex items-start">
+                      <span class="text-primary mr-2">✓</span>
+                      <span>Audyty zewnętrzne (AWF-y, Instytut Sportu – NIE PZPN)</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="text-primary mr-2">✓</span>
+                      <span>Ocena rozwoju dzieci, nie wyników meczów</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="text-primary mr-2">✓</span>
+                      <span>Zakaz pracy dla słabych trenerów w systemie publicznym</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="text-primary mr-2">✓</span>
+                      <span>Jawne raporty dla JST i rodziców</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="text-primary mr-2">✓</span>
+                      <span>Standard jako warunek finansowania</span>
+                    </li>
+                  </ul>
+                  <div class="bg-yellow-50 border-l-4 border-accent p-4 rounded">
+                    <strong class="text-primary">Cel:</strong> 100% trenerów objętych oceną do 2028
+                  </div>
+                </div>
+              </div>
+
+              <!-- Budget -->
+              <div class="gradient-primary text-white p-8 rounded-3xl mb-8">
+                <h2 class="text-3xl font-black mb-4">💰 BUDŻET ŁĄCZNY</h2>
+                <p class="text-4xl font-black mb-2">1,08 miliarda zł rocznie</p>
+                <p class="text-2xl mb-4">= 28,50 zł/Polaka/rok</p>
+                <p class="text-lg opacity-90">Mniej niż 3 bilety do kina</p>
+                <div class="mt-6 pt-6 border-t border-white/20">
+                  <p class="font-semibold mb-3">Źródła finansowania:</p>
+                  <ul class="space-y-2">
+                    <li>• Budżet państwa</li>
+                    <li>• Środki UE</li>
+                    <li>• Samorządy</li>
+                    <li>• Partnerstwa publiczno-prywatne (PPP)</li>
+                    <li>• PZPN</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Why Together -->
+              <div class="bg-gray-50 p-8 rounded-3xl mb-8">
+                <h2 class="text-3xl font-black text-primary mb-6">🎯 DLACZEGO TE 3 FILARY MUSZĄ IŚĆ RAZEM?</h2>
+                <div class="space-y-4">
+                  <div class="flex items-start gap-3">
+                    <span class="text-2xl">❌</span>
+                    <div>
+                      <strong class="text-primary">Bez FILARU 1:</strong>
+                      <p class="text-gray-700">Brak systemowego szkolenia, brak talentów, nigdy nie będziemy mistrzami</p>
+                    </div>
+                  </div>
+                  <div class="flex items-start gap-3">
+                    <span class="text-2xl">❌</span>
+                    <div>
+                      <strong class="text-primary">Bez FILARU 2:</strong>
+                      <p class="text-gray-700">Rodziny nie przyjdą na stadiony, brak społecznego wsparcia, budżet nie przejdzie</p>
+                    </div>
+                  </div>
+                  <div class="flex items-start gap-3">
+                    <span class="text-2xl">❌</span>
+                    <div>
+                      <strong class="text-primary">Bez FILARU 3:</strong>
+                      <p class="text-gray-700">Pieniądze trafią do złych trenerów, dzieci będą źle szkolone, zmarnujemy cały budżet</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="mt-6 p-4 bg-white rounded-xl">
+                  <p class="text-lg font-bold text-primary text-center">To nie są trzy osobne projekty. To jeden organizm.</p>
+                </div>
+              </div>
+
+              <!-- Timeline -->
+              <div class="bg-white border-2 border-primary p-8 rounded-3xl mb-8">
+                <h2 class="text-3xl font-black text-primary mb-6">⏰ TIMELINE</h2>
+                <div class="space-y-4">
+                  <div class="flex gap-4">
+                    <div class="font-black text-2xl text-primary w-20">2026</div>
+                    <div class="flex-1">
+                      <p class="font-bold mb-2">PILOTAŻ</p>
+                      <ul class="text-gray-700 space-y-1 text-sm">
+                        <li>• 3 województwa</li>
+                        <li>• 50 boisk Orlik 3.0</li>
+                        <li>• 500 trenerów w systemie ocen</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="flex gap-4">
+                    <div class="font-black text-2xl text-primary w-20">2027</div>
+                    <div class="flex-1">
+                      <p class="font-bold mb-2">PEŁNE WDROŻENIE</p>
+                      <ul class="text-gray-700 space-y-1 text-sm">
+                        <li>• Wszystkie województwa</li>
+                        <li>• Redukcja Ekstraklasy do 14 klubów</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="flex gap-4">
+                    <div class="font-black text-2xl text-primary w-20">2028-30</div>
+                    <div class="flex-1">
+                      <p class="font-bold mb-2">BUDOWANIE FUNDAMENTÓW</p>
+                      <ul class="text-gray-700 space-y-1 text-sm">
+                        <li>• 1000 boisk Orlik 3.0</li>
+                        <li>• U21 pełnoetatowa</li>
+                        <li>• 100% trenerów w systemie</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="flex gap-4">
+                    <div class="font-black text-2xl text-primary w-20">2035</div>
+                    <div class="flex-1">
+                      <p class="font-bold mb-2">PRZEŁOM</p>
+                      <ul class="text-gray-700 space-y-1 text-sm">
+                        <li>• TOP 5 UEFA</li>
+                        <li>• 100+ Polaków w TOP 5 ligach</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="flex gap-4">
+                    <div class="font-black text-2xl text-primary w-20">2038</div>
+                    <div class="flex-1 gradient-accent p-4 rounded-xl">
+                      <p class="font-black text-2xl text-gray-900">🏆 FINAŁ MISTRZOSTW ŚWIATA</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Key Benefits -->
+              <div class="grid md:grid-cols-2 gap-6 mb-8">
+                <div class="bg-green-50 border-2 border-green-500 p-6 rounded-2xl">
+                  <h3 class="text-xl font-black text-green-700 mb-4">✅ KLUCZOWE ZALETY</h3>
+                  <ul class="space-y-3 text-gray-700">
+                    <li class="flex items-start gap-2">
+                      <span class="text-green-600 font-bold">✓</span>
+                      <div>
+                        <strong>Nie wymaga zmiany prawa</strong>
+                        <p class="text-sm">Warunkowanie dostępu do środków publicznych</p>
+                      </div>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-green-600 font-bold">✓</span>
+                      <div>
+                        <strong>Społeczne poparcie</strong>
+                        <p class="text-sm">Rodzice, kibice, podatnicy chcą tego</p>
+                      </div>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-green-600 font-bold">✓</span>
+                      <div>
+                        <strong>Opłacalne</strong>
+                        <p class="text-sm">28,50 zł/rok = mniej niż 3 bilety</p>
+                      </div>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-green-600 font-bold">✓</span>
+                      <div>
+                        <strong>Nie do zablokowania</strong>
+                        <p class="text-sm">PZPN nie jest sędzią we własnej sprawie</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="bg-red-50 border-2 border-red-500 p-6 rounded-2xl">
+                  <h3 class="text-xl font-black text-red-700 mb-4">⚡ OSTATNIA SZANSA</h3>
+                  <div class="space-y-3 text-gray-700">
+                    <p><strong>Roczniki 2010-2016:</strong> Najwięcej dzieci od 30 lat (400k/rok)</p>
+                    <p><strong>Okno możliwości:</strong> 2026-2030</p>
+                    <p class="text-xl font-black text-red-600 mt-4">MAMY 12 LAT. POTEM ZA PÓŹNO.</p>
+                    <p class="text-sm mt-2">Jeśli nie zaczniemy TERAZ, stracimy całe pokolenie!</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Action Section -->
+              <div class="bg-gradient-to-r from-primary to-primary-dark text-white p-8 rounded-3xl mb-8">
+                <h2 class="text-3xl font-black mb-6">💡 CO MOŻECIE ZROBIĆ?</h2>
+                <div class="grid md:grid-cols-2 gap-6 text-sm">
+                  <div>
+                    <h3 class="font-bold text-accent mb-2">Ministerstwo Sportu:</h3>
+                    <ul class="space-y-1 opacity-90">
+                      <li>• Włączyć do strategii narodowej</li>
+                      <li>• Zabezpieczyć budżet 2026-2038</li>
+                      <li>• Rozpocząć pilotaż w 2026</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h3 class="font-bold text-accent mb-2">PZPN:</h3>
+                    <ul class="space-y-1 opacity-90">
+                      <li>• Pobrać dokumentację</li>
+                      <li>• Powołać zespół ewaluacyjny</li>
+                      <li>• Uruchomić pilotaż Talenciak+</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h3 class="font-bold text-accent mb-2">Samorządy:</h3>
+                    <ul class="space-y-1 opacity-90">
+                      <li>• Przygotować Orlik 3.0</li>
+                      <li>• Włączyć się w oceny trenerów</li>
+                      <li>• Zabezpieczyć środki na strefy</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h3 class="font-bold text-accent mb-2">Media:</h3>
+                    <ul class="space-y-1 opacity-90">
+                      <li>• Nagłośnić projekt</li>
+                      <li>• Rozpocząć debatę publiczną</li>
+                      <li>• Monitorować reakcje</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Footer / About -->
+              <div class="text-center space-y-6">
+                <div class="bg-gray-50 p-6 rounded-2xl">
+                  <h3 class="text-2xl font-black text-primary mb-3">🤝 KIM JESTEŚMY?</h3>
+                  <p class="text-gray-700 mb-4">Zespół Obywatelski POLSKA 2038 – grupa obywateli i miłośników piłki nożnej</p>
+                  <div class="flex flex-wrap justify-center gap-4 text-sm">
+                    <span class="bg-green-100 text-green-800 px-4 py-2 rounded-full font-semibold">✅ Obywatelski</span>
+                    <span class="bg-green-100 text-green-800 px-4 py-2 rounded-full font-semibold">✅ Anonimowy</span>
+                    <span class="bg-green-100 text-green-800 px-4 py-2 rounded-full font-semibold">✅ Bezinteresowny</span>
+                    <span class="bg-green-100 text-green-800 px-4 py-2 rounded-full font-semibold">✅ Pro bono</span>
+                  </div>
+                </div>
+
+                <!-- One Sentence -->
+                <div class="border-4 border-primary p-6 rounded-2xl">
+                  <h3 class="text-2xl font-black text-primary mb-4">🔥 JEDNO ZDANIE</h3>
+                  <p class="text-xl italic text-gray-700">
+                    "Nie zbudujemy mistrzów świata bez: <strong class="text-primary">systemu szkolenia</strong>,
+                    <strong class="text-primary">społeczeństwa które będzie chciało ich wspierać</strong>,
+                    i <strong class="text-primary">trenerów którzy umieją rozwijać dzieci</strong>."
+                  </p>
+                </div>
+
+                <!-- Final CTA -->
+                <div class="gradient-primary text-white p-8 rounded-3xl">
+                  <h2 class="text-4xl font-black mb-4">🇵🇱⚽🏆</h2>
+                  <p class="text-3xl font-black mb-2">MISTRZOSTWO ŚWIATA 2038</p>
+                  <p class="text-2xl mb-6">LUB NIC</p>
+                  <p class="text-xl opacity-90 mb-6">CZAS DZIAŁAĆ</p>
+                  <a href="TRZY-FILARY-KOMUNIKAT.txt" download
+                     class="inline-block gradient-accent text-gray-900 px-10 py-5 rounded-full font-black text-xl hover:scale-105 transition shadow-2xl">
+                    📥 Pobierz Pełny Komunikat (TXT)
+                  </a>
+                </div>
+
+                <!-- Links -->
+                <div class="text-gray-600 text-sm space-y-2">
+                  <p>🌐 <a href="https://polska2038.github.io/polska_projekt_2038/" class="text-primary hover:underline">polska2038.github.io/polska_projekt_2038/</a></p>
+                  <p>📄 <a href="https://polska2038.github.io/polska_projekt_2038/press/" class="text-primary hover:underline">Trzy Filary - Pełna dokumentacja</a></p>
+                  <p class="italic">Zespół Obywatelski POLSKA 2038 • Projekt obywatelski • Komunikat publiczny</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- DOKUMENTACJA TAB -->
+      <div x-show="currentTab === 'dokumentacja'" class="tab-content">
+        <section class="py-20 bg-gray-50">
+          <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+              <h1 class="text-4xl md:text-6xl font-black text-primary mb-4">
+                📄 Pełna Dokumentacja
+              </h1>
+              <p class="text-xl text-gray-600">Wszystkie materiały w jednym miejscu</p>
+            </div>
+
+            <div class="bg-white rounded-3xl shadow-2xl overflow-hidden">
+              <div class="flex flex-wrap border-b border-gray-200">
+                <button @click="docTab = 'filar1'"
+                        :class="docTab === 'filar1' ? 'bg-primary text-white' : 'bg-gray-100 text-gray-700'"
+                        class="flex-1 px-6 py-4 font-bold text-center hover:bg-primary hover:text-white transition">
+                  ⚽ Filar 1
+                </button>
+                <button @click="docTab = 'filar2'"
+                        :class="docTab === 'filar2' ? 'bg-primary text-white' : 'bg-gray-100 text-gray-700'"
+                        class="flex-1 px-6 py-4 font-bold text-center hover:bg-primary hover:text-white transition">
+                  🛡️ Filar 2
+                </button>
+                <button @click="docTab = 'filar3'"
+                        :class="docTab === 'filar3' ? 'bg-primary text-white' : 'bg-gray-100 text-gray-700'"
+                        class="flex-1 px-6 py-4 font-bold text-center hover:bg-primary hover:text-white transition">
+                  🎓 Filar 3
+                </button>
+              </div>
+
+              <div class="p-8">
+                <div x-show="docTab === 'filar1'">
+                  <h2 class="text-3xl font-black text-primary mb-6">FILAR 1: POLSKA 2038</h2>
+                  <p class="text-xl mb-6">Budżet: <span class="font-bold text-primary">1 000 000 000 zł/rok</span></p>
+                  <iframe src="press/filar-1-polska-2038.html" class="w-full h-screen border-0 rounded-xl"></iframe>
+                </div>
+
+                <div x-show="docTab === 'filar2'">
+                  <h2 class="text-3xl font-black text-primary mb-6">FILAR 2: BEZPIECZNY STADION</h2>
+                  <p class="text-xl mb-6">Budżet: <span class="font-bold text-primary">50 000 000 zł/rok</span></p>
+                  <iframe src="press/filar-2-bezpieczny-stadion.html" class="w-full h-screen border-0 rounded-xl"></iframe>
+                </div>
+
+                <div x-show="docTab === 'filar3'">
+                  <h2 class="text-3xl font-black text-primary mb-6">FILAR 3: OCENA TRENERÓW</h2>
+                  <p class="text-xl mb-6">Budżet: <span class="font-bold text-primary">30 000 000 zł/rok</span></p>
+                  <iframe src="press/filar-3-ocena-trenerow.html" class="w-full h-screen border-0 rounded-xl"></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- ŚCIĄGA TAB -->
+      <div x-show="currentTab === 'sciaga'" class="tab-content">
+        <section class="py-20 gradient-primary text-white">
+          <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+              <h1 class="text-4xl md:text-6xl font-black mb-4">
+                🔢 Ściąga Liczb
+              </h1>
+              <p class="text-xl">Wszystkie kluczowe liczby w jednym miejscu</p>
+            </div>
+
+            <!-- Budżet i ROI -->
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+              <div class="bg-white/10 backdrop-blur-lg p-8 rounded-3xl border border-white/20">
+                <h2 class="text-3xl font-black mb-6 text-accent">💰 BUDŻET</h2>
+                <div class="space-y-4 text-lg">
+                  <div class="flex justify-between border-b border-white/20 pb-3">
+                    <span>Łącznie:</span>
+                    <span class="font-bold text-accent">1,08 mld zł/rok</span>
+                  </div>
+                  <div class="flex justify-between border-b border-white/20 pb-3">
+                    <span>Na Polaka:</span>
+                    <span class="font-bold text-accent">28,50 zł/rok</span>
+                  </div>
+                  <div class="flex justify-between border-b border-white/20 pb-3">
+                    <span>W 12 lat:</span>
+                    <span class="font-bold text-accent">13 mld zł</span>
+                  </div>
+                  <div class="mt-4 pt-4 border-t-2 border-accent/50">
+                    <div class="text-sm opacity-90 mb-2">Podział:</div>
+                    <div class="space-y-2 text-base">
+                      <div class="flex justify-between">
+                        <span>⚽ Filar 1:</span>
+                        <span class="font-bold">1 000 mln</span>
+                      </div>
+                      <div class="flex justify-between">
+                        <span>🛡️ Filar 2:</span>
+                        <span class="font-bold">50 mln</span>
+                      </div>
+                      <div class="flex justify-between">
+                        <span>🎓 Filar 3:</span>
+                        <span class="font-bold">30 mln</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-white/10 backdrop-blur-lg p-8 rounded-3xl border border-white/20">
+                <h2 class="text-3xl font-black mb-6 text-accent">📈 ROI</h2>
+                <div class="space-y-4 text-lg">
+                  <div class="flex justify-between border-b border-white/20 pb-3">
+                    <span>Łączny zwrot:</span>
+                    <span class="font-bold text-accent">4+ mld zł/rok</span>
+                  </div>
+                  <div class="flex justify-between border-b border-white/20 pb-3">
+                    <span>ROI:</span>
+                    <span class="font-bold text-accent">370%</span>
+                  </div>
+                  <div class="flex justify-between border-b border-white/20 pb-3">
+                    <span>Zwrot w 12 lat:</span>
+                    <span class="font-bold text-accent">50+ mld zł</span>
+                  </div>
+                  <div class="mt-4 pt-4 border-t-2 border-accent/50">
+                    <div class="text-sm opacity-90 mb-2">Podział ROI:</div>
+                    <div class="space-y-2 text-base">
+                      <div class="flex justify-between">
+                        <span>⚽ Filar 1:</span>
+                        <span class="font-bold">300-500%</span>
+                      </div>
+                      <div class="flex justify-between">
+                        <span>🛡️ Filar 2:</span>
+                        <span class="font-bold">540%</span>
+                      </div>
+                      <div class="flex justify-between">
+                        <span>🎓 Filar 3:</span>
+                        <span class="font-bold">2300%</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Demografia -->
+            <div class="bg-white/10 backdrop-blur-lg p-8 rounded-3xl border border-white/20 mb-8">
+              <h2 class="text-3xl font-black mb-6 text-accent">👶 DEMOGRAFIA - DLACZEGO TERAZ?</h2>
+              <div class="grid md:grid-cols-3 gap-6 text-lg">
+                <div class="text-center">
+                  <div class="text-4xl font-black text-accent mb-2">400k</div>
+                  <div class="text-sm">Roczniki 2010-2016<br>urodzeń/rok</div>
+                  <div class="text-xs mt-2 opacity-75">REKORD od 30 lat!</div>
+                </div>
+                <div class="text-center">
+                  <div class="text-4xl font-black text-accent mb-2">320k</div>
+                  <div class="text-sm">Roczniki 2017-2025<br>urodzeń/rok</div>
+                  <div class="text-xs mt-2 opacity-75">Spadek 20%</div>
+                </div>
+                <div class="text-center">
+                  <div class="text-4xl font-black text-accent mb-2">28 lat</div>
+                  <div class="text-sm">Wiek rocznika 2010<br>w 2038</div>
+                  <div class="text-xs mt-2 opacity-75">Idealny szczyt formy</div>
+                </div>
+              </div>
+              <div class="mt-6 text-center p-4 bg-white/10 rounded-xl">
+                <div class="text-2xl font-black text-accent mb-2">Okno możliwości: 2026-2030</div>
+                <div class="text-lg">Różnica: <span class="font-black text-accent">100 MILIARDÓW ZŁ</span> (działanie vs brak)</div>
+              </div>
+            </div>
+
+            <!-- Cele do 2035 -->
+            <div class="bg-white/10 backdrop-blur-lg p-8 rounded-3xl border border-white/20 mb-8">
+              <h2 class="text-3xl font-black mb-6 text-accent">🎯 KONKRETNE CELE DO 2035</h2>
+              <div class="grid md:grid-cols-2 gap-4 text-lg">
+                <div class="flex items-start gap-3">
+                  <span class="text-accent text-2xl">✓</span>
+                  <div>
+                    <div class="font-bold">100+ Polaków w TOP 5 ligach</div>
+                    <div class="text-sm opacity-75">obecnie: ~30</div>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <span class="text-accent text-2xl">✓</span>
+                  <div>
+                    <div class="font-bold">Ekstraklasa w TOP 5 UEFA</div>
+                    <div class="text-sm opacity-75">obecnie: 24. miejsce</div>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <span class="text-accent text-2xl">✓</span>
+                  <div>
+                    <div class="font-bold">Kadra w TOP 10 FIFA</div>
+                    <div class="text-sm opacity-75">obecnie: ~30. miejsce</div>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <span class="text-accent text-2xl">✓</span>
+                  <div>
+                    <div class="font-bold">Eksport: 500+ mln EUR/rok</div>
+                    <div class="text-sm opacity-75">obecnie: ~100 mln EUR</div>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <span class="text-accent text-2xl">✓</span>
+                  <div>
+                    <div class="font-bold">Frekwencja +30%</div>
+                    <div class="text-sm opacity-75">z 8 000 do 10 500/mecz</div>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <span class="text-accent text-2xl">✓</span>
+                  <div>
+                    <div class="font-bold">Incydenty -80%</div>
+                    <div class="text-sm opacity-75">z ~100 do ~20/sezon</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Porównanie z innymi krajami -->
+            <div class="bg-white/10 backdrop-blur-lg p-8 rounded-3xl border border-white/20 mb-8">
+              <h2 class="text-3xl font-black mb-6 text-accent">⚽ PORÓWNANIE Z INNYMI KRAJAMI</h2>
+              <div class="grid md:grid-cols-3 gap-6">
+                <div class="text-center p-4 bg-white/5 rounded-xl">
+                  <div class="text-2xl font-black mb-3">🇭🇷 CHORWACJA</div>
+                  <div class="space-y-2 text-sm">
+                    <div><strong>Populacja:</strong> 4 mln</div>
+                    <div><strong>Osiągnięcia:</strong> Finał MŚ 2018, 3. MŚ 2022</div>
+                    <div class="text-accent font-bold">10x mniej ludzi!</div>
+                  </div>
+                </div>
+                <div class="text-center p-4 bg-white/5 rounded-xl">
+                  <div class="text-2xl font-black mb-3">🇵🇹 PORTUGALIA</div>
+                  <div class="space-y-2 text-sm">
+                    <div><strong>Populacja:</strong> 10 mln</div>
+                    <div><strong>Osiągnięcia:</strong> ME 2016, LN 2019</div>
+                    <div class="text-accent font-bold">4x mniej ludzi!</div>
+                  </div>
+                </div>
+                <div class="text-center p-4 bg-red-500/20 rounded-xl border-2 border-accent">
+                  <div class="text-2xl font-black mb-3">🇵🇱 POLSKA</div>
+                  <div class="space-y-2 text-sm">
+                    <div><strong>Populacja:</strong> 38 mln</div>
+                    <div><strong>Osiągnięcia:</strong> 0 od 1982</div>
+                    <div class="text-accent font-bold text-lg">Biggest underachiever!</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Download button -->
+            <div class="text-center">
+              <a href="NAJWAZNIEJSZE-LICZBY-SCIAGA.txt" download
+                 class="gradient-accent text-gray-900 px-10 py-5 rounded-full font-black text-xl inline-block hover:scale-105 transition shadow-2xl">
+                📥 Pobierz Pełną Ściągę (TXT)
+              </a>
+              <div class="mt-4 text-sm opacity-75">Wszystkie liczby + więcej szczegółów</div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center">
+          <h3 class="text-2xl font-black text-accent mb-4">🇵🇱 POLSKA 2038</h3>
+          <p class="text-gray-400 mb-4">Projekt obywatelski reformy polskiej piłki nożnej</p>
+          <p class="text-accent font-bold">🇵🇱⚽🏆 MISTRZOSTWO ŚWIATA 2038 LUB NIC 🇵🇱⚽🏆</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll to Top -->
+    <button @click="window.scrollTo({top: 0, behavior: 'smooth'})"
+            class="fixed bottom-8 right-8 bg-primary hover:bg-primary-dark text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center text-2xl hover:scale-110 transition z-40">
+      ↑
+    </button>
+
+  </div>
+
+  <!-- Alpine.js v3 (na końcu body) -->
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+  <script>
+    // Log when Alpine is loaded
+    document.addEventListener('alpine:init', () => {
+      console.log('Alpine.js is ready!');
+    });
+  </script>
+
+</body>
+</html>
+

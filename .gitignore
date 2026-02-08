@@ -1,0 +1,39 @@
+# Include your project-specific ignores in this file
+# Read about how to use .gitignore: https://help.github.com/articles/ignoring-files
+# Useful .gitignore templates: https://github.com/github/gitignore
+
+# Dependencies
+node_modules
+dist
+.cache
+
+# Build outputs
+*.log
+*.tmp
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.backup.*
+*.bak
+
+# Large files (jeśli jakieś są)
+*.zip
+*.7z
+*.rar
+
+# Nie ignoruj ważnych plików projektu
+!DOKUMENTY/**/*.md
+!PDF-GOTOWE/**/*.html
+!press/**/*.html
+

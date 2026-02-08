@@ -1,0 +1,296 @@
+═══════════════════════════════════════════════════════════════════════════
+❓ FAQ - NAJCZĘŚCIEJ ZADAWANE PYTANIA - WDROŻENIE GITHUB PAGES
+═══════════════════════════════════════════════════════════════════════════
+
+
+🟢 PRZED WDROŻENIEM
+═══════════════════════════════════════════════════════════════════════════
+
+❓ Czy muszę umieć programować?
+✅ NIE! Skrypt DEPLOY-TO-GITHUB.bat zrobi wszystko automatycznie.
+   Wystarczy kliknąć i odpowiadać na proste pytania.
+
+❓ Czy muszę mieć konto GitHub?
+✅ TAK. To darmowe i trwa 2 minuty: https://github.com/signup
+
+❓ Czy Git jest wymagany?
+✅ TAK. Pobierz z: https://git-scm.com/download/win
+   Instalacja trwa 5 minut.
+
+❓ Ile to kosztuje?
+✅ 0 zł. GitHub Pages jest całkowicie darmowe dla projektów publicznych.
+   Bez limitów czasu, bez ukrytych kosztów, bez reklam.
+
+❓ Jak długo trwa pierwsze wdrożenie?
+✅ 15-20 minut (łącznie z utworzeniem konta i instalacją Git)
+   Samo wdrożenie: 5 minut.
+
+❓ Czy mogę to zrobić sam?
+✅ TAK! Instrukcje są bardzo szczegółowe i krok po kroku.
+
+
+🟢 WDROŻENIE
+═══════════════════════════════════════════════════════════════════════════
+
+❓ Od czego zacząć?
+✅ Otwórz: START-TUTAJ-GITHUB.txt
+   Tam znajdziesz pełną instrukcję.
+
+❓ Który plik uruchomić?
+✅ Kliknij 2x na: DEPLOY-TO-GITHUB.bat
+   To automatyczny skrypt wdrożenia.
+
+❓ Co jeśli nie działa skrypt .bat?
+✅ Użyj ręcznej metody z: GITHUB-DEPLOYMENT-GUIDE.md
+   Tam są wszystkie komendy do wklejenia.
+
+❓ Co to jest Personal Access Token?
+✅ To "hasło" do Git (bezpieczniejsze niż zwykłe hasło).
+   Stwórz tu: https://github.com/settings/tokens/new
+   Zaznacz: repo (wszystkie opcje w tej sekcji)
+
+❓ Gdzie wpisać token?
+✅ Gdy Git poprosi o hasło, wklej token (Ctrl+V).
+   UWAGA: Token nie będzie widoczny podczas wpisywania!
+
+❓ Co jeśli się pomylę?
+✅ Nic się nie stanie! Możesz:
+   • Usunąć repozytorium na GitHub i zacząć od nowa
+   • Poprawić błąd i wysłać ponownie
+   • Wszystkie pliki są bezpieczne lokalnie
+
+
+🟢 GITHUB PAGES
+═══════════════════════════════════════════════════════════════════════════
+
+❓ Gdzie włączyć GitHub Pages?
+✅ Settings → Pages → Source: main, / (root) → Save
+
+❓ Jak długo czekać na publikację?
+✅ Pierwsze wdrożenie: 1-3 minuty
+   Kolejne aktualizacje: 30-60 sekund
+
+❓ Jaki będzie adres strony?
+✅ https://TWOJA-NAZWA.github.io/polska-2038/
+   (Zamień TWOJA-NAZWA na swoją nazwę użytkownika GitHub)
+
+❓ Czy mogę mieć własną domenę (np. polska2038.pl)?
+✅ TAK, ale to opcjonalne. Adres github.io jest profesjonalny.
+   Instrukcja: https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site
+
+❓ Czy strona będzie działać na telefonie?
+✅ TAK! Projekt jest w pełni responsywny (RWD).
+
+❓ Czy będzie działać bez internetu?
+✅ NIE. To strona internetowa, wymaga połączenia z internetem.
+
+
+🟢 PO WDROŻENIU
+═══════════════════════════════════════════════════════════════════════════
+
+❓ Jak zaktualizować stronę?
+✅ 3 proste komendy:
+   git add .
+   git commit -m "Opis zmian"
+   git push
+   Strona zaktualizuje się automatycznie w 1-2 minuty.
+
+❓ Jak edytować treść strony?
+✅ Otwórz index.html w edytorze (np. Notepad++, VS Code)
+   Zmień co chcesz → zapisz → git add . → git commit → git push
+
+❓ Jak zmienić budżet/liczby?
+✅ Edytuj index.html i DOKUMENTY/*.md
+   Szukaj liczb (np. "1,08 miliarda") i zamień
+   Potem: git add . → git commit → git push
+
+❓ Jak dodać nowy dokument PDF?
+✅ Wrzuć PDF do folderu PDF-GOTOWE/
+   Dodaj link w index.html
+   Potem: git add . → git commit → git push
+
+❓ Czy mogę cofnąć zmiany?
+✅ TAK! Git przechowuje pełną historię.
+   git log --oneline (zobacz historię)
+   git reset --hard abc123 (wróć do wersji abc123)
+
+
+🟢 PROBLEMY TECHNICZNE
+═══════════════════════════════════════════════════════════════════════════
+
+❌ PROBLEM: Strona pokazuje 404
+✅ ROZWIĄZANIE:
+   • Poczekaj 5 minut po pierwszym wdrożeniu
+   • Odśwież stronę (Ctrl+F5)
+   • Sprawdź czy GitHub Pages jest włączone
+   • Sprawdź adres URL (czy poprawna nazwa użytkownika)
+
+❌ PROBLEM: Brak stylów (strona wygląda brzydko)
+✅ ROZWIĄZANIE:
+   • Sprawdź czy plik css/style.css został wgrany
+   • git status (zobacz czy wszystkie pliki są wysłane)
+   • git add . → git commit → git push (wyślij brakujące)
+
+❌ PROBLEM: Obrazy się nie ładują
+✅ ROZWIĄZANIE:
+   • Sprawdź czy folder img/ został wgrany
+   • Może być za duży (max 100MB na plik)
+   • Zmniejsz rozmiar obrazów lub użyj .gitignore
+
+❌ PROBLEM: Git prosi o hasło ciągle
+✅ ROZWIĄZANIE:
+   • Użyj cache: git config --global credential.helper cache
+   • Lub zapisz: git config --global credential.helper store
+   • Lub używaj SSH zamiast HTTPS
+
+❌ PROBLEM: "fatal: not a git repository"
+✅ ROZWIĄZANIE:
+   • Jesteś w złym folderze
+   • cd "C:\Users\tomiz\Desktop\POLSKA 2038"
+   • Lub uruchom: git init
+
+❌ PROBLEM: "Permission denied"
+✅ ROZWIĄZANIE:
+   • Token jest nieprawidłowy
+   • Stwórz nowy: https://github.com/settings/tokens/new
+   • Upewnij się że zaznaczyłeś "repo"
+
+❌ PROBLEM: "failed to push"
+✅ ROZWIĄZANIE:
+   • git pull origin main --rebase
+   • git push origin main
+   • Lub: git push -f origin main (OSTROŻNIE!)
+
+
+🟢 BEZPIECZEŃSTWO
+═══════════════════════════════════════════════════════════════════════════
+
+❓ Czy ktoś może zmienić moją stronę?
+✅ NIE. Tylko Ty masz dostęp do repozytorium.
+   Nikt inny nie może wprowadzać zmian.
+
+❓ Czy kod jest widoczny publicznie?
+✅ TAK. To publiczne repozytorium - każdy może zobaczyć kod.
+   ALE to jest DOBRE - pokazuje transparentność projektu!
+
+❓ Czy mogę usunąć projekt?
+✅ TAK. Settings → Danger Zone → Delete this repository
+   UWAGA: Usunięcie jest nieodwracalne!
+
+❓ Czy muszę udostępnić swój email?
+✅ NIE. Email w Git config może być prywatny.
+   Użyj: nazwa@users.noreply.github.com
+
+❓ Co jeśli ktoś skopiuje mój projekt?
+✅ To jest DOZWOLONE (licencja MIT).
+   Każdy może używać, modyfikować i dystrybuować.
+   To cel projektu!
+
+
+🟢 UDOSTĘPNIANIE
+═══════════════════════════════════════════════════════════════════════════
+
+❓ Komu wysłać link?
+✅ • Ministerstwo Sportu i Turystyki
+   • Polski Związek Piłki Nożnej (PZPN)
+   • Media sportowe
+   • Politycy
+   • Kluby piłkarskie
+   • Influencerzy sportowi
+
+❓ Jaki link wysłać?
+✅ Główna strona: https://TWOJA-NAZWA.github.io/polska-2038/
+   Press Kit: https://TWOJA-NAZWA.github.io/polska-2038/press/
+
+❓ Co napisać w emailu?
+✅ Gotowy szablon jest w: CHECKLIST-PRZED-WYSYLKA-FINALNA.txt
+
+❓ Czy mogę udostępnić na social media?
+✅ TAK! Im więcej osób zobaczy, tym lepiej.
+   Użyj hashtagów: #Polska2038 #PolskaPiłkaNożna #PZPN
+
+❓ Jak śledzić odwiedziny?
+✅ GitHub → Settings → Insights → Traffic
+   Zobacz ile osób odwiedziło stronę.
+
+
+🟢 ZAAWANSOWANE
+═══════════════════════════════════════════════════════════════════════════
+
+❓ Czy mogę mieć wiele wersji projektu?
+✅ TAK. Użyj gałęzi (branches):
+   git checkout -b wersja-testowa
+   (Szczegóły w: GIT-KOMENDY-SCIAGAWKA.txt)
+
+❓ Czy mogę pracować z kimś nad projektem?
+✅ TAK. Dodaj współpracowników:
+   Settings → Manage access → Invite collaborator
+
+❓ Czy mogę przenieść projekt na inny hosting?
+✅ TAK. Masz wszystkie pliki lokalnie.
+   Możesz wdrożyć na: Netlify, Vercel, własny serwer.
+
+❓ Jak dodać Google Analytics?
+✅ Wklej kod Google Analytics do index.html przed </head>
+
+❓ Jak dodać formularze kontaktowe?
+✅ Użyj: Formspree, Google Forms, lub własny backend.
+
+❓ Czy mogę dodać blog?
+✅ TAK. Użyj Jekyll (wbudowane w GitHub Pages):
+   https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll
+
+
+🟢 WYDAJNOŚĆ
+═══════════════════════════════════════════════════════════════════════════
+
+❓ Jak szybko ładuje się strona?
+✅ Bardzo szybko! GitHub ma CDN na całym świecie.
+   Średni czas ładowania: 1-3 sekundy.
+
+❓ Czy jest limit odwiedzin?
+✅ Soft limit: 100GB transferu/miesiąc
+   To około 100 000 - 1 000 000 odwiedzin!
+   Dla zwykłego projektu to w zupełności wystarcza.
+
+❓ Czy mogę zmniejszyć rozmiar strony?
+✅ TAK:
+   • Zmniejsz rozmiar obrazów (tinypng.com)
+   • Usuń niepotrzebne PDF-y
+   • Zminifikuj CSS/JS (opcjonalne)
+
+
+═══════════════════════════════════════════════════════════════════════════
+🎯 SZYBKIE ODPOWIEDZI - TOP 10
+═══════════════════════════════════════════════════════════════════════════
+
+1. Od czego zacząć? → START-TUTAJ-GITHUB.txt
+2. Jak wdrożyć? → DEPLOY-TO-GITHUB.bat (kliknij 2x)
+3. Ile to kosztuje? → 0 zł
+4. Jak długo trwa? → 15 minut (pierwsze wdrożenie)
+5. Czy muszę umieć programować? → NIE
+6. Jaki będzie adres? → https://TWOJA-NAZWA.github.io/polska-2038/
+7. Jak zaktualizować? → git add . → git commit → git push
+8. Co jeśli nie działa? → START-TUTAJ-GITHUB.txt (sekcja "Problemy")
+9. Komu wysłać? → Ministerstwo, PZPN, media
+10. Jak długo będzie działać? → Bez ograniczeń czasowych
+
+
+═══════════════════════════════════════════════════════════════════════════
+📞 GDZIE SZUKAĆ POMOCY?
+═══════════════════════════════════════════════════════════════════════════
+
+1. START-TUTAJ-GITHUB.txt           - Podstawy
+2. GITHUB-DEPLOYMENT-GUIDE.md       - Szczegóły
+3. GIT-KOMENDY-SCIAGAWKA.txt       - Komendy Git
+4. GitHub Docs                      - https://docs.github.com/en/pages
+5. Stack Overflow                   - https://stackoverflow.com/
+6. GitHub Community                 - https://github.community/
+
+
+═══════════════════════════════════════════════════════════════════════════
+
+🇵🇱⚽🏆 Powodzenia z projektem POLSKA 2038! 🇵🇱⚽🏆
+
+═══════════════════════════════════════════════════════════════════════════
+

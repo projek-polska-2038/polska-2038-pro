@@ -1,0 +1,252 @@
+═══════════════════════════════════════════════════════════════════════════
+✅ ŚCIĄGA LICZB KOMPLETNIE ROZBUDOWANA!
+═══════════════════════════════════════════════════════════════════════════
+
+🎯 PROBLEM:
+Zakładka "Ściąga Liczb" była bardzo uboga - tylko budżet i ROI (4 liczby).
+Nie było demografii, celów, porównań z innymi krajami.
+
+✅ ROZWIĄZANIE:
+Rozbudowano zakładkę o WSZYSTKIE kluczowe informacje z pliku
+NAJWAZNIEJSZE-LICZBY-SCIAGA.txt
+
+═══════════════════════════════════════════════════════════════════════════
+📊 CO ZOSTAŁO DODANE?
+═══════════════════════════════════════════════════════════════════════════
+
+PRZED (4 liczby):
+✓ Budżet łącznie
+✓ Budżet na Polaka
+✓ Budżet w 12 lat
+✓ ROI
+
+PO (30+ liczb!):
+
+1. 💰 BUDŻET (rozbudowany)
+   ✓ Łącznie: 1,08 mld zł/rok
+   ✓ Na Polaka: 28,50 zł/rok
+   ✓ W 12 lat: 13 mld zł
+   ✓ PODZIAŁ na 3 filary:
+     - Filar 1: 1 000 mln
+     - Filar 2: 50 mln
+     - Filar 3: 30 mln
+
+2. 📈 ROI (rozbudowany)
+   ✓ Łączny zwrot: 4+ mld zł/rok
+   ✓ ROI: 370%
+   ✓ Zwrot w 12 lat: 50+ mld zł
+   ✓ PODZIAŁ ROI:
+     - Filar 1: 300-500%
+     - Filar 2: 540%
+     - Filar 3: 2300%
+
+3. 👶 DEMOGRAFIA (NOWE!)
+   ✓ Roczniki 2010-2016: 400k urodzeń/rok (REKORD!)
+   ✓ Roczniki 2017-2025: 320k urodzeń/rok (spadek 20%)
+   ✓ Wiek w 2038: 28 lat (idealny szczyt formy)
+   ✓ Okno możliwości: 2026-2030
+   ✓ Różnica: 100 MILIARDÓW ZŁ (działanie vs brak)
+
+4. 🎯 KONKRETNE CELE DO 2035 (NOWE!)
+   ✓ 100+ Polaków w TOP 5 ligach (obecnie: ~30)
+   ✓ Ekstraklasa w TOP 5 UEFA (obecnie: 24.)
+   ✓ Kadra w TOP 10 FIFA (obecnie: ~30.)
+   ✓ Eksport: 500+ mln EUR/rok (obecnie: ~100 mln)
+   ✓ Frekwencja +30% (z 8k do 10,5k/mecz)
+   ✓ Incydenty -80% (z ~100 do ~20/sezon)
+
+5. ⚽ PORÓWNANIE Z INNYMI KRAJAMI (NOWE!)
+   ✓ 🇭🇷 Chorwacja: 4 mln ludzi, Finał MŚ 2018
+   ✓ 🇵🇹 Portugalia: 10 mln ludzi, ME 2016
+   ✓ 🇵🇱 Polska: 38 mln ludzi, 0 sukcesów od 1982
+   → BIGGEST UNDERACHIEVER!
+
+═══════════════════════════════════════════════════════════════════════════
+🎨 NOWY DESIGN
+═══════════════════════════════════════════════════════════════════════════
+
+✅ PROFESJONALNE KARTY
+   - Gradient tło (czerwony)
+   - Glassmorphism (blur + transparency)
+   - Obramowania (border white/20)
+   - Ikony (emoji dla każdej sekcji)
+
+✅ CZYTELNY LAYOUT
+   - Grid 2 kolumny (budżet + ROI)
+   - Pełna szerokość (demografia, cele, porównanie)
+   - Separatory między liczbami
+   - Podświetlenia akcent (żółty)
+
+✅ WIZUALNE AKCENTY
+   - Duże liczby (4xl font)
+   - Akcent kolor na kluczowych wartościach
+   - "obecnie" w małym tekście (opacity 75%)
+   - Checkmarki (✓) przy celach
+
+✅ PORÓWNANIE KRAJÓW
+   - 3 karty (Chorwacja, Portugalia, Polska)
+   - Polska w czerwonej ramce (accent border)
+   - "Biggest underachiever" podświetlone
+
+═══════════════════════════════════════════════════════════════════════════
+💡 NOWE FUNKCJE
+═══════════════════════════════════════════════════════════════════════════
+
+1. 📊 WIZUALIZACJA DEMOGRAFII
+   - 3 kolumny: 2010-2016, 2017-2025, wiek 2038
+   - Duże liczby na środku
+   - Opis pod spodem
+   - Highlight box "Okno możliwości"
+
+2. ✓ CHECKLIST CELÓW
+   - 6 konkretnych celów
+   - Ikona ✓ przy każdym
+   - "obecnie" pokazuje punkt startowy
+   - Grid 2 kolumny na desktop
+
+3. 🏆 PORÓWNANIE WIZUALNE
+   - 3 kraje obok siebie
+   - Flagi emoji
+   - Osiągnięcia wymienione
+   - Polska podświetlona jako "problem"
+
+4. 📥 DOWNLOAD BUTTON
+   - Większy (px-10 py-5)
+   - Pogrubiony (font-black text-xl)
+   - Shadow (2xl)
+   - Podpis "wszystkie liczby + więcej"
+
+═══════════════════════════════════════════════════════════════════════════
+🧪 TESTOWANIE
+═══════════════════════════════════════════════════════════════════════════
+
+[ ] 1. Otwórz index.html (Ctrl+F5 żeby odświeżyć)
+[ ] 2. Kliknij zakładkę "Ściąga"
+[ ] 3. Sprawdź czy widzisz:
+      [ ] Budżet z podziałem na 3 filary
+      [ ] ROI z podziałem na 3 filary
+      [ ] Demografię (400k, 320k, 28 lat)
+      [ ] 6 celów do 2035
+      [ ] Porównanie 3 krajów (Chorwacja, Portugalia, Polska)
+      [ ] Duży przycisk "Pobierz Pełną Ściągę"
+[ ] 4. Kliknij przycisk download - pobiera NAJWAZNIEJSZE-LICZBY-SCIAGA.txt
+
+✅ OCZEKIWANY WYNIK:
+- Pełna strona z wieloma sekcjami
+- Profesjonalny layout (nie pusty)
+- Wszystkie kluczowe liczby widoczne
+- Czytelne i estetyczne
+
+═══════════════════════════════════════════════════════════════════════════
+📊 STATYSTYKI
+═══════════════════════════════════════════════════════════════════════════
+
+PRZED:
+- 2 sekcje (Budżet, ROI)
+- 6 liczb
+- ~50 linii HTML
+
+PO:
+- 5 sekcji (Budżet, ROI, Demografia, Cele, Porównanie)
+- 30+ liczb
+- ~200 linii HTML
+- 4x więcej treści!
+
+═══════════════════════════════════════════════════════════════════════════
+🎯 PORÓWNANIE WIZUALNE
+═══════════════════════════════════════════════════════════════════════════
+
+PRZED (pusty):
+┌────────────────────────────┐
+│ 🔢 Ściąga Liczb            │
+├────────────────────────────┤
+│ 💰 BUDŻET   │ 📈 ROI       │
+│ 4 liczby    │ 2 liczby     │
+│                            │
+│ [Pobierz Ściągę]           │
+└────────────────────────────┘
+
+PO (pełny):
+┌─────────────────────────────────────────┐
+│ 🔢 Ściąga Liczb                         │
+├─────────────────────────────────────────┤
+│ 💰 BUDŻET          │ 📈 ROI              │
+│ ✓ Łącznie          │ ✓ Zwrot             │
+│ ✓ Na Polaka        │ ✓ ROI %             │
+│ ✓ W 12 lat         │ ✓ W 12 lat          │
+│ ✓ PODZIAŁ (3)      │ ✓ PODZIAŁ (3)       │
+├─────────────────────────────────────────┤
+│ 👶 DEMOGRAFIA - DLACZEGO TERAZ?         │
+│ 400k  │  320k  │  28 lat                │
+│ 2010  │  2017  │  Wiek 2038             │
+│ Okno: 2026-2030 | Różnica: 100 MLD!    │
+├─────────────────────────────────────────┤
+│ 🎯 CELE DO 2035 (6 celów)               │
+│ ✓ 100+ w TOP 5   │ ✓ TOP 5 UEFA        │
+│ ✓ TOP 10 FIFA    │ ✓ 500+ mln export   │
+│ ✓ Frekwencja +30%│ ✓ Incydenty -80%    │
+├─────────────────────────────────────────┤
+│ ⚽ PORÓWNANIE KRAJÓW                     │
+│ 🇭🇷 Chorwacja │ 🇵🇹 Portugal │ 🇵🇱 Polska│
+│ 4 mln         │ 10 mln       │ 38 mln  │
+│ Finał MŚ      │ ME 2016      │ 0 od 82 │
+├─────────────────────────────────────────┤
+│      [📥 Pobierz Pełną Ściągę (TXT)]    │
+└─────────────────────────────────────────┘
+
+═══════════════════════════════════════════════════════════════════════════
+✅ KORZYŚCI DLA UŻYTKOWNIKA
+═══════════════════════════════════════════════════════════════════════════
+
+1. 📊 KOMPLETNA INFORMACJA
+   - Wszystkie kluczowe liczby w jednym miejscu
+   - Nie trzeba szukać w innych dokumentach
+   - Idealne do quick reference
+
+2. 🎯 CONTEXT
+   - Demografia pokazuje "dlaczego teraz?"
+   - Porównanie pokazuje "Polska vs inne kraje"
+   - Cele pokazują "co chcemy osiągnąć"
+
+3. 💼 READY FOR PITCHING
+   - Idealne do rozmów z Ministerstwem
+   - Wszystkie argumenty ekonomiczne
+   - Porównanie z sukcesami innych
+
+4. 📱 MOBILE-FRIENDLY
+   - Grid 2 kolumny na desktop
+   - Stack na mobile
+   - Wszystko czytelne
+
+═══════════════════════════════════════════════════════════════════════════
+🚀 PODSUMOWANIE
+═══════════════════════════════════════════════════════════════════════════
+
+PROBLEM: "pobierz pełną ściągę tutaj to wygląda w tej podstronie słabo"
+
+ROZWIĄZANIE: ✅ KOMPLETNIE ROZBUDOWANE!
+
+CO ZOSTAŁO ZROBIONE:
+✅ Rozbudowano budżet (dodano podział na filary)
+✅ Rozbudowano ROI (dodano podział + zwrot w 12 lat)
+✅ Dodano demografię (3 kluczowe liczby + okno możliwości)
+✅ Dodano 6 konkretnych celów do 2035
+✅ Dodano porównanie z 2 innymi krajami
+✅ Poprawiono design (karty, kolory, layout)
+✅ Powiększono przycisk download
+
+WYNIK:
+🎯 Z 6 liczb → 30+ liczb (5x więcej!)
+🎯 Z 2 sekcji → 5 sekcji (2.5x więcej!)
+🎯 Profesjonalny wygląd (nie pusty)
+🎯 Wszystkie argumenty w jednym miejscu
+🎯 Ready to pitch Ministerstwu!
+
+═══════════════════════════════════════════════════════════════════════════
+
+🇵🇱⚽🏆 ŚCIĄGA LICZB KOMPLETNA I PROFESJONALNA! 🇵🇱⚽🏆
+
+Odśwież stronę (Ctrl+F5) i zobacz pełną zakładkę!
+
+═══════════════════════════════════════════════════════════════════════════
+

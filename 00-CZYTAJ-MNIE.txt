@@ -1,0 +1,101 @@
+=== PAKIET POLSKA 2038 - SPIS PLIKÓW ===
+
+📦 GOTOWE DO WYSŁANIA:
+
+1. POLSKA 2038.html
+   → Kompletna prezentacja interaktywna (14 slajdów)
+   → Otwórz w przeglądarce aby sprawdzić
+   → TO JEST GŁÓWNY ZAŁĄCZNIK DO EMAILA
+
+2. 01-email-treść.txt
+   → Gotowy email do skopiowania
+   → Skopiuj TEMAT i TREŚĆ do ProtonMail
+
+3. 02-adresy-email.txt
+   → Lista adresatów PZPN + media
+   → PZPN: wklej w pole TO
+   → Media: wklej w pole BCC (ukryte kopie!)
+
+4. 03-INSTRUKCJA-WYSYLKI.txt
+   → Krok po kroku jak wysłać anonimowo
+   → Przeczytaj PRZED wysyłką
+   → Bezpieczeństwo VPN + ProtonMail
+
+5. 04-executive-summary.md
+   → Pełne streszczenie projektu (3 strony)
+   → Opcjonalnie: skonwertuj do PDF
+   → Możesz dołączyć jako dodatkowy załącznik
+
+=== JAK WYSŁAĆ W 3 KROKACH ===
+
+KROK 1: Przygotowanie (5 min)
+□ Pobierz ProtonVPN: https://protonvpn.com
+□ Włącz VPN (serwer: Niemcy)
+□ Otwórz przeglądarkę w trybie prywatnym
+
+KROK 2: Wysyłka (3 min)
+□ Zaloguj: polska2038@proton.me
+□ Nowa wiadomość
+□ Skopiuj TEMAT + TREŚĆ z pliku "01-email-treść.txt"
+□ DO: prezes@pzpn.pl, biuro@pzpn.pl
+□ BCC: media z pliku "02-adresy-email.txt"
+□ ZAŁĄCZNIK: "POLSKA 2038.html"
+□ WYŚLIJ (poniedziałek 8:00 rano = optymalny czas)
+
+KROK 3: Po wysłaniu
+□ Zamknij przeglądarkę
+□ Wyłącz VPN
+□ NIE odpowiadaj przez 48h
+□ Obserwuj media (reakcje w 24-72h)
+
+=== OPCJONALNIE: KONWERSJA DO PDF ===
+
+Jeśli chcesz dołączyć PDF:
+1. Otwórz "04-executive-summary.md" w Word
+2. Zapisz jako PDF
+3. Dodaj jako drugi załącznik do emaila
+
+LUB użyj online: https://md2pdf.netlify.app
+
+=== BEZPIECZEŃSTWO ===
+
+✅ ProtonMail = szyfrowany email
+✅ VPN = ukryta lokalizacja
+✅ BCC = media nie widzą się nawzajem
+✅ Brak metadanych w plikach
+
+=== TIMING ===
+
+⏰ NAJLEPSZY MOMENT:
+   Poniedziałek, 8:00 rano
+   (maksymalna widoczność w mediach)
+
+❌ UNIKAJ:
+   Piątku po 15:00 (nikt nie przeczyta)
+   Soboty/niedzieli (niska aktywność)
+
+=== FOLLOW-UP ===
+
+Jeśli po 7 dniach cisza:
+→ Wyślij krótki follow-up:
+   "Szanowni Państwo, czy mieli Państwo okazję
+   zapoznać się z projektem POLSKA 2038 wysłanym
+   [data]? Pozostajemy do dyspozycji."
+
+Jeśli po 14 dniach brak reakcji PZPN:
+→ Uruchom petycję obywatelską
+→ Cel: 50 000 podpisów
+→ Platforma: Change.org lub GoPetition.com
+
+=== KONTAKT ===
+
+Wszystkie odpowiedzi kieruj na:
+polska2038@proton.me
+
+(NIGDY nie odpowiadaj z prywatnego emaila!)
+
+=== POWODZENIA! ===
+
+Belgia miała odwagę. Chorwacja miała odwagę.
+Czas pokazać, że Polska też ma. 🇵🇱⚽🏆
+
