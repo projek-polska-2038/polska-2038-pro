@@ -126,7 +126,7 @@ OPCJA 2: Utwórz NOWE konto GitHub (najbezpieczniejsze)
 1. Wejdź: https://github.com/signup
 
 2. Utwórz nowe konto:
-   • Email: polska2038.projekt@gmail.com (utwórz najpierw!)
+   • Email: polska2038@proton.me (utwórz najpierw!)
    • Username: projek-polska-2038
    • Hasło: [bezpieczne]
 

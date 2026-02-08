@@ -44,7 +44,7 @@ USERNAME: projek-polska-2038 (bez "t" - anonimowy!)
 
 ✅ Username: projek-polska-2038 (ANONIMOWY!)
 ✅ URL: Całkowicie bez danych osobowych
-✅ Email w git: polska2038.projekt@gmail.com
+✅ Email w git: polska2038@proton.me
 ✅ Autor: Zespół POLSKA 2038
 ✅ Push: Wykonany pomyślnie
 ✅ Strona: Gotowa do użycia (za 1-2 minuty)
@@ -80,7 +80,7 @@ KROK 3: UTWÓRZ ANONIMOWY EMAIL (15 minut)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 □ Wejdź: https://accounts.google.com/signup
-□ Email: polska2038.projekt@gmail.com
+□ Email: polska2038@proton.me
 □ Imię: "Zespół POLSKA 2038" (NIE swoje!)
 □ Nie używaj swojego telefonu
 
@@ -96,7 +96,7 @@ KROK 4: UKRYJ PROFIL GITHUB (5 minut)
 KROK 5: WYŚLIJ EMAILE! 📧
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-□ Użyj TYLKO: polska2038.projekt@gmail.com
+□ Użyj TYLKO: polska2038@proton.me
 □ Skopiuj treść z: STRATEGIA-WYSYLKI-DO-ODBIORCOW.txt
 □ Podpisz jako: "Zespół POLSKA 2038"
 
@@ -129,7 +129,7 @@ DO MEDIÓW (WSZYSTKIE 3):
 □ Zmiany wysłane na GitHub ✅
 □ Push wykonany pomyślnie ✅
 □ Włącz GitHub Pages ❌ (zrób teraz!)
-□ Utwórz polska2038.projekt@gmail.com ❌
+□ Utwórz polska2038@proton.me ❌
 □ Ukryj dane w profilu GitHub ❌
 □ Przetestuj linki ❌ (za 2 min)
 □ Wyślij emaile ❌
@@ -191,7 +191,7 @@ ZOSTAŁO:
 📞 TWOJE NOWE DANE:
 
 Username: projek-polska-2038
-Email: polska2038.projekt@gmail.com (do utworzenia)
+Email: polska2038@proton.me (do utworzenia)
 Nazwa: Zespół POLSKA 2038
 Status: Inicjatywa Obywatelska
 URL: https://projek-polska-2038.github.io/polska-2038-pro/

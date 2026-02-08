@@ -16,7 +16,7 @@ Oto jak zachować anonimowość:
 
    Wejdź na: https://accounts.google.com/signup
 
-   Zalecany email: polska2038.projekt@gmail.com
+   Zalecany email: polska2038@proton.me
 
    ⚠️ WAŻNE:
    • NIE UŻYWAJ swojego prawdziwego emaila!
@@ -75,7 +75,7 @@ PRZED WYSYŁKĄ UPEWNIJ SIĘ ŻE:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 ✅ DOBRZE:
-   Od: polska2038.projekt@gmail.com
+   Od: polska2038@proton.me
    Podpis: Zespół Projektu POLSKA 2038
            (inicjatywa obywatelska)
 
@@ -93,7 +93,7 @@ MINISTERSTWO/PZPN/MEDIA ZOBACZĄ:
 ✅ Treść projektu na stronie
 ✅ Kod źródłowy na GitHub
 ✅ Username GitHub: projek-polska-2038
-✅ Email: polska2038.projekt@gmail.com
+✅ Email: polska2038@proton.me
 ✅ Podpis: "Zespół POLSKA 2038"
 
 ❌ NIE ZOBACZĄ (jeśli usuniesz z profilu/plików):
@@ -181,7 +181,7 @@ OPCJE:
 
 PRZED WYSŁANIEM PIERWSZEGO EMAILA:
 
-□ Utworzyłem polska2038.projekt@gmail.com
+□ Utworzyłem polska2038@proton.me
 □ Ukryłem dane w profilu GitHub
 □ Sprawdziłem wszystkie pliki - brak danych osobowych
 □ Przetestowałem linki w trybie incognito
@@ -207,7 +207,7 @@ POWODZENIA! 🇵🇱⚽
 
 📞 KONTAKT W PROJEKCIE (po utworzeniu):
 
-Email: polska2038.projekt@gmail.com
+Email: polska2038@proton.me
 GitHub Issues: https://github.com/projek-polska-2038/polska-2038-pro/issues
 Nazwa: Zespół POLSKA 2038
 Status: Inicjatywa obywatelska

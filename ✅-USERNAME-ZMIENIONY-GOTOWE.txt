@@ -55,7 +55,7 @@ DO MEDIÓW:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 ✅ Username: projek-polska-2038 (ANONIMOWY!)
-✅ Email w git: polska2038.projekt@gmail.com
+✅ Email w git: polska2038@proton.me
 ✅ Nazwa autora: Zespół POLSKA 2038
 ✅ URL strony: CAŁKOWICIE ANONIMOWY
 ✅ Wszystkie pliki: Zaktualizowane
@@ -80,7 +80,7 @@ KROK 2: UTWÓRZ ANONIMOWY EMAIL ✉️ (15 min)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 □ Wejdź na: https://accounts.google.com/signup
-□ Utwórz: polska2038.projekt@gmail.com
+□ Utwórz: polska2038@proton.me
 □ Imię: "Zespół POLSKA 2038" (NIE swoje!)
 □ Nie podawaj swojego telefonu
 
@@ -103,7 +103,7 @@ KROK 4: TESTUJ LINKI 🌐 (2 min)
 KROK 5: WYŚLIJ EMAILE! 📧
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-□ Użyj TYLKO: polska2038.projekt@gmail.com
+□ Użyj TYLKO: polska2038@proton.me
 □ Skopiuj treść z: STRATEGIA-WYSYLKI-DO-ODBIORCOW.txt
 □ Podpisz jako: "Zespół POLSKA 2038"
 
@@ -116,7 +116,7 @@ KROK 5: WYŚLIJ EMAILE! 📧
 □ Remote git zaktualizowany ✅
 □ Wszystkie pliki zaktualizowane ✅
 □ Zmiany wysłane na GitHub ⏳ (zaraz!)
-□ Utworzyłem polska2038.projekt@gmail.com ❌ (zrób!)
+□ Utworzyłem polska2038@proton.me ❌ (zrób!)
 □ Ukryłem dane w profilu GitHub ❌ (zrób!)
 □ Sprawdziłem pliki - brak danych osobowych ✅
 □ Przetestowałem linki w incognito ❌ (zrób!)
@@ -165,7 +165,7 @@ Jeśli ktoś miałby stary link - będzie działać! 🎉
 ✅ Gotowość: 100%!
 
 POZOSTAŁO:
-• Utwórz email: polska2038.projekt@gmail.com
+• Utwórz email: polska2038@proton.me
 • Ukryj profil GitHub
 • Testuj linki
 • WYŚLIJ! 🇵🇱⚽
@@ -175,7 +175,7 @@ POZOSTAŁO:
 📞 TWOJE NOWE DANE KONTAKTOWE:
 
 Username: projek-polska-2038
-Email: polska2038.projekt@gmail.com (do utworzenia)
+Email: polska2038@proton.me (do utworzenia)
 Nazwa: Zespół POLSKA 2038
 Status: Inicjatywa Obywatelska
 URL: https://projek-polska-2038.github.io/polska-2038-pro/

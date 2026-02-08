@@ -39,7 +39,7 @@ KROK 1: UTWÓRZ ANONIMOWY EMAIL ✉️ (15 min)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 □ Wejdź na: https://accounts.google.com/signup
-□ Utwórz: polska2038.projekt@gmail.com
+□ Utwórz: polska2038@proton.me
   (lub alternatywę z listy w instrukcji)
 □ Imię: "Zespół POLSKA 2038" (NIE swoje!)
 □ Nie podawaj swojego telefonu (lub użyj innego)
@@ -77,7 +77,7 @@ KROK 4: TESTUJ W INCOGNITO 🌐 (2 min)
 KROK 5: WYŚLIJ! 📧
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-□ Użyj TYLKO nowego emaila: polska2038.projekt@gmail.com
+□ Użyj TYLKO nowego emaila: polska2038@proton.me
 □ Skopiuj treść z: STRATEGIA-WYSYLKI-DO-ODBIORCOW.txt
 □ Podpisz jako: "Zespół POLSKA 2038"
 
@@ -87,7 +87,7 @@ KROK 5: WYŚLIJ! 📧
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 ✅ UŻYWAJ:
-   polska2038.projekt@gmail.com
+   polska2038@proton.me
 
 ❌ NIE UŻYWAJ:
    tomasz.wojciechowski44@gmail.com
@@ -138,7 +138,7 @@ MINISTERSTWO/PZPN/MEDIA ZOBACZĄ:
 ✅ Treść projektu (profesjonalna strona)
 ✅ Kod źródłowy na GitHub (transparentność)
 ✅ Username: projek-polska-2038 (to NIE jest Twoje prawdziwe imię!)
-✅ Email: polska2038.projekt@gmail.com
+✅ Email: polska2038@proton.me
 ✅ Podpis: "Zespół POLSKA 2038 - inicjatywa obywatelska"
 
 ❌ NIE ZOBACZĄ:
@@ -197,7 +197,7 @@ DZIEŃ 4-5:
 
 PRZED WYSYŁKĄ UPEWNIJ SIĘ:
 
-□ Utworzyłem polska2038.projekt@gmail.com
+□ Utworzyłem polska2038@proton.me
 □ Ukryłem dane w profilu GitHub
 □ Sprawdziłem pliki - brak danych osobowych
 □ Przetestowałem linki w trybie incognito
@@ -224,7 +224,7 @@ POWODZENIA Z PROJEKTEM POLSKA 2038! 🇵🇱⚽
 
 📞 KONTAKT (po utworzeniu):
 
-Email: polska2038.projekt@gmail.com
+Email: polska2038@proton.me
 GitHub: https://github.com/projek-polska-2038/polska-2038-pro
 Issues: https://github.com/projek-polska-2038/polska-2038-pro/issues
 

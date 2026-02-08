@@ -53,7 +53,7 @@ Zespół Projektu POLSKA 2038
 (inicjatywa obywatelska)
 
 ---
-Kontakt: polska2038.projekt@gmail.com (UTWÓRZ NOWY EMAIL!)
+Kontakt: polska2038@proton.me (UTWÓRZ NOWY EMAIL!)
 lub przez Issues na GitHubie
 
 ═══════════════════════════════════════════════════════════════
@@ -109,7 +109,7 @@ Zespół Projektu POLSKA 2038
 (inicjatywa obywatelska)
 
 ---
-Kontakt: polska2038.projekt@gmail.com (UTWÓRZ NOWY EMAIL!)
+Kontakt: polska2038@proton.me (UTWÓRZ NOWY EMAIL!)
 lub przez Issues na GitHubie
 
 ═══════════════════════════════════════════════════════════════
@@ -167,7 +167,7 @@ Zespół Projektu POLSKA 2038
 (inicjatywa obywatelska)
 
 ---
-Kontakt dla mediów: polska2038.projekt@gmail.com (UTWÓRZ!)
+Kontakt dla mediów: polska2038@proton.me (UTWÓRZ!)
 lub przez Issues na GitHubie
 
 ═══════════════════════════════════════════════════════════════
@@ -303,7 +303,7 @@ DLACZEGO?
 1️⃣ UTWÓRZ NOWY ANONIMOWY EMAIL
    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-   ✅ Zalecany: polska2038.projekt@gmail.com
+   ✅ Zalecany: polska2038@proton.me
 
    Kroki:
    a) Wejdź na: https://accounts.google.com/signup
@@ -377,7 +377,7 @@ DLACZEGO?
    Jeśli commity zawierają Twoje prawdziwe dane:
 
    git config user.name "Zespół POLSKA 2038"
-   git config user.email "polska2038.projekt@gmail.com"
+   git config user.email "polska2038@proton.me"
 
    Następne commity będą już anonimowe!
 
@@ -410,7 +410,7 @@ DLACZEGO?
 7️⃣ WYŚLIJ Z ANONIMOWEGO EMAILA
    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-   ✅ UŻYWAJ: polska2038.projekt@gmail.com
+   ✅ UŻYWAJ: polska2038@proton.me
    ❌ NIE UŻYWAJ: swojego prawdziwego emaila!
 
    Podpisz jako:
@@ -423,7 +423,7 @@ DLACZEGO?
 🔒 SZYBKA ŚCIĄGAWKA - 5 KROKÓW DO ANONIMOWOŚCI:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-1. ✉️  Utwórz: polska2038.projekt@gmail.com
+1. ✉️  Utwórz: polska2038@proton.me
 2. 🔍 Sprawdź pliki czy nie ma Twoich danych
 3. 👤 Ukryj dane w profilu GitHub (opcja)
 4. 🌐 Testuj linki w trybie incognito
@@ -438,7 +438,7 @@ DLACZEGO?
    • Treść strony: https://projek-polska-2038.github.io/polska-2038-pro/
    • Kod na GitHub: https://github.com/projek-polska-2038/polska-2038-pro
    • Username GitHub: "projek-polska-2038"
-   • Email kontaktowy: polska2038.projekt@gmail.com (jeśli utworzysz)
+   • Email kontaktowy: polska2038@proton.me (jeśli utworzysz)
 
 ❌ NIE ZOBACZĄ (jeśli zrobisz powyższe kroki):
    • Twojego prawdziwego imienia/nazwiska
