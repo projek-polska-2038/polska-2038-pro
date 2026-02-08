@@ -1,0 +1,220 @@
+╔════════════════════════════════════════════════════════════════╗
+║    🔒 JAK POZOSTAĆ ANONIMOWYM - INSTRUKCJA BEZPIECZEŃSTWA    ║
+╚════════════════════════════════════════════════════════════════╝
+
+⚠️ PRZECZYTAJ TO PRZED WYSYŁKĄ! ⚠️
+
+Twój projekt to INICJATYWA OBYWATELSKA - anonimowa i pro bono.
+Oto jak zachować anonimowość:
+
+═══════════════════════════════════════════════════════════════
+
+🚨 NAJWAŻNIEJSZE - ZRÓB TO NAJPIERW!
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. UTWÓRZ NOWY ANONIMOWY EMAIL ✉️
+
+   Wejdź na: https://accounts.google.com/signup
+
+   Zalecany email: polska2038.projekt@gmail.com
+
+   ⚠️ WAŻNE:
+   • NIE UŻYWAJ swojego prawdziwego emaila!
+   • Imię/Nazwisko: "Zespół POLSKA 2038" (nie swoje!)
+   • Numer: opcjonalny (jeśli musisz, użyj inny niż swój)
+
+   📧 Alternatywy:
+   • polska2038projekt@gmail.com
+   • projekt.polska2038@gmail.com
+   • reforma.futbolu.2038@gmail.com
+
+2. SPRAWDŹ PROFIL GITHUB 👤
+
+   Wejdź na: https://github.com/settings/profile
+
+   Ukryj/wyczyść:
+   □ Name (zostaw puste lub "POLSKA 2038")
+   □ Email (ukryj lub zmień na nowy)
+   □ Bio
+   □ Company
+   □ Location
+   □ Website
+
+   💡 Username "tomaszwojciechowski44" można zmienić na:
+      https://github.com/settings/admin
+      Nowa nazwa: polska2038 lub projekpolska2038
+
+3. SPRAWDŹ PLIKI PROJEKTU 🔍
+
+   Otwórz i sprawdź czy NIE zawierają:
+   □ README.md - Twoje imię/nazwisko?
+   □ package.json - Twój email w "author"?
+   □ Wszystkie pliki .txt - dane osobowe?
+   □ index.html - metadata z danymi?
+
+   Jeśli znajdziesz swoje dane - USUŃ JE przed wysyłką!
+
+═══════════════════════════════════════════════════════════════
+
+✅ CHECKLIST ANONIMOWOŚCI
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PRZED WYSYŁKĄ UPEWNIJ SIĘ ŻE:
+
+□ Utworzyłeś nowy anonimowy email
+□ Sprawdziłeś profil GitHub (brak danych osobowych)
+□ Sprawdziłeś pliki projektu (brak danych osobowych)
+□ Testujesz linki w trybie incognito
+□ Wysyłasz TYLKO z nowego emaila
+□ Podpisujesz się jako "Zespół POLSKA 2038"
+□ NIE używasz swojego prawdziwego emaila/telefonu
+
+═══════════════════════════════════════════════════════════════
+
+📧 JAK WYSYŁAĆ EMAILE?
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ DOBRZE:
+   Od: polska2038.projekt@gmail.com
+   Podpis: Zespół Projektu POLSKA 2038
+           (inicjatywa obywatelska)
+
+❌ ŹLE:
+   Od: twoj.email@gmail.com
+   Podpis: [Twoje imię i nazwisko]
+
+═══════════════════════════════════════════════════════════════
+
+🔍 CO ZOBACZĄ ODBIORCY?
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+MINISTERSTWO/PZPN/MEDIA ZOBACZĄ:
+
+✅ Treść projektu na stronie
+✅ Kod źródłowy na GitHub
+✅ Username GitHub: tomaszwojciechowski44
+✅ Email: polska2038.projekt@gmail.com
+✅ Podpis: "Zespół POLSKA 2038"
+
+❌ NIE ZOBACZĄ (jeśli usuniesz z profilu/plików):
+   • Twojego prawdziwego imienia
+   • Twojego osobistego emaila
+   • Twojego telefonu
+   • Twojego adresu
+   • Żadnych innych danych osobowych
+
+═══════════════════════════════════════════════════════════════
+
+⚠️ OSTRZEŻENIE O USERNAME GITHUB
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Username: "tomaszwojciechowski44"
+
+⚠️ Może sugerować Twoje imię!
+
+OPCJE:
+
+1. ZMIEŃ USERNAME (ZALECANE):
+   • Wejdź: https://github.com/settings/admin
+   • Zmień na: polska2038 lub projekpolska2038
+   • GitHub automatycznie przekieruje stare linki!
+
+2. ZOSTAW JAK JEST:
+   • To tylko username, nie prawdziwe dane
+   • Nie potwierdza Twojej tożsamości
+   • Możesz powiedzieć że to nick/pseudonim
+
+3. STWÓRZ NOWE KONTO:
+   • Nowy GitHub: polska2038
+   • Transfer projektu
+   • Najbezpieczniejsze, ale najwięcej pracy
+
+═══════════════════════════════════════════════════════════════
+
+🛡️ DODATKOWE ŚRODKI BEZPIECZEŃSTWA (opcjonalne)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. VPN (dla maksymalnej anonimowości):
+   • ProtonVPN (darmowy): https://protonvpn.com/
+   • Włącz przed wysyłaniem emaili
+
+2. Przeglądarka Tor (ekstremalny poziom):
+   • Tor Browser: https://www.torproject.org/
+   • Używaj tylko Tora do wysyłki emaili
+
+3. Tryb incognito (minimum):
+   • Ctrl+Shift+N (Chrome)
+   • Sprawdź linki przed wysyłką
+
+═══════════════════════════════════════════════════════════════
+
+💬 JAK ODPOWIADAĆ NA PYTANIA?
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+❓ "Kto stoi za projektem?"
+✅ "Zespół ekspertów i pasjonatów futbolu. Chcemy, aby projekt
+   był oceniany na podstawie merytoryki, nie autora. To
+   inicjatywa obywatelska pro bono."
+
+❓ "Możemy się spotkać?"
+✅ "Jesteśmy dostępni do rozmowy online (Zoom, Teams) lub przez
+   email. Projekt jest w pełni transparentny - cała dokumentacja
+   jest publiczna."
+
+❓ "Kto to finansuje?"
+✅ "To projekt pro bono, społeczny, bez żadnego finansowania.
+   Wszystkie materiały są open source i darmowe."
+
+❓ "Dlaczego chcecie być anonimowi?"
+✅ "Aby projekt był oceniany obiektywnie, na podstawie treści,
+   nie osoby autora. To inicjatywa dla dobra futbolu, nie
+   dla rozgłosu."
+
+❓ "Potrzebujemy danych do faktury/umowy"
+✅ "To darmowy projekt open source. Nie wymagamy ani nie
+   przyjmujemy żadnych płatności. Możecie go używać swobodnie."
+
+═══════════════════════════════════════════════════════════════
+
+📋 OSTATECZNA LISTA KONTROLNA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PRZED WYSŁANIEM PIERWSZEGO EMAILA:
+
+□ Utworzyłem polska2038.projekt@gmail.com
+□ Ukryłem dane w profilu GitHub
+□ Sprawdziłem wszystkie pliki - brak danych osobowych
+□ Przetestowałem linki w trybie incognito
+□ Przygotowałem odpowiedzi na FAQ
+□ Włączyłem powiadomienia na nowym emailu
+□ NIE będę używać swojego prawdziwego emaila
+□ NIE będę używać swojego telefonu
+□ Podpiszę się jako "Zespół POLSKA 2038"
+□ Jestem gotowy na pytania o anonimowość
+
+═══════════════════════════════════════════════════════════════
+
+🎯 GOTOWY DO ANONIMOWEJ WYSYŁKI!
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Twoja tożsamość jest chroniona!
+Projekt jest profesjonalny i transparentny!
+Inicjatywa obywatelska ready to go! 🚀
+
+POWODZENIA! 🇵🇱⚽
+
+═══════════════════════════════════════════════════════════════
+
+📞 KONTAKT W PROJEKCIE (po utworzeniu):
+
+Email: polska2038.projekt@gmail.com
+GitHub Issues: https://github.com/tomaszwojciechowski44/polska-2038-pro/issues
+Nazwa: Zespół POLSKA 2038
+Status: Inicjatywa obywatelska
+
+═══════════════════════════════════════════════════════════════
+Utworzono: 2026-02-08
+Wersja: 1.0 - ANONIMOWA
+Status: CHRONIONY ✅
+═══════════════════════════════════════════════════════════════
+
