@@ -185,29 +185,120 @@ Linki: Te same co media krajowe (Press Kit + Główna + GitHub)
 
 Znajdź na LinkedIn/Twitter i wyślij DM z linkiem do Press Kit
 
+🏆 KLUBY EKSTRAKLASY (WAŻNE!):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Legia Warszawa
+   • biuro@legia.com
+   • kontakt@legia.com
+
+2. Lech Poznań
+   • biuro@lechpoznan.pl
+   • sekretariat@lechpoznan.pl
+
+3. Raków Częstochowa
+   • biuro@rakow.com
+   • kontakt@rakow.com
+
+4. Pogoń Szczecin
+   • biuro@pogon.pl
+   • sekretariat@pogon.pl
+
+5. Widzew Łódź
+   • biuro@widzew.com
+   • sekretariat@widzew.com
+
+6. Cracovia
+   • biuro@cracovia.pl
+   • kontakt@cracovia.pl
+
+7. Jagiellonia Białystok
+   • biuro@jagiellonia.pl
+   • sekretariat@jagiellonia.pl
+
+8. Śląsk Wrocław
+   • biuro@slaskwroclaw.pl
+   • kontakt@slaskwroclaw.pl
+
+9. Zagłębie Lubin
+   • biuro@zaglebie.eu
+   • sekretariat@zaglebie.eu
+
+10. Radomiak Radom
+    • biuro@radomiak.pl
+    • kontakt@radomiak.pl
+
+11. Piast Gliwice
+    • biuro@piastgliwice.pl
+    • sekretariat@piastgliwice.pl
+
+12. Korona Kielce
+    • biuro@korona-kielce.pl
+    • kontakt@korona-kielce.pl
+
+⚠️ UWAGA: Sprawdź aktualne adresy na stronach klubów!
+
+Linki do wysłania:
+┌─────────────────────────────────────────────────────────────┐
+│ 1. Główna: https://projek-polska-2038.github.io/polska-2038-pro/
+│ 2. GitHub: https://github.com/projek-polska-2038/polska-2038-pro
+└─────────────────────────────────────────────────────────────┘
+
+👔 PREMIER POLSKI (KANCELARIA PREZESA RADY MINISTRÓW):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Adresy email:
+• kancelaria@premier.gov.pl (GŁÓWNY)
+• listy@premier.gov.pl
+• sekretariat@kprm.gov.pl
+
+Linki do wysłania:
+┌─────────────────────────────────────────────────────────────┐
+│ 1. Główna: https://projek-polska-2038.github.io/polska-2038-pro/
+│ 2. GitHub: https://github.com/projek-polska-2038/polska-2038-pro
+└─────────────────────────────────────────────────────────────┘
+
 ═══════════════════════════════════════════════════════════════
 
 📧 KOLEJNOŚĆ WYSYŁKI (ZALECANA):
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-DZIEŃ 1 (PRIORYTET):
-1. sport@msit.gov.pl (Ministerstwo)
-2. pzpn@pzpn.pl (PZPN)
+DZIEŃ 1 (PRIORYTET - INSTYTUCJE PAŃSTWOWE):
+1. sport@msit.gov.pl (Ministerstwo Sportu)
+2. kancelaria@premier.gov.pl (Premier)
+3. pzpn@pzpn.pl (PZPN)
 
-DZIEŃ 2-3 (MEDIA GŁÓWNE):
-3. sport@tvp.pl (TVP Sport)
-4. redakcja@przegladsportowy.pl (Przegląd Sportowy)
-5. sport@wp.pl (WP SportoweFakty)
-6. redakcja@sport.pl (Sport.pl)
+DZIEŃ 2 (KLUBY EKSTRAKLASY - TOP):
+4. biuro@legia.com (Legia Warszawa)
+5. biuro@lechpoznan.pl (Lech Poznań)
+6. biuro@rakow.com (Raków Częstochowa)
+7. biuro@pogon.pl (Pogoń Szczecin)
 
-DZIEŃ 4-5 (POZOSTAŁE):
-7. sport@interia.pl (Interia Sport)
-8. redakcja@90minut.pl (90minut.pl)
-9. kontakt@meczyki.pl (Meczyki.pl)
+DZIEŃ 3 (KLUBY EKSTRAKLASY - POZOSTAŁE):
+8. biuro@widzew.com (Widzew Łódź)
+9. biuro@cracovia.pl (Cracovia)
+10. biuro@jagiellonia.pl (Jagiellonia Białystok)
+11. biuro@slaskwroclaw.pl (Śląsk Wrocław)
+12. biuro@zaglebie.eu (Zagłębie Lubin)
+13. biuro@radomiak.pl (Radomiak Radom)
+14. biuro@piastgliwice.pl (Piast Gliwice)
+15. biuro@korona-kielce.pl (Korona Kielce)
+
+DZIEŃ 4-5 (MEDIA GŁÓWNE):
+16. sport@tvp.pl (TVP Sport)
+17. redakcja@przegladsportowy.pl (Przegląd Sportowy)
+18. sport@wp.pl (WP SportoweFakty)
+19. redakcja@sport.pl (Sport.pl)
+
+DZIEŃ 6-7 (POZOSTAŁE):
+20. sport@interia.pl (Interia Sport)
+21. redakcja@90minut.pl (90minut.pl)
+22. kontakt@meczyki.pl (Meczyki.pl)
 
 DLACZEGO TA KOLEJNOŚĆ?
-• Ministerstwo i PZPN PIERWSZE (szacunek dla instytucji)
-• Media główne po oficjalnych (profesjonalizm)
+• Ministerstwo + Premier + PZPN PIERWSZE (instytucje państwowe)
+• Kluby Ekstraklasy DRUGIE (bezpośredni beneficjenci reformy!)
+• Media PO klubach (mogą już pisać o reakcjach klubów)
 • Media specjalistyczne na końcu (szerszy zasięg)
 
 ═══════════════════════════════════════════════════════════════
