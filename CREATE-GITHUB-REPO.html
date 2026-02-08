@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Tworzenie repozytorium GitHub</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #0d1117;
+            color: #c9d1d9;
+        }
+        .container {
+            background: #161b22;
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid #30363d;
+        }
+        h1 { color: #58a6ff; }
+        .step {
+            background: #0d1117;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 6px;
+            border-left: 3px solid #58a6ff;
+        }
+        .btn {
+            background: #238636;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px 5px;
+        }
+        .btn:hover { background: #2ea043; }
+        .btn-secondary {
+            background: #21262d;
+            border: 1px solid #30363d;
+        }
+        .btn-secondary:hover { background: #30363d; }
+        code {
+            background: #0d1117;
+            padding: 2px 6px;
+            border-radius: 3px;
+            color: #79c0ff;
+        }
+        .warning {
+            background: #1e2127;
+            border-left: 3px solid #f85149;
+            padding: 10px;
+            margin: 15px 0;
+        }
+        #countdown {
+            font-size: 24px;
+            color: #58a6ff;
+            text-align: center;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Tworzenie Repozytorium GitHub</h1>
+
+        <div class="step">
+            <h3>Krok 1: Utwórz repozytorium</h3>
+            <p>Za chwilę zostaniesz przekierowany do GitHuba.</p>
+            <p><strong>Wypełnij formularz następująco:</strong></p>
+            <ul>
+                <li><strong>Repository name:</strong> <code>polska-2038-pro</code></li>
+                <li><strong>Description:</strong> POLSKA 2038 - Projekt reformy polskiego futbolu</li>
+                <li><strong>Public</strong> ✓ (zaznaczone)</li>
+                <li><strong>NIE ZAZNACZAJ:</strong> "Add a README file"</li>
+            </ul>
+            <p>Następnie kliknij <strong>"Create repository"</strong></p>
+        </div>
+
+        <div class="step">
+            <h3>Krok 2: Po utworzeniu repozytorium</h3>
+            <p>GitHub pokaże Ci stronę z instrukcjami. <strong>Nic nie rób</strong> - wróć tutaj do PowerShell.</p>
+        </div>
+
+        <div class="warning">
+            <strong>⚠️ WAŻNE:</strong> Po utworzeniu repozytorium na GitHubie, wróć do PowerShell - tam będą czekać gotowe komendy!
+        </div>
+
+        <div id="countdown">Przekierowanie za 3 sekundy...</div>
+
+        <div style="text-align: center;">
+            <a href="https://github.com/new" class="btn" id="goBtn">🚀 Przejdź teraz do GitHub</a>
+            <button class="btn btn-secondary" onclick="window.close()">Anuluj</button>
+        </div>
+    </div>
+
+    <script>
+        let seconds = 3;
+        const countdownEl = document.getElementById('countdown');
+        const goBtn = document.getElementById('goBtn');
+
+        const interval = setInterval(() => {
+            seconds--;
+            if (seconds > 0) {
+                countdownEl.textContent = `Przekierowanie za ${seconds} ${seconds === 1 ? 'sekundę' : 'sekundy'}...`;
+            } else {
+                countdownEl.textContent = '🚀 Przekierowywanie...';
+                clearInterval(interval);
+                window.location.href = 'https://github.com/new';
+            }
+        }, 1000);
+
+        goBtn.addEventListener('click', (e) => {
+            clearInterval(interval);
+        });
+    </script>
+</body>
+</html>
+
